@@ -1,0 +1,12 @@
+# Ignore Python cache files
+__pycache__
+*.pyc
+
+# Ignore virtual environment
+myvenv/
+
+# Ignore Jupyter notebooks if not needed
+*.ipynb
+
+# Ignore data files if not necessary
+data/

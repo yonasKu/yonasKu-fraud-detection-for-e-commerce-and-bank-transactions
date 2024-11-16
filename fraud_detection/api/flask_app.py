@@ -1,4 +1,5 @@
 # fraud_detection/api/flask_app.py
+
 from flask import Flask
 from fraud_detection.api.endpoints import predict_credit_fraud, predict_general_fraud
 import logging

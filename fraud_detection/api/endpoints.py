@@ -4,13 +4,16 @@ import joblib
 import pandas as pd
 import logging
 from flask import jsonify, request
+import os
 
 # Initialize logging for the endpoints
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 # Load the credit fraud detection model
 def load_credit_fraud_model():
-    credit_fraud_model_path = 'models/random_forest_model.pkl'  # Adjusted model path
+    # Corrected model path based on folder structure
+    credit_fraud_model_path = os.path.join('models', 'random_forest_model.pkl')
     try:
         credit_fraud_model = joblib.load(credit_fraud_model_path)
         logger.info("Credit Fraud Model loaded successfully.")
@@ -21,7 +24,8 @@ def load_credit_fraud_model():
 
 # Load the general fraud detection model
 def load_general_fraud_model():
-    general_fraud_model_path = 'models/random_forest_model.pkl'  # Adjusted model path
+    # Corrected model path based on folder structure
+    general_fraud_model_path = os.path.join('models', 'random_forest_model.pkl')
     try:
         general_fraud_model = joblib.load(general_fraud_model_path)
         logger.info("General Fraud Model loaded successfully.")

@@ -11,7 +11,7 @@ def setup_logger(log_file):
         logger: Configured logger instance.
     """
     logger = logging.getLogger()
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(logging.DEBUG)  # Capture all levels of logs (DEBUG, INFO, etc.)
 
     # Create file handler for logging to a file
     file_handler = logging.FileHandler(log_file)

@@ -1,5 +1,8 @@
 myvenv
 data/*
 .env
-model/*
+fraud_detection/models/*
 
+fraud_detection/models/decision_tree_model.pkl
+fraud_detection/models/gradient_boosting_model.pkl
+fraud_detection/models/random_forest_model.pkl

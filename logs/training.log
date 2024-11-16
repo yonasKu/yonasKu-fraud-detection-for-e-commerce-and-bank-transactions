@@ -1,0 +1,113 @@
+2024-11-15 15:18:52,448 - root - INFO - Loading data from data/fraud_datas.csv.
+2024-11-15 15:18:52,465 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: 'data/fraud_datas.csv'
+2024-11-15 15:19:05,264 - root - INFO - Loading data from ../data/fraud_datas.csv.
+2024-11-15 15:19:06,024 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:19:06,040 - root - INFO - Standardizing data.
+2024-11-15 15:19:06,112 - root - ERROR - Error preparing data: could not convert string to float: '2015-01-05 06:37:15'
+2024-11-15 15:37:21,067 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:37:21,354 - root - ERROR - Error preparing data: name 'LabelEncoder' is not defined
+2024-11-15 15:37:55,373 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:37:55,692 - root - ERROR - Error preparing data: name 'LabelEncoder' is not defined
+2024-11-15 15:38:06,047 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:38:06,890 - root - INFO - Encoded column: device_id
+2024-11-15 15:38:06,936 - root - INFO - Encoded column: source
+2024-11-15 15:38:06,968 - root - INFO - Encoded column: browser
+2024-11-15 15:38:07,000 - root - INFO - Encoded column: sex
+2024-11-15 15:38:07,069 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:38:07,120 - root - INFO - Standardized the data.
+2024-11-15 15:38:28,780 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:38:28,905 - root - ERROR - Error training model: [Errno 2] No such file or directory: 'models/logistic_regression_model.pkl'
+2024-11-15 15:39:01,772 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:39:01,915 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:39:01,975 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:39:01,982 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:40:08,031 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 15:40:09,916 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:43:22,650 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:43:23,468 - root - INFO - Encoded column: device_id
+2024-11-15 15:43:23,505 - root - INFO - Encoded column: source
+2024-11-15 15:43:23,536 - root - INFO - Encoded column: browser
+2024-11-15 15:43:23,570 - root - INFO - Encoded column: sex
+2024-11-15 15:43:23,626 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:43:23,671 - root - INFO - Standardized the data.
+2024-11-15 15:47:04,711 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:47:04,836 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:47:04,880 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:47:04,880 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:47:30,731 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:48:35,085 - root - ERROR - Error training model: [Errno 2] No such file or directory: 'models/random_forest_model.pkl'
+2024-11-15 15:49:05,045 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:50:13,093 - root - ERROR - Error training model: [Errno 2] No such file or directory: '..models/random_forest_model.pkl'
+2024-11-15 15:53:25,271 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:53:26,148 - root - INFO - Encoded column: device_id
+2024-11-15 15:53:26,203 - root - INFO - Encoded column: source
+2024-11-15 15:53:26,237 - root - INFO - Encoded column: browser
+2024-11-15 15:53:26,277 - root - INFO - Encoded column: sex
+2024-11-15 15:53:26,313 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:53:26,358 - root - INFO - Standardized the data.
+2024-11-15 15:53:45,642 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:53:45,757 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:53:45,798 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:53:45,800 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:54:54,688 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 15:54:56,237 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:56:23,295 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 15:56:27,119 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 15:56:27,169 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:56:27,169 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 15:57:17,896 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 15:57:18,073 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:32:16,749 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:16,749 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:17,657 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:17,657 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:17,703 - root - INFO - Encoded column: source
+2024-11-15 16:32:17,703 - root - INFO - Encoded column: source
+2024-11-15 16:32:17,738 - root - INFO - Encoded column: browser
+2024-11-15 16:32:17,738 - root - INFO - Encoded column: browser
+2024-11-15 16:32:17,777 - root - INFO - Encoded column: sex
+2024-11-15 16:32:17,777 - root - INFO - Encoded column: sex
+2024-11-15 16:32:17,825 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:17,825 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:17,894 - root - INFO - Standardized the data.
+2024-11-15 16:32:17,894 - root - INFO - Standardized the data.
+2024-11-15 16:32:57,048 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:57,048 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:58,050 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:58,050 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:58,091 - root - INFO - Encoded column: source
+2024-11-15 16:32:58,091 - root - INFO - Encoded column: source
+2024-11-15 16:32:58,127 - root - INFO - Encoded column: browser
+2024-11-15 16:32:58,127 - root - INFO - Encoded column: browser
+2024-11-15 16:32:58,162 - root - INFO - Encoded column: sex
+2024-11-15 16:32:58,162 - root - INFO - Encoded column: sex
+2024-11-15 16:32:58,210 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:58,210 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:58,259 - root - INFO - Standardized the data.
+2024-11-15 16:32:58,259 - root - INFO - Standardized the data.
+2024-11-15 16:41:33,718 - root - INFO - Training model: LogisticRegression.
+2024-11-15 16:41:33,718 - root - INFO - Training model: LogisticRegression.
+2024-11-15 16:41:33,857 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 16:41:33,857 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 16:41:33,897 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:41:33,897 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:41:33,899 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 16:41:33,899 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 16:42:41,692 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 16:42:41,692 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 16:42:43,473 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:43,473 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:43,502 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 16:42:43,502 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 16:42:47,580 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 16:42:47,580 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 16:42:47,639 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:47,639 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:47,641 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 16:42:47,641 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 16:43:38,363 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 16:43:38,363 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 16:43:38,479 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:43:38,479 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:43:38,507 - root - ERROR - Error during evaluation: 'dict' object has no attribute 'predict'
+2024-11-15 16:43:38,507 - root - ERROR - Error during evaluation: 'dict' object has no attribute 'predict'

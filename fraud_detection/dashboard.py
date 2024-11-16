@@ -6,7 +6,7 @@ from dash import Dash, dcc, html
 import dash.dependencies as dd
 import plotly.express as px
 
-# Initialize Flask app
+
 server = Flask(__name__)
 
 # Set up logging

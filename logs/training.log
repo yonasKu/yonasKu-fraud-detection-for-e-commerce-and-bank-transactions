@@ -1,0 +1,817 @@
+2024-11-15 15:18:52,448 - root - INFO - Loading data from data/fraud_datas.csv.
+2024-11-15 15:18:52,465 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: 'data/fraud_datas.csv'
+2024-11-15 15:19:05,264 - root - INFO - Loading data from ../data/fraud_datas.csv.
+2024-11-15 15:19:06,024 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:19:06,040 - root - INFO - Standardizing data.
+2024-11-15 15:19:06,112 - root - ERROR - Error preparing data: could not convert string to float: '2015-01-05 06:37:15'
+2024-11-15 15:37:21,067 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:37:21,354 - root - ERROR - Error preparing data: name 'LabelEncoder' is not defined
+2024-11-15 15:37:55,373 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:37:55,692 - root - ERROR - Error preparing data: name 'LabelEncoder' is not defined
+2024-11-15 15:38:06,047 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:38:06,890 - root - INFO - Encoded column: device_id
+2024-11-15 15:38:06,936 - root - INFO - Encoded column: source
+2024-11-15 15:38:06,968 - root - INFO - Encoded column: browser
+2024-11-15 15:38:07,000 - root - INFO - Encoded column: sex
+2024-11-15 15:38:07,069 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:38:07,120 - root - INFO - Standardized the data.
+2024-11-15 15:38:28,780 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:38:28,905 - root - ERROR - Error training model: [Errno 2] No such file or directory: 'models/logistic_regression_model.pkl'
+2024-11-15 15:39:01,772 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:39:01,915 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:39:01,975 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:39:01,982 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:40:08,031 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 15:40:09,916 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:43:22,650 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:43:23,468 - root - INFO - Encoded column: device_id
+2024-11-15 15:43:23,505 - root - INFO - Encoded column: source
+2024-11-15 15:43:23,536 - root - INFO - Encoded column: browser
+2024-11-15 15:43:23,570 - root - INFO - Encoded column: sex
+2024-11-15 15:43:23,626 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:43:23,671 - root - INFO - Standardized the data.
+2024-11-15 15:47:04,711 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:47:04,836 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:47:04,880 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:47:04,880 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:47:30,731 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:48:35,085 - root - ERROR - Error training model: [Errno 2] No such file or directory: 'models/random_forest_model.pkl'
+2024-11-15 15:49:05,045 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:50:13,093 - root - ERROR - Error training model: [Errno 2] No such file or directory: '..models/random_forest_model.pkl'
+2024-11-15 15:53:25,271 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 15:53:26,148 - root - INFO - Encoded column: device_id
+2024-11-15 15:53:26,203 - root - INFO - Encoded column: source
+2024-11-15 15:53:26,237 - root - INFO - Encoded column: browser
+2024-11-15 15:53:26,277 - root - INFO - Encoded column: sex
+2024-11-15 15:53:26,313 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 15:53:26,358 - root - INFO - Standardized the data.
+2024-11-15 15:53:45,642 - root - INFO - Training model: LogisticRegression.
+2024-11-15 15:53:45,757 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 15:53:45,798 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:53:45,800 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 15:54:54,688 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 15:54:56,237 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:56:23,295 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 15:56:27,119 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 15:56:27,169 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 15:56:27,169 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 15:57:17,896 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 15:57:18,073 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:32:16,749 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:16,749 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:17,657 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:17,657 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:17,703 - root - INFO - Encoded column: source
+2024-11-15 16:32:17,703 - root - INFO - Encoded column: source
+2024-11-15 16:32:17,738 - root - INFO - Encoded column: browser
+2024-11-15 16:32:17,738 - root - INFO - Encoded column: browser
+2024-11-15 16:32:17,777 - root - INFO - Encoded column: sex
+2024-11-15 16:32:17,777 - root - INFO - Encoded column: sex
+2024-11-15 16:32:17,825 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:17,825 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:17,894 - root - INFO - Standardized the data.
+2024-11-15 16:32:17,894 - root - INFO - Standardized the data.
+2024-11-15 16:32:57,048 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:57,048 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-15 16:32:58,050 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:58,050 - root - INFO - Encoded column: device_id
+2024-11-15 16:32:58,091 - root - INFO - Encoded column: source
+2024-11-15 16:32:58,091 - root - INFO - Encoded column: source
+2024-11-15 16:32:58,127 - root - INFO - Encoded column: browser
+2024-11-15 16:32:58,127 - root - INFO - Encoded column: browser
+2024-11-15 16:32:58,162 - root - INFO - Encoded column: sex
+2024-11-15 16:32:58,162 - root - INFO - Encoded column: sex
+2024-11-15 16:32:58,210 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:58,210 - root - INFO - Data successfully split into train and test sets.
+2024-11-15 16:32:58,259 - root - INFO - Standardized the data.
+2024-11-15 16:32:58,259 - root - INFO - Standardized the data.
+2024-11-15 16:41:33,718 - root - INFO - Training model: LogisticRegression.
+2024-11-15 16:41:33,718 - root - INFO - Training model: LogisticRegression.
+2024-11-15 16:41:33,857 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 16:41:33,857 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-15 16:41:33,897 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:41:33,897 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:41:33,899 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 16:41:33,899 - root - INFO - Training model: RandomForestClassifier.
+2024-11-15 16:42:41,692 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 16:42:41,692 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-15 16:42:43,473 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:43,473 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:43,502 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 16:42:43,502 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-15 16:42:47,580 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 16:42:47,580 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-15 16:42:47,639 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:47,639 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:42:47,641 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 16:42:47,641 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-15 16:43:38,363 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 16:43:38,363 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-15 16:43:38,479 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:43:38,479 - root - INFO - Model training and evaluation completed successfully.
+2024-11-15 16:43:38,507 - root - ERROR - Error during evaluation: 'dict' object has no attribute 'predict'
+2024-11-15 16:43:38,507 - root - ERROR - Error during evaluation: 'dict' object has no attribute 'predict'
+2024-11-16 08:58:56,806 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 08:58:56,806 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 08:58:57,743 - root - INFO - Encoded column: device_id
+2024-11-16 08:58:57,743 - root - INFO - Encoded column: device_id
+2024-11-16 08:58:57,791 - root - INFO - Encoded column: source
+2024-11-16 08:58:57,791 - root - INFO - Encoded column: source
+2024-11-16 08:58:57,829 - root - INFO - Encoded column: browser
+2024-11-16 08:58:57,829 - root - INFO - Encoded column: browser
+2024-11-16 08:58:57,879 - root - INFO - Encoded column: sex
+2024-11-16 08:58:57,879 - root - INFO - Encoded column: sex
+2024-11-16 08:58:57,926 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 08:58:57,926 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 08:58:57,980 - root - INFO - Standardized the data.
+2024-11-16 08:58:57,980 - root - INFO - Standardized the data.
+2024-11-16 08:59:09,752 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 08:59:09,752 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 08:59:13,510 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 08:59:13,510 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 08:59:13,564 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 08:59:13,564 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 08:59:13,577 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 08:59:13,577 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 09:00:10,620 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:00:10,620 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:00:10,726 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:00:10,726 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:11:24,561 - root - INFO - Training model: LogisticRegression.
+2024-11-16 09:11:24,561 - root - INFO - Training model: LogisticRegression.
+2024-11-16 09:11:24,786 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 09:11:24,786 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 09:11:24,833 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:11:24,833 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:11:24,833 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 09:11:24,833 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 09:12:27,618 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 09:12:27,618 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 09:12:29,391 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:12:29,391 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:14:35,246 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-16 09:14:35,246 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-16 09:14:35,248 - root - INFO - Accuracy: 0.6482480230288191
+2024-11-16 09:14:35,248 - root - INFO - Accuracy: 0.6482480230288191
+2024-11-16 09:14:35,249 - root - INFO - Precision: 0.16937197246536925
+2024-11-16 09:14:35,249 - root - INFO - Precision: 0.16937197246536925
+2024-11-16 09:14:35,250 - root - INFO - Recall: 0.6992982456140351
+2024-11-16 09:14:35,250 - root - INFO - Recall: 0.6992982456140351
+2024-11-16 09:14:35,253 - root - INFO - F1 Score: 0.27269617568584525
+2024-11-16 09:14:35,253 - root - INFO - F1 Score: 0.27269617568584525
+2024-11-16 09:14:35,255 - root - INFO - ROC AUC: 0.7580767576706717
+2024-11-16 09:14:35,255 - root - INFO - ROC AUC: 0.7580767576706717
+2024-11-16 09:14:35,259 - root - INFO - Confusion Matrix: 
+[[17599  9774]
+ [  857  1993]]
+2024-11-16 09:14:35,259 - root - INFO - Confusion Matrix: 
+[[17599  9774]
+ [  857  1993]]
+2024-11-16 09:14:35,326 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-16 09:14:35,326 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-16 09:14:35,328 - root - INFO - Accuracy: 0.9067928398901499
+2024-11-16 09:14:35,328 - root - INFO - Accuracy: 0.9067928398901499
+2024-11-16 09:14:35,330 - root - INFO - Precision: 0.5052001260636622
+2024-11-16 09:14:35,330 - root - INFO - Precision: 0.5052001260636622
+2024-11-16 09:14:35,331 - root - INFO - Recall: 0.5624561403508772
+2024-11-16 09:14:35,331 - root - INFO - Recall: 0.5624561403508772
+2024-11-16 09:14:35,333 - root - INFO - F1 Score: 0.5322928773036693
+2024-11-16 09:14:35,333 - root - INFO - F1 Score: 0.5322928773036693
+2024-11-16 09:14:35,336 - root - INFO - ROC AUC: 0.7525501759000577
+2024-11-16 09:14:35,336 - root - INFO - ROC AUC: 0.7525501759000577
+2024-11-16 09:14:35,338 - root - INFO - Confusion Matrix: 
+[[25803  1570]
+ [ 1247  1603]]
+2024-11-16 09:14:35,338 - root - INFO - Confusion Matrix: 
+[[25803  1570]
+ [ 1247  1603]]
+2024-11-16 09:14:37,010 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-16 09:14:37,010 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-16 09:14:37,010 - root - INFO - Accuracy: 0.956390828177216
+2024-11-16 09:14:37,010 - root - INFO - Accuracy: 0.956390828177216
+2024-11-16 09:14:37,010 - root - INFO - Precision: 0.999348109517601
+2024-11-16 09:14:37,010 - root - INFO - Precision: 0.999348109517601
+2024-11-16 09:14:37,026 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 09:14:37,026 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 09:14:37,026 - root - INFO - F1 Score: 0.6993613138686131
+2024-11-16 09:14:37,026 - root - INFO - F1 Score: 0.6993613138686131
+2024-11-16 09:14:37,026 - root - INFO - ROC AUC: 0.7693871345883797
+2024-11-16 09:14:37,026 - root - INFO - ROC AUC: 0.7693871345883797
+2024-11-16 09:14:37,026 - root - INFO - Confusion Matrix: 
+[[27372     1]
+ [ 1317  1533]]
+2024-11-16 09:14:37,026 - root - INFO - Confusion Matrix: 
+[[27372     1]
+ [ 1317  1533]]
+2024-11-16 09:14:37,211 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-16 09:14:37,211 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-16 09:14:37,211 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 09:14:37,211 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 09:14:37,211 - root - INFO - Precision: 1.0
+2024-11-16 09:14:37,211 - root - INFO - Precision: 1.0
+2024-11-16 09:14:37,211 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 09:14:37,211 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 09:14:37,211 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 09:14:37,211 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 09:14:37,211 - root - INFO - ROC AUC: 0.7743449397248281
+2024-11-16 09:14:37,211 - root - INFO - ROC AUC: 0.7743449397248281
+2024-11-16 09:14:37,211 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 09:14:37,211 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 09:39:27,873 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 09:39:27,873 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 09:39:31,763 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 09:39:31,763 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 09:39:31,827 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:39:31,827 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:39:31,827 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 09:39:31,827 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 09:40:22,976 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:40:22,976 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:40:23,102 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:40:23,102 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:42:03,874 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 09:42:03,874 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 09:42:08,093 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 09:42:08,093 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 09:42:08,164 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:42:08,164 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:42:08,167 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 09:42:08,167 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 09:43:07,796 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:43:07,796 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 09:43:07,925 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 09:43:07,925 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:17:06,315 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:17:06,315 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:17:07,188 - root - INFO - Encoded column: device_id
+2024-11-16 10:17:07,188 - root - INFO - Encoded column: device_id
+2024-11-16 10:17:07,236 - root - INFO - Encoded column: source
+2024-11-16 10:17:07,236 - root - INFO - Encoded column: source
+2024-11-16 10:17:07,272 - root - INFO - Encoded column: browser
+2024-11-16 10:17:07,272 - root - INFO - Encoded column: browser
+2024-11-16 10:17:07,300 - root - INFO - Encoded column: sex
+2024-11-16 10:17:07,300 - root - INFO - Encoded column: sex
+2024-11-16 10:17:07,361 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:17:07,361 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:17:07,422 - root - INFO - Standardized the data.
+2024-11-16 10:17:07,422 - root - INFO - Standardized the data.
+2024-11-16 10:23:28,943 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:23:28,943 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:23:29,914 - root - INFO - Encoded column: device_id
+2024-11-16 10:23:29,914 - root - INFO - Encoded column: device_id
+2024-11-16 10:23:29,949 - root - INFO - Encoded column: source
+2024-11-16 10:23:29,949 - root - INFO - Encoded column: source
+2024-11-16 10:23:29,984 - root - INFO - Encoded column: browser
+2024-11-16 10:23:29,984 - root - INFO - Encoded column: browser
+2024-11-16 10:23:30,014 - root - INFO - Encoded column: sex
+2024-11-16 10:23:30,014 - root - INFO - Encoded column: sex
+2024-11-16 10:23:30,068 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:23:30,068 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:23:30,133 - root - INFO - Standardized the data.
+2024-11-16 10:23:30,133 - root - INFO - Standardized the data.
+2024-11-16 10:23:33,808 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:23:33,808 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:23:33,911 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:23:33,911 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:23:33,956 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:23:33,956 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:23:33,956 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:23:33,956 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:24:34,840 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 10:24:34,840 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 10:24:36,306 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:24:36,306 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:48:27,495 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:48:27,495 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:48:27,504 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:48:27,504 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:48:27,528 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:48:27,528 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:48:27,529 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:48:27,529 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:48:27,619 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:48:27,619 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:48:27,624 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:48:27,624 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:49:00,637 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:49:00,637 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:49:00,654 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:49:00,654 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:49:00,671 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:49:00,671 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:49:00,671 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:49:00,671 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:49:00,738 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:49:00,738 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:49:00,755 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:49:00,755 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:50:21,920 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:50:21,920 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:50:22,784 - root - INFO - Encoded column: device_id
+2024-11-16 10:50:22,784 - root - INFO - Encoded column: device_id
+2024-11-16 10:50:22,817 - root - INFO - Encoded column: source
+2024-11-16 10:50:22,817 - root - INFO - Encoded column: source
+2024-11-16 10:50:22,851 - root - INFO - Encoded column: browser
+2024-11-16 10:50:22,851 - root - INFO - Encoded column: browser
+2024-11-16 10:50:22,889 - root - INFO - Encoded column: sex
+2024-11-16 10:50:22,889 - root - INFO - Encoded column: sex
+2024-11-16 10:50:22,934 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:50:22,934 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:50:23,005 - root - INFO - Standardized the data.
+2024-11-16 10:50:23,005 - root - INFO - Standardized the data.
+2024-11-16 10:50:23,039 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:50:23,039 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:50:23,155 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:50:23,155 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:50:23,213 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:50:23,213 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:50:23,215 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:50:23,215 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:50:32,670 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:50:32,670 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 10:50:32,686 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:50:32,686 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:50:32,703 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:50:32,703 - matplotlib - DEBUG - interactive is False
+2024-11-16 10:50:32,703 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:50:32,703 - matplotlib - DEBUG - platform is win32
+2024-11-16 10:50:32,770 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:50:32,770 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 10:50:32,770 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:50:32,770 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 10:50:33,846 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:50:33,846 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-16 10:50:34,731 - root - INFO - Encoded column: device_id
+2024-11-16 10:50:34,731 - root - INFO - Encoded column: device_id
+2024-11-16 10:50:34,761 - root - INFO - Encoded column: source
+2024-11-16 10:50:34,761 - root - INFO - Encoded column: source
+2024-11-16 10:50:34,791 - root - INFO - Encoded column: browser
+2024-11-16 10:50:34,791 - root - INFO - Encoded column: browser
+2024-11-16 10:50:34,830 - root - INFO - Encoded column: sex
+2024-11-16 10:50:34,830 - root - INFO - Encoded column: sex
+2024-11-16 10:50:34,864 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:50:34,864 - root - INFO - Data successfully split into train and test sets.
+2024-11-16 10:50:34,917 - root - INFO - Standardized the data.
+2024-11-16 10:50:34,917 - root - INFO - Standardized the data.
+2024-11-16 10:50:34,949 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:50:34,949 - root - INFO - Training model: LogisticRegression.
+2024-11-16 10:50:35,060 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:50:35,060 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-16 10:50:35,096 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:50:35,096 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:50:35,109 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:50:35,109 - root - INFO - Training model: RandomForestClassifier.
+2024-11-16 10:51:40,228 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 10:51:40,228 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-16 10:51:42,178 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:51:42,178 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:51:42,189 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 10:51:42,189 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-16 10:51:46,515 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 10:51:46,515 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-16 10:51:46,583 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:51:46,583 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:51:46,586 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 10:51:46,586 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-16 10:52:35,717 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 10:52:35,717 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-16 10:52:35,847 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:52:35,847 - root - INFO - Model training and evaluation completed successfully.
+2024-11-16 10:52:35,886 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-16 10:52:35,886 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-16 10:52:35,901 - root - INFO - Accuracy: 0.6482480230288191
+2024-11-16 10:52:35,901 - root - INFO - Accuracy: 0.6482480230288191
+2024-11-16 10:52:35,901 - root - INFO - Precision: 0.16937197246536925
+2024-11-16 10:52:35,901 - root - INFO - Precision: 0.16937197246536925
+2024-11-16 10:52:35,901 - root - INFO - Recall: 0.6992982456140351
+2024-11-16 10:52:35,901 - root - INFO - Recall: 0.6992982456140351
+2024-11-16 10:52:35,901 - root - INFO - F1 Score: 0.27269617568584525
+2024-11-16 10:52:35,901 - root - INFO - F1 Score: 0.27269617568584525
+2024-11-16 10:52:35,901 - root - INFO - ROC AUC: 0.7580767576706717
+2024-11-16 10:52:35,901 - root - INFO - ROC AUC: 0.7580767576706717
+2024-11-16 10:52:35,917 - root - INFO - Confusion Matrix: 
+[[17599  9774]
+ [  857  1993]]
+2024-11-16 10:52:35,917 - root - INFO - Confusion Matrix: 
+[[17599  9774]
+ [  857  1993]]
+2024-11-16 10:52:35,964 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-16 10:52:35,964 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-16 10:52:35,964 - root - INFO - Accuracy: 0.907620024484664
+2024-11-16 10:52:35,964 - root - INFO - Accuracy: 0.907620024484664
+2024-11-16 10:52:35,964 - root - INFO - Precision: 0.5091656131479141
+2024-11-16 10:52:35,964 - root - INFO - Precision: 0.5091656131479141
+2024-11-16 10:52:35,964 - root - INFO - Recall: 0.5652631578947368
+2024-11-16 10:52:35,964 - root - INFO - Recall: 0.5652631578947368
+2024-11-16 10:52:35,979 - root - INFO - F1 Score: 0.5357499168606584
+2024-11-16 10:52:35,979 - root - INFO - F1 Score: 0.5357499168606584
+2024-11-16 10:52:35,979 - root - INFO - ROC AUC: 0.7542642096418483
+2024-11-16 10:52:35,979 - root - INFO - ROC AUC: 0.7542642096418483
+2024-11-16 10:52:35,979 - root - INFO - Confusion Matrix: 
+[[25820  1553]
+ [ 1239  1611]]
+2024-11-16 10:52:35,979 - root - INFO - Confusion Matrix: 
+[[25820  1553]
+ [ 1239  1611]]
+2024-11-16 10:52:37,663 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-16 10:52:37,663 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-16 10:52:37,664 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 10:52:37,664 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 10:52:37,666 - root - INFO - Precision: 1.0
+2024-11-16 10:52:37,666 - root - INFO - Precision: 1.0
+2024-11-16 10:52:37,668 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 10:52:37,668 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 10:52:37,669 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 10:52:37,669 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 10:52:37,671 - root - INFO - ROC AUC: 0.7684386586603139
+2024-11-16 10:52:37,671 - root - INFO - ROC AUC: 0.7684386586603139
+2024-11-16 10:52:37,672 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 10:52:37,672 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 10:52:37,787 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-16 10:52:37,787 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-16 10:52:37,792 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 10:52:37,792 - root - INFO - Accuracy: 0.9564239155609966
+2024-11-16 10:52:37,793 - root - INFO - Precision: 1.0
+2024-11-16 10:52:37,793 - root - INFO - Precision: 1.0
+2024-11-16 10:52:37,795 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 10:52:37,795 - root - INFO - Recall: 0.5378947368421053
+2024-11-16 10:52:37,796 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 10:52:37,796 - root - INFO - F1 Score: 0.6995208761122519
+2024-11-16 10:52:37,798 - root - INFO - ROC AUC: 0.7743352618568303
+2024-11-16 10:52:37,798 - root - INFO - ROC AUC: 0.7743352618568303
+2024-11-16 10:52:37,799 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 10:52:37,799 - root - INFO - Confusion Matrix: 
+[[27373     0]
+ [ 1317  1533]]
+2024-11-16 10:54:11,028 - shap - WARNING - Using 120889 background data samples could cause slower run times. Consider using shap.sample(data, K) or shap.kmeans(data, K) to summarize the background as K samples.
+2024-11-16 10:54:11,028 - shap - WARNING - Using 120889 background data samples could cause slower run times. Consider using shap.sample(data, K) or shap.kmeans(data, K) to summarize the background as K samples.
+2024-11-16 10:54:29,048 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 10:54:29,048 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 10:54:29,048 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 10:54:29,048 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 10:54:29,048 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 10:54:29,048 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 10:54:29,048 - shap - DEBUG - self.M = 9
+2024-11-16 10:54:29,048 - shap - DEBUG - self.M = 9
+2024-11-16 10:54:29,048 - shap - DEBUG - subset_size = 1
+2024-11-16 10:54:29,048 - shap - DEBUG - subset_size = 1
+2024-11-16 10:54:29,048 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 10:54:29,048 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 10:54:29,048 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 10:54:29,048 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 10:54:29,048 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 10:54:29,048 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 10:54:29,182 - shap - DEBUG - subset_size = 2
+2024-11-16 10:54:29,182 - shap - DEBUG - subset_size = 2
+2024-11-16 10:54:29,182 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 10:54:29,182 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 10:54:29,182 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 10:54:29,182 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 10:54:29,182 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 10:54:29,182 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 10:54:29,616 - shap - DEBUG - subset_size = 3
+2024-11-16 10:54:29,616 - shap - DEBUG - subset_size = 3
+2024-11-16 10:54:29,616 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 10:54:29,616 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 10:54:29,616 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 10:54:29,616 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 10:54:29,616 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 10:54:29,616 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 10:54:30,623 - shap - DEBUG - subset_size = 4
+2024-11-16 10:54:30,623 - shap - DEBUG - subset_size = 4
+2024-11-16 10:54:30,623 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 10:54:30,623 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 10:54:30,623 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 10:54:30,623 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 10:54:30,623 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 10:54:30,623 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 10:54:32,123 - shap - INFO - num_full_subsets = 4
+2024-11-16 10:54:32,123 - shap - INFO - num_full_subsets = 4
+2024-11-16 10:54:32,139 - shap - DEBUG - samples_left = 0
+2024-11-16 10:54:32,139 - shap - DEBUG - samples_left = 0
+2024-11-16 10:57:13,316 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 10:57:13,316 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 10:57:13,316 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 10:57:13,316 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 10:57:13,332 - shap - DEBUG - np.sum(w) = np.float64(0.0026950562221022102)
+2024-11-16 10:57:13,332 - shap - DEBUG - np.sum(w) = np.float64(0.0026950562221022102)
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.23517809260045364
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.23517809260045364
+2024-11-16 10:57:13,332 - shap - DEBUG - self.fx = 0.8020615481786035
+2024-11-16 10:57:13,332 - shap - DEBUG - self.fx = 0.8020615481786035
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fx) = 0.8020615481786035
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fx) = 0.8020615481786035
+2024-11-16 10:57:13,332 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 10:57:13,332 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 10:57:13,332 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 10:57:13,332 - shap - INFO - phi = array([ 7.29921760e-04, -2.35778344e-04,  3.60621584e-04, -9.30823425e-07,
+        2.00153212e-03, -4.54948722e-03,  3.13262739e-04,  4.07591440e-03,
+        2.32483036e-01])
+2024-11-16 10:57:13,332 - shap - INFO - phi = array([ 7.29921760e-04, -2.35778344e-04,  3.60621584e-04, -9.30823425e-07,
+        2.00153212e-03, -4.54948722e-03,  3.13262739e-04,  4.07591440e-03,
+        2.32483036e-01])
+2024-11-16 10:57:13,348 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 10:57:13,348 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 10:57:13,348 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 10:57:13,348 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 10:57:13,348 - shap - DEBUG - np.sum(w) = np.float64(-0.0026950562221083134)
+2024-11-16 10:57:13,348 - shap - DEBUG - np.sum(w) = np.float64(-0.0026950562221083134)
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.23517809260045364
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.23517809260045364
+2024-11-16 10:57:13,348 - shap - DEBUG - self.fx = 0.19793845182139652
+2024-11-16 10:57:13,348 - shap - DEBUG - self.fx = 0.19793845182139652
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fx) = 0.19793845182139652
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fx) = 0.19793845182139652
+2024-11-16 10:57:13,348 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 10:57:13,348 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 10:57:13,348 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 10:57:13,348 - shap - INFO - phi = array([-7.29921760e-04,  2.35778344e-04, -3.60621584e-04,  9.30823399e-07,
+       -2.00153212e-03,  4.54948722e-03, -3.13262739e-04, -4.07591440e-03,
+       -2.32483036e-01])
+2024-11-16 10:57:13,348 - shap - INFO - phi = array([-7.29921760e-04,  2.35778344e-04, -3.60621584e-04,  9.30823399e-07,
+       -2.00153212e-03,  4.54948722e-03, -3.13262739e-04, -4.07591440e-03,
+       -2.32483036e-01])
+2024-11-16 10:57:31,040 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 10:57:31,040 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 10:57:31,040 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 10:57:31,040 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 10:57:31,040 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 10:57:31,040 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 10:57:31,040 - shap - DEBUG - self.M = 9
+2024-11-16 10:57:31,040 - shap - DEBUG - self.M = 9
+2024-11-16 10:57:31,040 - shap - DEBUG - subset_size = 1
+2024-11-16 10:57:31,040 - shap - DEBUG - subset_size = 1
+2024-11-16 10:57:31,040 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 10:57:31,040 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 10:57:31,040 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 10:57:31,040 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 10:57:31,040 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 10:57:31,040 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 10:57:31,212 - shap - DEBUG - subset_size = 2
+2024-11-16 10:57:31,212 - shap - DEBUG - subset_size = 2
+2024-11-16 10:57:31,212 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 10:57:31,212 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 10:57:31,212 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 10:57:31,212 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 10:57:31,212 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 10:57:31,212 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 10:57:31,716 - shap - DEBUG - subset_size = 3
+2024-11-16 10:57:31,716 - shap - DEBUG - subset_size = 3
+2024-11-16 10:57:31,716 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 10:57:31,716 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 10:57:31,716 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 10:57:31,716 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 10:57:31,716 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 10:57:31,716 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 10:57:32,705 - shap - DEBUG - subset_size = 4
+2024-11-16 10:57:32,705 - shap - DEBUG - subset_size = 4
+2024-11-16 10:57:32,705 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 10:57:32,705 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 10:57:32,705 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 10:57:32,705 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 10:57:32,705 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 10:57:32,705 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 10:57:34,153 - shap - INFO - num_full_subsets = 4
+2024-11-16 10:57:34,153 - shap - INFO - num_full_subsets = 4
+2024-11-16 10:57:34,164 - shap - DEBUG - samples_left = 0
+2024-11-16 10:57:34,164 - shap - DEBUG - samples_left = 0
+2024-11-16 11:00:15,648 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:00:15,648 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:00:15,648 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:00:15,648 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:00:15,664 - shap - DEBUG - np.sum(w) = np.float64(0.009270809851884875)
+2024-11-16 11:00:15,664 - shap - DEBUG - np.sum(w) = np.float64(0.009270809851884875)
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.19725659548899233
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.19725659548899233
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fx = 0.36962686008915757
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fx = 0.36962686008915757
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) = 0.36962686008915757
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) = 0.36962686008915757
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 11:00:15,664 - shap - INFO - phi = array([ 0.00121773,  0.00083096, -0.00047616,  0.00570251,  0.00990886,
+       -0.00548633, -0.00122713, -0.00119962, -0.20652741])
+2024-11-16 11:00:15,664 - shap - INFO - phi = array([ 0.00121773,  0.00083096, -0.00047616,  0.00570251,  0.00990886,
+       -0.00548633, -0.00122713, -0.00119962, -0.20652741])
+2024-11-16 11:00:15,664 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:00:15,664 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:00:15,664 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:00:15,664 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:00:15,664 - shap - DEBUG - np.sum(w) = np.float64(-0.009270809851936297)
+2024-11-16 11:00:15,664 - shap - DEBUG - np.sum(w) = np.float64(-0.009270809851936297)
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.19725659548899227
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.19725659548899227
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fx = 0.6303731399108424
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fx = 0.6303731399108424
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) = 0.6303731399108424
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fx) = 0.6303731399108424
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 11:00:15,664 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 11:00:15,664 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 11:00:15,664 - shap - INFO - phi = array([-0.00121773, -0.00083096,  0.00047616, -0.00570251, -0.00990886,
+        0.00548633,  0.00122713,  0.00119962,  0.20652741])
+2024-11-16 11:00:15,664 - shap - INFO - phi = array([-0.00121773, -0.00083096,  0.00047616, -0.00570251, -0.00990886,
+        0.00548633,  0.00122713,  0.00119962,  0.20652741])
+2024-11-16 11:00:37,003 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 11:00:37,003 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 11:00:37,003 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 11:00:37,003 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 11:00:37,003 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 11:00:37,003 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 11:00:37,003 - shap - DEBUG - self.M = 9
+2024-11-16 11:00:37,003 - shap - DEBUG - self.M = 9
+2024-11-16 11:00:37,010 - shap - DEBUG - subset_size = 1
+2024-11-16 11:00:37,010 - shap - DEBUG - subset_size = 1
+2024-11-16 11:00:37,010 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 11:00:37,010 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 11:00:37,010 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 11:00:37,010 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 11:00:37,010 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 11:00:37,010 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 11:00:37,158 - shap - DEBUG - subset_size = 2
+2024-11-16 11:00:37,158 - shap - DEBUG - subset_size = 2
+2024-11-16 11:00:37,158 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 11:00:37,158 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 11:00:37,158 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 11:00:37,158 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 11:00:37,158 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 11:00:37,158 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 11:00:37,876 - shap - DEBUG - subset_size = 3
+2024-11-16 11:00:37,876 - shap - DEBUG - subset_size = 3
+2024-11-16 11:00:37,877 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 11:00:37,877 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 11:00:37,877 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 11:00:37,877 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 11:00:37,877 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 11:00:37,877 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 11:00:39,107 - shap - DEBUG - subset_size = 4
+2024-11-16 11:00:39,107 - shap - DEBUG - subset_size = 4
+2024-11-16 11:00:39,107 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 11:00:39,107 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 11:00:39,107 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 11:00:39,107 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 11:00:39,107 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 11:00:39,107 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 11:00:41,496 - shap - INFO - num_full_subsets = 4
+2024-11-16 11:00:41,496 - shap - INFO - num_full_subsets = 4
+2024-11-16 11:00:41,512 - shap - DEBUG - samples_left = 0
+2024-11-16 11:00:41,512 - shap - DEBUG - samples_left = 0
+2024-11-16 11:03:36,434 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:03:36,434 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:03:36,449 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:03:36,449 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:03:36,451 - shap - DEBUG - np.sum(w) = np.float64(-0.0045598656711653114)
+2024-11-16 11:03:36,451 - shap - DEBUG - np.sum(w) = np.float64(-0.0045598656711653114)
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.07872667057961036
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.07872667057961036
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fx = 0.6456101261577603
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fx = 0.6456101261577603
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) = 0.6456101261577603
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) = 0.6456101261577603
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fnull = 0.5668834555781499
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fnull) = 0.5668834555781499
+2024-11-16 11:03:36,451 - shap - INFO - phi = array([ 0.0003639 ,  0.00374542, -0.00086529, -0.00569469, -0.00513181,
+        0.00763814, -0.00342743, -0.0011881 ,  0.08328654])
+2024-11-16 11:03:36,451 - shap - INFO - phi = array([ 0.0003639 ,  0.00374542, -0.00086529, -0.00569469, -0.00513181,
+        0.00763814, -0.00342743, -0.0011881 ,  0.08328654])
+2024-11-16 11:03:36,451 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:03:36,451 - shap - DEBUG - fraction_evaluated = 1.0
+2024-11-16 11:03:36,451 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:03:36,451 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-16 11:03:36,451 - shap - DEBUG - np.sum(w) = np.float64(0.004559865671189471)
+2024-11-16 11:03:36,451 - shap - DEBUG - np.sum(w) = np.float64(0.004559865671189471)
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.07872667057961036
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.07872667057961036
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fx = 0.3543898738422398
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fx = 0.3543898738422398
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) = 0.3543898738422398
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fx) = 0.3543898738422398
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 11:03:36,451 - shap - DEBUG - self.fnull = 0.43311654442185016
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 11:03:36,451 - shap - DEBUG - self.link(self.fnull) = 0.43311654442185016
+2024-11-16 11:03:36,451 - shap - INFO - phi = array([-0.0003639 , -0.00374542,  0.00086529,  0.00569469,  0.00513181,
+       -0.00763814,  0.00342743,  0.0011881 , -0.08328654])
+2024-11-16 11:03:36,451 - shap - INFO - phi = array([-0.0003639 , -0.00374542,  0.00086529,  0.00569469,  0.00513181,
+       -0.00763814,  0.00342743,  0.0011881 , -0.08328654])
+2024-11-16 11:04:03,343 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 11:04:03,343 - shap - DEBUG - weight_vector = array([0.41392904, 0.23653088, 0.18396846, 0.16557162])
+2024-11-16 11:04:03,352 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 11:04:03,352 - shap - DEBUG - num_subset_sizes = 4
+2024-11-16 11:04:03,352 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 11:04:03,352 - shap - DEBUG - num_paired_subset_sizes = 4
+2024-11-16 11:04:03,352 - shap - DEBUG - self.M = 9
+2024-11-16 11:04:03,352 - shap - DEBUG - self.M = 9
+2024-11-16 11:04:03,356 - shap - DEBUG - subset_size = 1
+2024-11-16 11:04:03,356 - shap - DEBUG - subset_size = 1
+2024-11-16 11:04:03,356 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 11:04:03,356 - shap - DEBUG - nsubsets = np.float64(18.0)
+2024-11-16 11:04:03,356 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 11:04:03,356 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 211.10381077529567
+2024-11-16 11:04:03,357 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 11:04:03,357 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 11.727989487516426
+2024-11-16 11:04:03,501 - shap - DEBUG - subset_size = 2
+2024-11-16 11:04:03,501 - shap - DEBUG - subset_size = 2
+2024-11-16 11:04:03,502 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 11:04:03,502 - shap - DEBUG - nsubsets = np.float64(72.0)
+2024-11-16 11:04:03,502 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 11:04:03,502 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 198.5650224215247
+2024-11-16 11:04:03,502 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 11:04:03,502 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 2.7578475336322876
+2024-11-16 11:04:04,117 - shap - DEBUG - subset_size = 3
+2024-11-16 11:04:04,117 - shap - DEBUG - subset_size = 3
+2024-11-16 11:04:04,117 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 11:04:04,117 - shap - DEBUG - nsubsets = np.float64(168.0)
+2024-11-16 11:04:04,118 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 11:04:04,118 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 221.0526315789474
+2024-11-16 11:04:04,118 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 11:04:04,118 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.3157894736842106
+2024-11-16 11:04:05,646 - shap - DEBUG - subset_size = 4
+2024-11-16 11:04:05,646 - shap - DEBUG - subset_size = 4
+2024-11-16 11:04:05,646 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 11:04:05,646 - shap - DEBUG - nsubsets = np.float64(252.0)
+2024-11-16 11:04:05,646 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 11:04:05,646 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 252.0000000000001
+2024-11-16 11:04:05,647 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 11:04:05,647 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.0000000000000004
+2024-11-16 11:04:07,587 - shap - INFO - num_full_subsets = 4
+2024-11-16 11:04:07,587 - shap - INFO - num_full_subsets = 4
+2024-11-16 11:04:07,619 - shap - DEBUG - samples_left = 0
+2024-11-16 11:04:07,619 - shap - DEBUG - samples_left = 0
+2024-11-16 11:05:19,474 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 11:05:19,474 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 11:05:19,490 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:05:19,490 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:05:19,562 - matplotlib - DEBUG - interactive is False
+2024-11-16 11:05:19,562 - matplotlib - DEBUG - interactive is False
+2024-11-16 11:05:19,562 - matplotlib - DEBUG - platform is win32
+2024-11-16 11:05:19,562 - matplotlib - DEBUG - platform is win32
+2024-11-16 11:05:19,659 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:05:19,659 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:05:19,659 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 11:05:19,659 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 11:06:00,661 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 11:06:00,661 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-16 11:06:00,661 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:06:00,661 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:06:00,677 - matplotlib - DEBUG - interactive is False
+2024-11-16 11:06:00,677 - matplotlib - DEBUG - interactive is False
+2024-11-16 11:06:00,677 - matplotlib - DEBUG - platform is win32
+2024-11-16 11:06:00,677 - matplotlib - DEBUG - platform is win32
+2024-11-16 11:06:00,762 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:06:00,762 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-16 11:06:00,762 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-16 11:06:00,762 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json

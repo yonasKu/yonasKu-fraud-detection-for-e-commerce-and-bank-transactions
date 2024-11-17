@@ -1,5 +1,4 @@
 # fraud_detection/api/endpoints.py
-
 import joblib
 import pandas as pd
 import logging
@@ -13,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 # Load the credit fraud detection model
 def load_credit_fraud_model():
     # Corrected model path based on folder structure
-    credit_fraud_model_path = os.path.join('models', 'random_forest_model.pkl')
+    credit_fraud_model_path = os.path.join('models', 'credit_gradient_boosting_model.pkl')
     try:
         credit_fraud_model = joblib.load(credit_fraud_model_path)
         logger.info("Credit Fraud Model loaded successfully.")
@@ -25,7 +24,7 @@ def load_credit_fraud_model():
 # Load the general fraud detection model
 def load_general_fraud_model():
     # Corrected model path based on folder structure
-    general_fraud_model_path = os.path.join('models', 'random_forest_model.pkl')
+    general_fraud_model_path = os.path.join('models', 'gradient_boosting_model.pkl')
     try:
         general_fraud_model = joblib.load(general_fraud_model_path)
         logger.info("General Fraud Model loaded successfully.")
@@ -45,11 +44,16 @@ general_fraud_model_features = [
 credit_fraud_model_features = [f'V{i}' for i in range(1, 29)] + ['Time', 'Amount']
 
 # Helper function to ensure input data has required columns
-def validate_input(data, model):
-    if model is None:
-        return False, "Model is not loaded."
+def validate_input(data, model_type):
+    # Set the required columns based on the model type
+    if model_type == 'credit_fraud':
+        required_columns = credit_fraud_model_features
+    elif model_type == 'general_fraud':
+        required_columns = general_fraud_model_features
+    else:
+        return False, "Invalid model type."
     
-    required_columns = credit_fraud_model_features if model == credit_fraud_model else general_fraud_model_features
+    # Check if all required columns are present in the data
     if set(required_columns).issubset(data.keys()):
         return True, None
     else:
@@ -67,7 +71,7 @@ def predict_credit_fraud():
     data = request.get_json()
 
     # Validate input data
-    is_valid, error_msg = validate_input(data, credit_fraud_model)
+    is_valid, error_msg = validate_input(data, 'credit_fraud')
     if not is_valid:
         return jsonify({'error': error_msg}), 400
 
@@ -96,7 +100,7 @@ def predict_general_fraud():
     data = request.get_json()
 
     # Validate input data
-    is_valid, error_msg = validate_input(data, general_fraud_model)
+    is_valid, error_msg = validate_input(data, 'general_fraud')
     if not is_valid:
         return jsonify({'error': error_msg}), 400
 

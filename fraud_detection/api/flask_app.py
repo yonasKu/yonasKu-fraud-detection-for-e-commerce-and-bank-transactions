@@ -1,8 +1,13 @@
-# fraud_detection/api/flask_app.py
-
+import sys
+import os
 from flask import Flask
-from fraud_detection.api.endpoints import predict_credit_fraud, predict_general_fraud
 import logging
+
+# Add the fraud_detection root directory to the Python path
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))  # Go two levels up
+sys.path.append(project_root)
+
+from fraud_detection.api.endpoints import predict_credit_fraud, predict_general_fraud
 
 # Initialize the Flask application
 app = Flask(__name__)

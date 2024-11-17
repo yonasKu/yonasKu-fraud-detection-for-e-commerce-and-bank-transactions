@@ -1,0 +1,44 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Unit Tests
+        run: pytest tests/
+
+      - name: Code Linting
+        run: flake8 fraud_detection/
+
+  # Placeholder for later
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip Build for Now
+        run: echo "Build stage is not ready yet."
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skip Deploy for Now
+        run: echo "Deployment stage is not ready yet."

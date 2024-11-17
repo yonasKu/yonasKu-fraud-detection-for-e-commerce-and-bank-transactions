@@ -25,12 +25,12 @@ def prepare_data(data_path, target_column, test_size=0.2, scale_data=True):
         df = pd.read_csv(data_path)
         logger.info(f"Loaded data from {data_path}")
 
-        # Convert timestamp columns to datetime
-        df['signup_time'] = pd.to_datetime(df['signup_time'])
-        df['purchase_time'] = pd.to_datetime(df['purchase_time'])
+        # # Convert timestamp columns to datetime
+        # df['signup_time'] = pd.to_datetime(df['signup_time'])
+        # df['purchase_time'] = pd.to_datetime(df['purchase_time'])
 
-        # Calculate time difference between signup and purchase (in seconds)
-        df['time_diff'] = (df['purchase_time'] - df['signup_time']).dt.total_seconds()
+        # # Calculate time difference between signup and purchase (in seconds)
+        # df['time_diff'] = (df['purchase_time'] - df['signup_time']).dt.total_seconds()
 
         # Drop the original timestamp columns
         df.drop(columns=['signup_time', 'purchase_time'], inplace=True)
@@ -64,6 +64,51 @@ def prepare_data(data_path, target_column, test_size=0.2, scale_data=True):
         logger.error(f"Error preparing data: {str(e)}")
         raise
 
+
+def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data=True):
+    """
+    Prepare credit card fraud data for training and testing.
+    
+    Parameters:
+    - data_path (str): Path to the dataset file (CSV).
+    - target_column (str): Name of the target column indicating fraud.
+    - test_size (float): Fraction of data to reserve for testing.
+    - scale_data (bool): Whether to standardize features.
+    
+    Returns:
+    - dict: Dictionary containing training and testing sets ('X_train', 'X_test', 'y_train', 'y_test').
+    """
+    try:
+        # Load the dataset
+        df = pd.read_csv(data_path)
+        logger.info(f"Loaded data from {data_path}")
+
+        # Check for missing values
+        if df.isnull().sum().sum() > 0:
+            logger.warning("Dataset contains missing values. Filling with mean values.")
+            df.fillna(df.mean(), inplace=True)
+
+        # Separate features (X) and target (y)
+        X = df.drop(columns=[target_column])  # Features
+        y = df[target_column]  # Target
+
+        # Split into training and testing sets
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+        logger.info("Data successfully split into train and test sets.")
+
+        # Scale the data if needed
+        if scale_data:
+            scaler = StandardScaler()
+            X_train = scaler.fit_transform(X_train)
+            X_test = scaler.transform(X_test)
+            logger.info("Standardized the data.")
+
+        # Return the prepared data
+        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test}
+
+    except Exception as e:
+        logger.error(f"Error preparing data: {str(e)}")
+        raise
 
 def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path):
     """Train and save a model to disk."""

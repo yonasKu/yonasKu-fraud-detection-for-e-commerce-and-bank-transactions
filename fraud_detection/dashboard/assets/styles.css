@@ -1,0 +1,38 @@
+/* Container for the entire dashboard */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Row layout for grouping graphs */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* Card styling for individual graphs */
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Center align H1 title */
+h1 {
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Graph container to fill card */
+.card dcc.Graph {
+    height: 100%;
+}

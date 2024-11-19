@@ -5344,6 +5344,7 @@
 2024-11-17 19:05:14,401 - root - INFO - Exploratory Data Analysis (EDA) completed.
 2024-11-17 19:05:14,430 - root - INFO - Starting IP preprocessing...
 2024-11-17 19:05:16,473 - root - INFO - IP data preprocessing complete.
+<<<<<<< HEAD
 2024-11-19 12:42:27,320 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
 2024-11-19 12:42:27,320 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
 2024-11-19 12:42:27,528 - matplotlib - DEBUG - interactive is False
@@ -8012,3 +8013,5 @@
 2024-11-19 16:10:58,331 - root - INFO - Exploratory Data Analysis (EDA) completed.
 2024-11-19 16:10:58,351 - root - INFO - Starting IP preprocessing...
 2024-11-19 16:10:59,400 - root - INFO - IP data preprocessing complete.
+=======
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac

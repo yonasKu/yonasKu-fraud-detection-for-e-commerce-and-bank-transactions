@@ -3,6 +3,7 @@ import dash
 import plotly.express as px
 from flask import Flask
 import requests
+<<<<<<< HEAD
 import pandas as pd
 # Initialize Flask app
 server = Flask(__name__)
@@ -19,6 +20,12 @@ def get_country_from_ip(ip_address):
         return None
 
 
+=======
+
+# Initialize Flask app
+server = Flask(__name__)
+
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
 # Initialize Dash app
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
@@ -47,6 +54,13 @@ app.layout = html.Div([
         ], className="card"),
 
         html.Div([
+<<<<<<< HEAD
+=======
+            dcc.Graph(id='top-purchases'),
+        ], className="card"),
+
+        html.Div([
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
             dcc.Graph(id='fraud-by-source'),
         ], className="card"),
 
@@ -104,10 +118,17 @@ def update_sex_distribution_graph(input_value):
     response = requests.get(f'{API_URL}/sex_distribution')
     data = response.json()
 
+<<<<<<< HEAD
     fig = px.pie(
         data,
         names='sex',
         values='class',
+=======
+    fig = px.bar(
+        data,
+        x='sex',
+        y='class',
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
         labels={'class': 'Fraud Cases', 'sex': 'Sex'},
         title="Fraud Cases by Sex"
     )
@@ -131,6 +152,26 @@ def update_fraud_trends_graph(input_value):
     )
     return fig
 
+<<<<<<< HEAD
+=======
+# Callback to update 'top-purchases' graph
+@app.callback(
+    dash.dependencies.Output('top-purchases', 'figure'),
+    [dash.dependencies.Input('top-purchases', 'id')]
+)
+def update_top_purchases_graph(input_value):
+    response = requests.get(f'{API_URL}/top_purchases')
+    data = response.json()
+
+    fig = px.bar(
+        data,
+        x='user_id',
+        y='purchase_value',
+        labels={'user_id': 'User ID', 'purchase_value': 'Purchase Value'},
+        title="Top 10 Purchases by Users"
+    )
+    return fig
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
 
 # Callback to update 'fraud-by-source' graph
 @app.callback(
@@ -151,7 +192,10 @@ def update_fraud_by_source_graph(input_value):
     return fig
 
 # Callback to update 'geography' graph
+<<<<<<< HEAD
 
+=======
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
 @app.callback(
     dash.dependencies.Output('geography', 'figure'),
     [dash.dependencies.Input('geography', 'id')]
@@ -160,6 +204,7 @@ def update_geography_graph(input_value):
     response = requests.get(f'{API_URL}/geography')
     data = response.json()
 
+<<<<<<< HEAD
     # Convert the list to a pandas DataFrame
     df = pd.DataFrame(data)
 
@@ -185,6 +230,15 @@ def update_geography_graph(input_value):
         template='plotly_dark'  # Optional: Use dark theme
     )
 
+=======
+    fig = px.scatter(
+        data,
+        x='ip_address',
+        y='class',
+        labels={'ip_address': 'IP Address', 'class': 'Fraud Cases'},
+        title="Geographic Distribution of Fraud Cases"
+    )
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
     return fig
 
 # Callback to update 'devices-fraud' graph
@@ -196,6 +250,7 @@ def update_devices_fraud_graph(input_value):
     response = requests.get(f'{API_URL}/devices_fraud')
     data = response.json()
 
+<<<<<<< HEAD
     # Convert the list to a pandas DataFrame
     df = pd.DataFrame(data)
 
@@ -219,6 +274,16 @@ def update_devices_fraud_graph(input_value):
         orientation='h'
     )
 
+=======
+    fig = px.bar(
+        data,
+        x='device_id',
+        y='class',
+        color='browser',
+        labels={'device_id': 'Device ID', 'class': 'Fraud Cases', 'browser': 'Browser'},
+        title="Fraud Cases by Device and Browser"
+    )
+>>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
     return fig
 
 if __name__ == '__main__':

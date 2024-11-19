@@ -3,6 +3,7 @@ import dash
 import plotly.express as px
 from flask import Flask
 import requests
+import datetime
 import pandas as pd
 # Initialize Flask app
 server = Flask(__name__)
@@ -182,7 +183,6 @@ app.layout = html.Div([
     ])
 ])
 
-# Callback to display user input
 @app.callback(
     dash.dependencies.Output('output-display', 'children'),
     [dash.dependencies.Input('submit-button', 'n_clicks')],
@@ -201,20 +201,99 @@ app.layout = html.Div([
 )
 def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
     if n_clicks > 0:
-        return html.Div([
-            html.H4("Submitted Data:"),
-            html.P(f"User ID: {user_id}"),
-            html.P(f"Signup Time: {signup_time}"),
-            html.P(f"Purchase Time: {purchase_time}"),
-            html.P(f"Purchase Value: {purchase_value}"),
-            html.P(f"Device ID: {device_id}"),
-            html.P(f"Source: {source}"),
-            html.P(f"Browser: {browser}"),
-            html.P(f"Sex: {sex}"),
-            html.P(f"Age: {age}"),
-            html.P(f"IP Address: {ip_address}")
-        ])
+        # Convert inputs to required format
+        fraud_class = 0  # Assume it's unknown for prediction purposes
+        country = 171  # Example: Add logic to map IP to country if needed
+        transaction_frequency = 0.0  # Placeholder, adjust with logic if required
+        transaction_count = 0.0  # Placeholder
+        transaction_velocity = 0.0  # Placeholder
+
+        # Derive time-based features
+        signup_datetime = datetime.datetime.fromisoformat(signup_time)
+        purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
+        hour_of_day = purchase_datetime.hour
+        day_of_week = purchase_datetime.weekday()  # Monday is 0, Sunday is 6
+
+        # Map categorical values (source, browser, sex) to integers if needed
+        source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
+        browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
+        sex_map = {'M': 0, 'F': 1}
+
+        source = source_map.get(source, -1)
+        browser = browser_map.get(browser, -1)
+        sex = sex_map.get(sex, -1)
+
+        # Prepare data for the prediction API
+        data = {
+            "user_id": user_id,
+            "signup_time": signup_datetime.strftime('%Y-%m-%d %H:%M:%S'),
+            "purchase_time": purchase_datetime.strftime('%Y-%m-%d %H:%M:%S'),
+            "purchase_value": purchase_value,
+            "device_id": device_id,
+            "source": source,
+            "browser": browser,
+            "sex": sex,
+            "age": age,
+            "ip_address": ip_address,
+            "fraud_class": fraud_class,
+            "country": country,
+            "transaction_frequency": transaction_frequency,
+            "transaction_count": transaction_count,
+            "transaction_velocity": transaction_velocity,
+            "hour_of_day": hour_of_day,
+            "day_of_week": day_of_week
+        }
+
+        # Send data to Prediction API
+        prediction_api_url = "http://127.0.0.1:5000/predict"
+        response = requests.post(prediction_api_url, json=data)
+
+        if response.status_code == 200:
+            prediction = response.json()
+            return html.Div([
+                html.H4("Prediction Results:"),
+                html.P(f"Fraud Prediction: {prediction['fraud_prediction']}"),
+                html.P(f"Confidence Score: {prediction['confidence_score']}")
+            ])
+        else:
+            return html.Div([
+                html.H4("Error:"),
+                html.P(f"Could not get a prediction. Status Code: {response.status_code}")
+            ])
     return "Please fill out the form and submit."
+# Callback to display user input
+# @app.callback(
+#     dash.dependencies.Output('output-display', 'children'),
+#     [dash.dependencies.Input('submit-button', 'n_clicks')],
+#     [
+#         dash.dependencies.State('user-id', 'value'),
+#         dash.dependencies.State('signup-time', 'date'),
+#         dash.dependencies.State('purchase-time', 'date'),
+#         dash.dependencies.State('purchase-value', 'value'),
+#         dash.dependencies.State('device-id', 'value'),
+#         dash.dependencies.State('source', 'value'),
+#         dash.dependencies.State('browser', 'value'),
+#         dash.dependencies.State('sex', 'value'),
+#         dash.dependencies.State('age', 'value'),
+#         dash.dependencies.State('ip-address', 'value')
+#     ]
+# )
+# def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
+#     if n_clicks > 0:
+#         return html.Div([
+#             html.H4("Submitted Data:"),
+#             html.P(f"User ID: {user_id}"),
+#             html.P(f"Signup Time: {signup_time}"),
+#             html.P(f"Purchase Time: {purchase_time}"),
+#             html.P(f"Purchase Value: {purchase_value}"),
+#             html.P(f"Device ID: {device_id}"),
+#             html.P(f"Source: {source}"),
+#             html.P(f"Browser: {browser}"),
+#             html.P(f"Sex: {sex}"),
+#             html.P(f"Age: {age}"),
+#             html.P(f"IP Address: {ip_address}")
+#         ])
+#     return "Please fill out the form and submit."
 # Callback to update 'general-summary' graph
 @app.callback(
     dash.dependencies.Output('general-summary', 'figure'),

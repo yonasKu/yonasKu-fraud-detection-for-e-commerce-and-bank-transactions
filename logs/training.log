@@ -1115,3 +1115,687 @@
 2024-11-17 19:56:56,251 - root - INFO - Using KernelExplainer for Logistic Regression model.
 2024-11-17 19:57:46,987 - root - ERROR - Error in explaining model: Unable to allocate 23.9 GiB for an array with shape (2074, 1549740) and data type float64
 2024-11-17 19:57:46,987 - root - ERROR - Error in explaining model: Unable to allocate 23.9 GiB for an array with shape (2074, 1549740) and data type float64
+2024-11-17 20:36:59,884 - matplotlib - DEBUG - matplotlib data path: c:\Users\Yonas\Desktop\proj\yonasKu-fraud-detection-for-e-commerce-and-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-17 20:36:59,884 - matplotlib - DEBUG - matplotlib data path: c:\Users\Yonas\Desktop\proj\yonasKu-fraud-detection-for-e-commerce-and-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-17 20:36:59,907 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Yonas\.matplotlib
+2024-11-17 20:36:59,907 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Yonas\.matplotlib
+2024-11-17 20:37:00,101 - matplotlib - DEBUG - interactive is False
+2024-11-17 20:37:00,101 - matplotlib - DEBUG - interactive is False
+2024-11-17 20:37:00,105 - matplotlib - DEBUG - platform is win32
+2024-11-17 20:37:00,105 - matplotlib - DEBUG - platform is win32
+2024-11-17 20:37:00,461 - matplotlib - DEBUG - CACHEDIR=C:\Users\Yonas\.matplotlib
+2024-11-17 20:37:00,461 - matplotlib - DEBUG - CACHEDIR=C:\Users\Yonas\.matplotlib
+2024-11-17 20:37:00,478 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Yonas\.matplotlib\fontlist-v390.json
+2024-11-17 20:37:00,478 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Yonas\.matplotlib\fontlist-v390.json
+2024-11-17 20:37:08,284 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 20:37:08,284 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 20:37:09,194 - root - INFO - Encoded column: device_id
+2024-11-17 20:37:09,194 - root - INFO - Encoded column: device_id
+2024-11-17 20:37:09,213 - root - INFO - Encoded column: source
+2024-11-17 20:37:09,213 - root - INFO - Encoded column: source
+2024-11-17 20:37:09,229 - root - INFO - Encoded column: browser
+2024-11-17 20:37:09,229 - root - INFO - Encoded column: browser
+2024-11-17 20:37:09,245 - root - INFO - Encoded column: sex
+2024-11-17 20:37:09,245 - root - INFO - Encoded column: sex
+2024-11-17 20:37:09,386 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 20:37:09,386 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 20:37:09,546 - root - INFO - Standardized the data.
+2024-11-17 20:37:09,546 - root - INFO - Standardized the data.
+2024-11-17 20:37:14,599 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 20:37:14,599 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 20:37:14,920 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 20:37:14,920 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 20:37:15,196 - root - INFO - Standardized the data.
+2024-11-17 20:37:15,196 - root - INFO - Standardized the data.
+2024-11-17 20:37:15,303 - root - INFO - Training model: LogisticRegression.
+2024-11-17 20:37:15,303 - root - INFO - Training model: LogisticRegression.
+2024-11-17 20:37:15,569 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-17 20:37:15,569 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-17 20:37:15,657 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:37:15,657 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:37:15,666 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 20:37:15,666 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 20:38:31,519 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-17 20:38:31,519 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-17 20:38:33,992 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:38:33,992 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:38:34,024 - root - INFO - Training model: LogisticRegression.
+2024-11-17 20:38:34,024 - root - INFO - Training model: LogisticRegression.
+2024-11-17 20:38:35,976 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-17 20:38:35,976 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-17 20:38:36,093 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:38:36,093 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:38:36,100 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 20:38:36,100 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 20:43:28,024 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-17 20:43:28,024 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-17 20:43:29,290 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:43:29,290 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:43:29,329 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 20:43:29,329 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 20:43:36,314 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-17 20:43:36,314 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-17 20:43:36,395 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:43:36,395 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:43:36,402 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 20:43:36,402 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 20:44:57,211 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-17 20:44:57,211 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-17 20:44:57,377 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:44:57,377 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:44:57,407 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 20:44:57,407 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 20:45:55,636 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-17 20:45:55,636 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-17 20:45:55,760 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:45:55,760 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 20:45:55,767 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 20:45:55,767 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 21:00:48,616 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-17 21:00:48,616 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-17 21:00:48,932 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 21:00:48,932 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 21:00:49,044 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-17 21:00:49,044 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-17 21:00:49,052 - root - INFO - Accuracy: 0.6430894308943089
+2024-11-17 21:00:49,052 - root - INFO - Accuracy: 0.6430894308943089
+2024-11-17 21:00:49,059 - root - INFO - Precision: 0.16852503912363068
+2024-11-17 21:00:49,059 - root - INFO - Precision: 0.16852503912363068
+2024-11-17 21:00:49,067 - root - INFO - Recall: 0.705858254813601
+2024-11-17 21:00:49,067 - root - INFO - Recall: 0.705858254813601
+2024-11-17 21:00:49,075 - root - INFO - F1 Score: 0.27208843268851163
+2024-11-17 21:00:49,075 - root - INFO - F1 Score: 0.27208843268851163
+2024-11-17 21:00:49,083 - root - INFO - ROC AUC: 0.7624949623461372
+2024-11-17 21:00:49,083 - root - INFO - ROC AUC: 0.7624949623461372
+2024-11-17 21:00:49,090 - root - INFO - Confusion Matrix: 
+[[14888  8501]
+ [  718  1723]]
+2024-11-17 21:00:49,090 - root - INFO - Confusion Matrix: 
+[[14888  8501]
+ [  718  1723]]
+2024-11-17 21:00:49,204 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-17 21:00:49,204 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-17 21:00:49,211 - root - INFO - Accuracy: 0.9033681765389082
+2024-11-17 21:00:49,211 - root - INFO - Accuracy: 0.9033681765389082
+2024-11-17 21:00:49,225 - root - INFO - Precision: 0.490320309750088
+2024-11-17 21:00:49,225 - root - INFO - Precision: 0.490320309750088
+2024-11-17 21:00:49,234 - root - INFO - Recall: 0.5706677591151168
+2024-11-17 21:00:49,234 - root - INFO - Recall: 0.5706677591151168
+2024-11-17 21:00:49,245 - root - INFO - F1 Score: 0.5274517228322605
+2024-11-17 21:00:49,245 - root - INFO - F1 Score: 0.5274517228322605
+2024-11-17 21:00:49,254 - root - INFO - ROC AUC: 0.7543791572522012
+2024-11-17 21:00:49,254 - root - INFO - ROC AUC: 0.7543791572522012
+2024-11-17 21:00:49,268 - root - INFO - Confusion Matrix: 
+[[21941  1448]
+ [ 1048  1393]]
+2024-11-17 21:00:49,268 - root - INFO - Confusion Matrix: 
+[[21941  1448]
+ [ 1048  1393]]
+2024-11-17 21:00:52,054 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-17 21:00:52,054 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-17 21:00:52,061 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-17 21:00:52,061 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-17 21:00:52,070 - root - INFO - Precision: 0.9992520568436799
+2024-11-17 21:00:52,070 - root - INFO - Precision: 0.9992520568436799
+2024-11-17 21:00:52,077 - root - INFO - Recall: 0.5473166734944694
+2024-11-17 21:00:52,077 - root - INFO - Recall: 0.5473166734944694
+2024-11-17 21:00:52,085 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-17 21:00:52,085 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-17 21:00:52,093 - root - INFO - ROC AUC: 0.7814036731833429
+2024-11-17 21:00:52,093 - root - INFO - ROC AUC: 0.7814036731833429
+2024-11-17 21:00:52,102 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-17 21:00:52,102 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-17 21:00:52,313 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-17 21:00:52,313 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-17 21:00:52,321 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-17 21:00:52,321 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-17 21:00:52,329 - root - INFO - Precision: 0.9992520568436799
+2024-11-17 21:00:52,329 - root - INFO - Precision: 0.9992520568436799
+2024-11-17 21:00:52,340 - root - INFO - Recall: 0.5473166734944694
+2024-11-17 21:00:52,340 - root - INFO - Recall: 0.5473166734944694
+2024-11-17 21:00:52,348 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-17 21:00:52,348 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-17 21:00:52,361 - root - INFO - ROC AUC: 0.7860544727123675
+2024-11-17 21:00:52,361 - root - INFO - ROC AUC: 0.7860544727123675
+2024-11-17 21:00:52,376 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-17 21:00:52,376 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-17 21:00:52,654 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-17 21:00:52,654 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-17 21:00:52,662 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-17 21:00:52,662 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-17 21:00:52,671 - root - INFO - Precision: 0.05965697240865026
+2024-11-17 21:00:52,671 - root - INFO - Precision: 0.05965697240865026
+2024-11-17 21:00:52,679 - root - INFO - Recall: 0.8888888888888888
+2024-11-17 21:00:52,679 - root - INFO - Recall: 0.8888888888888888
+2024-11-17 21:00:52,688 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-17 21:00:52,688 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-17 21:00:52,696 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-17 21:00:52,696 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-17 21:00:52,705 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-17 21:00:52,705 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-17 21:00:52,860 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-17 21:00:52,860 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-17 21:00:52,867 - root - INFO - Accuracy: 0.9989955239135798
+2024-11-17 21:00:52,867 - root - INFO - Accuracy: 0.9989955239135798
+2024-11-17 21:00:52,876 - root - INFO - Precision: 0.6666666666666666
+2024-11-17 21:00:52,876 - root - INFO - Precision: 0.6666666666666666
+2024-11-17 21:00:52,884 - root - INFO - Recall: 0.7333333333333333
+2024-11-17 21:00:52,884 - root - INFO - Recall: 0.7333333333333333
+2024-11-17 21:00:52,893 - root - INFO - F1 Score: 0.6984126984126984
+2024-11-17 21:00:52,893 - root - INFO - F1 Score: 0.6984126984126984
+2024-11-17 21:00:52,902 - root - INFO - ROC AUC: 0.8663754353760708
+2024-11-17 21:00:52,902 - root - INFO - ROC AUC: 0.8663754353760708
+2024-11-17 21:00:52,916 - root - INFO - Confusion Matrix: 
+[[56623    33]
+ [   24    66]]
+2024-11-17 21:00:52,916 - root - INFO - Confusion Matrix: 
+[[56623    33]
+ [   24    66]]
+2024-11-17 21:00:54,836 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-17 21:00:54,836 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-17 21:00:54,842 - root - INFO - Accuracy: 0.9995065731505305
+2024-11-17 21:00:54,842 - root - INFO - Accuracy: 0.9995065731505305
+2024-11-17 21:00:54,847 - root - INFO - Precision: 0.9696969696969697
+2024-11-17 21:00:54,847 - root - INFO - Precision: 0.9696969696969697
+2024-11-17 21:00:54,854 - root - INFO - Recall: 0.7111111111111111
+2024-11-17 21:00:54,854 - root - INFO - Recall: 0.7111111111111111
+2024-11-17 21:00:54,859 - root - INFO - F1 Score: 0.8205128205128205
+2024-11-17 21:00:54,859 - root - INFO - F1 Score: 0.8205128205128205
+2024-11-17 21:00:54,864 - root - INFO - ROC AUC: 0.926099618751765
+2024-11-17 21:00:54,864 - root - INFO - ROC AUC: 0.926099618751765
+2024-11-17 21:00:54,875 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   26    64]]
+2024-11-17 21:00:54,875 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   26    64]]
+2024-11-17 21:00:55,226 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-17 21:00:55,226 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-17 21:00:55,234 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-17 21:00:55,234 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-17 21:00:55,244 - root - INFO - Precision: 0.890625
+2024-11-17 21:00:55,244 - root - INFO - Precision: 0.890625
+2024-11-17 21:00:55,253 - root - INFO - Recall: 0.6333333333333333
+2024-11-17 21:00:55,253 - root - INFO - Recall: 0.6333333333333333
+2024-11-17 21:00:55,264 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-17 21:00:55,264 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-17 21:00:55,274 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-17 21:00:55,274 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-17 21:00:55,286 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-17 21:00:55,286 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-17 21:00:55,345 - root - INFO - Starting explanation for model type: lr.
+2024-11-17 21:00:55,345 - root - INFO - Starting explanation for model type: lr.
+2024-11-17 21:00:55,356 - root - INFO - Using KernelExplainer for Logistic Regression model.
+2024-11-17 21:00:55,356 - root - INFO - Using KernelExplainer for Logistic Regression model.
+2024-11-17 21:00:55,364 - root - ERROR - Error in explaining model: 'numpy.ndarray' object has no attribute 'sample'
+2024-11-17 21:00:55,364 - root - ERROR - Error in explaining model: 'numpy.ndarray' object has no attribute 'sample'
+2024-11-17 22:08:57,635 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 22:08:57,635 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 22:08:58,361 - root - INFO - Encoded column: device_id
+2024-11-17 22:08:58,361 - root - INFO - Encoded column: device_id
+2024-11-17 22:08:58,372 - root - INFO - Encoded column: source
+2024-11-17 22:08:58,372 - root - INFO - Encoded column: source
+2024-11-17 22:08:58,385 - root - INFO - Encoded column: browser
+2024-11-17 22:08:58,385 - root - INFO - Encoded column: browser
+2024-11-17 22:08:58,397 - root - INFO - Encoded column: sex
+2024-11-17 22:08:58,397 - root - INFO - Encoded column: sex
+2024-11-17 22:08:58,502 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:08:58,502 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:08:58,610 - root - INFO - Standardized the data.
+2024-11-17 22:08:58,610 - root - INFO - Standardized the data.
+2024-11-17 22:09:15,053 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 22:09:15,053 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 22:09:15,399 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:15,399 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:15,697 - root - INFO - Standardized the data.
+2024-11-17 22:09:15,697 - root - INFO - Standardized the data.
+2024-11-17 22:09:21,954 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 22:09:21,954 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-17 22:09:22,839 - root - INFO - Encoded column: device_id
+2024-11-17 22:09:22,839 - root - INFO - Encoded column: device_id
+2024-11-17 22:09:22,854 - root - INFO - Encoded column: source
+2024-11-17 22:09:22,854 - root - INFO - Encoded column: source
+2024-11-17 22:09:22,870 - root - INFO - Encoded column: browser
+2024-11-17 22:09:22,870 - root - INFO - Encoded column: browser
+2024-11-17 22:09:22,883 - root - INFO - Encoded column: sex
+2024-11-17 22:09:22,883 - root - INFO - Encoded column: sex
+2024-11-17 22:09:22,973 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:22,973 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:23,159 - root - INFO - Standardized the data.
+2024-11-17 22:09:23,159 - root - INFO - Standardized the data.
+2024-11-17 22:09:27,994 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 22:09:27,994 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-17 22:09:28,292 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:28,292 - root - INFO - Data successfully split into train and test sets.
+2024-11-17 22:09:28,540 - root - INFO - Standardized the data.
+2024-11-17 22:09:28,540 - root - INFO - Standardized the data.
+2024-11-17 22:09:28,640 - root - INFO - Training model: LogisticRegression.
+2024-11-17 22:09:28,640 - root - INFO - Training model: LogisticRegression.
+2024-11-17 22:09:28,970 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-17 22:09:28,970 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-17 22:09:29,042 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:09:29,042 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:09:29,050 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 22:09:29,050 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 22:10:33,798 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-17 22:10:33,798 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-17 22:10:35,957 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:10:35,957 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:10:35,989 - root - INFO - Training model: LogisticRegression.
+2024-11-17 22:10:35,989 - root - INFO - Training model: LogisticRegression.
+2024-11-17 22:10:37,868 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-17 22:10:37,868 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-17 22:10:37,973 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:10:37,973 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:10:37,979 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 22:10:37,979 - root - INFO - Training model: RandomForestClassifier.
+2024-11-17 22:15:15,722 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-17 22:15:15,722 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-17 22:15:16,914 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:15:16,914 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:15:16,947 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 22:15:16,947 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 22:15:22,677 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-17 22:15:22,677 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-17 22:15:22,756 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:15:22,756 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:15:22,761 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 22:15:22,761 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 22:16:32,669 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-17 22:16:32,669 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-17 22:16:32,827 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:16:32,827 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:16:32,853 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 22:16:32,853 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-17 22:17:25,381 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-17 22:17:25,381 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-17 22:17:25,483 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:17:25,483 - root - INFO - Model training and evaluation completed successfully.
+2024-11-17 22:17:25,488 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-17 22:17:25,488 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-19 12:39:28,257 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-19 12:39:28,257 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-19 12:39:28,274 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:39:28,274 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:39:28,295 - matplotlib - DEBUG - interactive is False
+2024-11-19 12:39:28,295 - matplotlib - DEBUG - interactive is False
+2024-11-19 12:39:28,295 - matplotlib - DEBUG - platform is win32
+2024-11-19 12:39:28,295 - matplotlib - DEBUG - platform is win32
+2024-11-19 12:39:28,409 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:39:28,409 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:39:28,414 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-19 12:39:28,414 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-19 12:40:08,363 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-19 12:40:08,363 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-19 12:40:08,363 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:40:08,363 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:40:08,389 - matplotlib - DEBUG - interactive is False
+2024-11-19 12:40:08,389 - matplotlib - DEBUG - interactive is False
+2024-11-19 12:40:08,389 - matplotlib - DEBUG - platform is win32
+2024-11-19 12:40:08,389 - matplotlib - DEBUG - platform is win32
+2024-11-19 12:40:08,461 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:40:08,461 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-19 12:40:08,461 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-19 12:40:08,461 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-19 12:40:09,652 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-19 12:40:09,652 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-19 12:40:10,242 - root - INFO - Encoded column: device_id
+2024-11-19 12:40:10,242 - root - INFO - Encoded column: device_id
+2024-11-19 12:40:10,291 - root - INFO - Encoded column: source
+2024-11-19 12:40:10,291 - root - INFO - Encoded column: source
+2024-11-19 12:40:10,324 - root - INFO - Encoded column: browser
+2024-11-19 12:40:10,324 - root - INFO - Encoded column: browser
+2024-11-19 12:40:10,366 - root - INFO - Encoded column: sex
+2024-11-19 12:40:10,366 - root - INFO - Encoded column: sex
+2024-11-19 12:40:10,398 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:40:10,398 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:40:10,466 - root - INFO - Standardized the data.
+2024-11-19 12:40:10,466 - root - INFO - Standardized the data.
+2024-11-19 12:40:10,485 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/credit_datas.csv'
+2024-11-19 12:40:10,485 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/credit_datas.csv'
+2024-11-19 12:40:24,650 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/credit_datas.csv'
+2024-11-19 12:40:24,650 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/credit_datas.csv'
+2024-11-19 12:43:19,594 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-19 12:43:19,594 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-19 12:43:19,647 - root - INFO - Encoded column: device_id
+2024-11-19 12:43:19,647 - root - INFO - Encoded column: device_id
+2024-11-19 12:43:19,648 - root - INFO - Encoded column: source
+2024-11-19 12:43:19,648 - root - INFO - Encoded column: source
+2024-11-19 12:43:19,663 - root - INFO - Encoded column: browser
+2024-11-19 12:43:19,663 - root - INFO - Encoded column: browser
+2024-11-19 12:43:19,663 - root - INFO - Encoded column: sex
+2024-11-19 12:43:19,663 - root - INFO - Encoded column: sex
+2024-11-19 12:43:19,728 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:43:19,728 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:43:19,806 - root - INFO - Standardized the data.
+2024-11-19 12:43:19,806 - root - INFO - Standardized the data.
+2024-11-19 12:43:22,280 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-19 12:43:22,280 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-19 12:43:22,512 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:43:22,512 - root - INFO - Data successfully split into train and test sets.
+2024-11-19 12:43:22,731 - root - INFO - Standardized the data.
+2024-11-19 12:43:22,731 - root - INFO - Standardized the data.
+2024-11-19 12:43:22,797 - root - INFO - Training model: LogisticRegression.
+2024-11-19 12:43:22,797 - root - INFO - Training model: LogisticRegression.
+2024-11-19 12:43:22,915 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-19 12:43:22,915 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-19 12:43:22,965 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:43:22,965 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:43:22,965 - root - INFO - Training model: RandomForestClassifier.
+2024-11-19 12:43:22,965 - root - INFO - Training model: RandomForestClassifier.
+2024-11-19 12:43:58,191 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-19 12:43:58,191 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-19 12:43:59,563 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:43:59,563 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:43:59,577 - root - INFO - Training model: LogisticRegression.
+2024-11-19 12:43:59,577 - root - INFO - Training model: LogisticRegression.
+2024-11-19 12:44:01,267 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-19 12:44:01,267 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-19 12:44:01,339 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:44:01,339 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:44:01,339 - root - INFO - Training model: RandomForestClassifier.
+2024-11-19 12:44:01,339 - root - INFO - Training model: RandomForestClassifier.
+2024-11-19 12:47:03,973 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-19 12:47:03,973 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-19 12:47:04,811 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:04,811 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:04,825 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-19 12:47:04,825 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-19 12:47:08,010 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-19 12:47:08,010 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-19 12:47:08,054 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:08,054 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:08,054 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-19 12:47:08,054 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-19 12:47:47,123 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-19 12:47:47,123 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-19 12:47:47,203 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:47,203 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:47:47,224 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-19 12:47:47,224 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-19 12:48:23,515 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-19 12:48:23,515 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-19 12:48:23,598 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:48:23,598 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:48:23,598 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-19 12:48:23,598 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-19 12:57:36,722 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-19 12:57:36,722 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-19 12:57:37,025 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:57:37,025 - root - INFO - Model training and evaluation completed successfully.
+2024-11-19 12:57:37,119 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-19 12:57:37,119 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-19 12:57:37,122 - root - INFO - Accuracy: 0.643166860240031
+2024-11-19 12:57:37,122 - root - INFO - Accuracy: 0.643166860240031
+2024-11-19 12:57:37,125 - root - INFO - Precision: 0.1685580121306985
+2024-11-19 12:57:37,125 - root - INFO - Precision: 0.1685580121306985
+2024-11-19 12:57:37,129 - root - INFO - Recall: 0.705858254813601
+2024-11-19 12:57:37,129 - root - INFO - Recall: 0.705858254813601
+2024-11-19 12:57:37,133 - root - INFO - F1 Score: 0.2721314064597647
+2024-11-19 12:57:37,133 - root - INFO - F1 Score: 0.2721314064597647
+2024-11-19 12:57:37,136 - root - INFO - ROC AUC: 0.7624917395087755
+2024-11-19 12:57:37,136 - root - INFO - ROC AUC: 0.7624917395087755
+2024-11-19 12:57:37,140 - root - INFO - Confusion Matrix: 
+[[14890  8499]
+ [  718  1723]]
+2024-11-19 12:57:37,140 - root - INFO - Confusion Matrix: 
+[[14890  8499]
+ [  718  1723]]
+2024-11-19 12:57:37,189 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-19 12:57:37,189 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-19 12:57:37,192 - root - INFO - Accuracy: 0.9039876113046845
+2024-11-19 12:57:37,192 - root - INFO - Accuracy: 0.9039876113046845
+2024-11-19 12:57:37,194 - root - INFO - Precision: 0.49313138429024306
+2024-11-19 12:57:37,194 - root - INFO - Precision: 0.49313138429024306
+2024-11-19 12:57:37,198 - root - INFO - Recall: 0.5735354362965998
+2024-11-19 12:57:37,198 - root - INFO - Recall: 0.5735354362965998
+2024-11-19 12:57:37,201 - root - INFO - F1 Score: 0.5303030303030303
+2024-11-19 12:57:37,201 - root - INFO - F1 Score: 0.5303030303030303
+2024-11-19 12:57:37,203 - root - INFO - ROC AUC: 0.7560053939788186
+2024-11-19 12:57:37,203 - root - INFO - ROC AUC: 0.7560053939788186
+2024-11-19 12:57:37,205 - root - INFO - Confusion Matrix: 
+[[21950  1439]
+ [ 1041  1400]]
+2024-11-19 12:57:37,205 - root - INFO - Confusion Matrix: 
+[[21950  1439]
+ [ 1041  1400]]
+2024-11-19 12:57:38,945 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-19 12:57:38,945 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-19 12:57:38,952 - root - INFO - Accuracy: 0.9571428571428572
+2024-11-19 12:57:38,952 - root - INFO - Accuracy: 0.9571428571428572
+2024-11-19 12:57:38,954 - root - INFO - Precision: 0.9985052316890882
+2024-11-19 12:57:38,954 - root - INFO - Precision: 0.9985052316890882
+2024-11-19 12:57:38,957 - root - INFO - Recall: 0.5473166734944694
+2024-11-19 12:57:38,957 - root - INFO - Recall: 0.5473166734944694
+2024-11-19 12:57:38,962 - root - INFO - F1 Score: 0.7070653612066684
+2024-11-19 12:57:38,962 - root - INFO - F1 Score: 0.7070653612066684
+2024-11-19 12:57:38,967 - root - INFO - ROC AUC: 0.7843508966467762
+2024-11-19 12:57:38,967 - root - INFO - ROC AUC: 0.7843508966467762
+2024-11-19 12:57:38,970 - root - INFO - Confusion Matrix: 
+[[23387     2]
+ [ 1105  1336]]
+2024-11-19 12:57:38,970 - root - INFO - Confusion Matrix: 
+[[23387     2]
+ [ 1105  1336]]
+2024-11-19 12:57:39,103 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-19 12:57:39,103 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-19 12:57:39,107 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-19 12:57:39,107 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-19 12:57:39,110 - root - INFO - Precision: 0.9992520568436799
+2024-11-19 12:57:39,110 - root - INFO - Precision: 0.9992520568436799
+2024-11-19 12:57:39,113 - root - INFO - Recall: 0.5473166734944694
+2024-11-19 12:57:39,113 - root - INFO - Recall: 0.5473166734944694
+2024-11-19 12:57:39,121 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-19 12:57:39,121 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-19 12:57:39,124 - root - INFO - ROC AUC: 0.7860545602894697
+2024-11-19 12:57:39,124 - root - INFO - ROC AUC: 0.7860545602894697
+2024-11-19 12:57:39,127 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-19 12:57:39,127 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-19 12:57:39,214 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-19 12:57:39,214 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-19 12:57:39,218 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-19 12:57:39,218 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-19 12:57:39,220 - root - INFO - Precision: 0.05965697240865026
+2024-11-19 12:57:39,220 - root - INFO - Precision: 0.05965697240865026
+2024-11-19 12:57:39,223 - root - INFO - Recall: 0.8888888888888888
+2024-11-19 12:57:39,223 - root - INFO - Recall: 0.8888888888888888
+2024-11-19 12:57:39,226 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-19 12:57:39,226 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-19 12:57:39,228 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-19 12:57:39,228 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-19 12:57:39,231 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-19 12:57:39,231 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-19 12:57:39,296 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-19 12:57:39,296 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-19 12:57:39,299 - root - INFO - Accuracy: 0.9990836358509851
+2024-11-19 12:57:39,299 - root - INFO - Accuracy: 0.9990836358509851
+2024-11-19 12:57:39,302 - root - INFO - Precision: 0.7021276595744681
+2024-11-19 12:57:39,302 - root - INFO - Precision: 0.7021276595744681
+2024-11-19 12:57:39,304 - root - INFO - Recall: 0.7333333333333333
+2024-11-19 12:57:39,304 - root - INFO - Recall: 0.7333333333333333
+2024-11-19 12:57:39,307 - root - INFO - F1 Score: 0.717391304347826
+2024-11-19 12:57:39,307 - root - INFO - F1 Score: 0.717391304347826
+2024-11-19 12:57:39,307 - root - INFO - ROC AUC: 0.8664195613291914
+2024-11-19 12:57:39,307 - root - INFO - ROC AUC: 0.8664195613291914
+2024-11-19 12:57:39,307 - root - INFO - Confusion Matrix: 
+[[56628    28]
+ [   24    66]]
+2024-11-19 12:57:39,307 - root - INFO - Confusion Matrix: 
+[[56628    28]
+ [   24    66]]
+2024-11-19 12:57:40,158 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-19 12:57:40,158 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-19 12:57:40,173 - root - INFO - Accuracy: 0.9995241955380115
+2024-11-19 12:57:40,173 - root - INFO - Accuracy: 0.9995241955380115
+2024-11-19 12:57:40,173 - root - INFO - Precision: 0.9701492537313433
+2024-11-19 12:57:40,173 - root - INFO - Precision: 0.9701492537313433
+2024-11-19 12:57:40,173 - root - INFO - Recall: 0.7222222222222222
+2024-11-19 12:57:40,173 - root - INFO - Recall: 0.7222222222222222
+2024-11-19 12:57:40,183 - root - INFO - F1 Score: 0.8280254777070064
+2024-11-19 12:57:40,183 - root - INFO - F1 Score: 0.8280254777070064
+2024-11-19 12:57:40,187 - root - INFO - ROC AUC: 0.9315209333521605
+2024-11-19 12:57:40,187 - root - INFO - ROC AUC: 0.9315209333521605
+2024-11-19 12:57:40,190 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   25    65]]
+2024-11-19 12:57:40,190 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   25    65]]
+2024-11-19 12:57:40,432 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-19 12:57:40,432 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-19 12:57:40,434 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-19 12:57:40,434 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-19 12:57:40,436 - root - INFO - Precision: 0.890625
+2024-11-19 12:57:40,436 - root - INFO - Precision: 0.890625
+2024-11-19 12:57:40,438 - root - INFO - Recall: 0.6333333333333333
+2024-11-19 12:57:40,438 - root - INFO - Recall: 0.6333333333333333
+2024-11-19 12:57:40,441 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-19 12:57:40,441 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-19 12:57:40,445 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-19 12:57:40,445 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-19 12:57:40,448 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-19 12:57:40,448 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-19 12:57:40,469 - root - INFO - Starting explanation for model type: lr.
+2024-11-19 12:57:40,469 - root - INFO - Starting explanation for model type: lr.
+2024-11-19 12:57:40,550 - shap - WARNING - Using 103316 background data samples could cause slower run times. Consider using shap.sample(data, K) or shap.kmeans(data, K) to summarize the background as K samples.
+2024-11-19 12:57:40,550 - shap - WARNING - Using 103316 background data samples could cause slower run times. Consider using shap.sample(data, K) or shap.kmeans(data, K) to summarize the background as K samples.
+2024-11-19 12:57:40,556 - root - INFO - Using KernelExplainer for Logistic Regression model.
+2024-11-19 12:57:40,556 - root - INFO - Using KernelExplainer for Logistic Regression model.
+2024-11-19 12:59:18,336 - shap - DEBUG - weight_vector = array([0.36124285, 0.19868357, 0.14717301, 0.12417723, 0.11353347,
+       0.05518988])
+2024-11-19 12:59:18,336 - shap - DEBUG - weight_vector = array([0.36124285, 0.19868357, 0.14717301, 0.12417723, 0.11353347,
+       0.05518988])
+2024-11-19 12:59:18,460 - shap - DEBUG - num_subset_sizes = 6
+2024-11-19 12:59:18,460 - shap - DEBUG - num_subset_sizes = 6
+2024-11-19 12:59:18,460 - shap - DEBUG - num_paired_subset_sizes = 5
+2024-11-19 12:59:18,460 - shap - DEBUG - num_paired_subset_sizes = 5
+2024-11-19 12:59:18,460 - shap - DEBUG - self.M = 12
+2024-11-19 12:59:18,460 - shap - DEBUG - self.M = 12
+2024-11-19 12:59:18,523 - shap - DEBUG - subset_size = 1
+2024-11-19 12:59:18,523 - shap - DEBUG - subset_size = 1
+2024-11-19 12:59:18,538 - shap - DEBUG - nsubsets = np.float64(24.0)
+2024-11-19 12:59:18,538 - shap - DEBUG - nsubsets = np.float64(24.0)
+2024-11-19 12:59:18,538 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 748.4951798449428
+2024-11-19 12:59:18,538 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 748.4951798449428
+2024-11-19 12:59:18,538 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 31.18729916020595
+2024-11-19 12:59:18,538 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 31.18729916020595
+2024-11-19 12:59:23,802 - shap - DEBUG - subset_size = 2
+2024-11-19 12:59:23,802 - shap - DEBUG - subset_size = 2
+2024-11-19 12:59:23,802 - shap - DEBUG - nsubsets = np.float64(132.0)
+2024-11-19 12:59:23,802 - shap - DEBUG - nsubsets = np.float64(132.0)
+2024-11-19 12:59:23,802 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 637.0244805595559
+2024-11-19 12:59:23,802 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 637.0244805595559
+2024-11-19 12:59:23,802 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 4.82594303454209
+2024-11-19 12:59:23,802 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 4.82594303454209
+2024-11-19 12:59:35,620 - shap - DEBUG - subset_size = 3
+2024-11-19 12:59:35,620 - shap - DEBUG - subset_size = 3
+2024-11-19 12:59:35,620 - shap - DEBUG - nsubsets = np.float64(440.0)
+2024-11-19 12:59:35,620 - shap - DEBUG - nsubsets = np.float64(440.0)
+2024-11-19 12:59:35,621 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 640.7644072857571
+2024-11-19 12:59:35,621 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 640.7644072857571
+2024-11-19 12:59:35,621 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.4562827438312662
+2024-11-19 12:59:35,621 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 1.4562827438312662
+2024-11-19 13:00:10,723 - shap - DEBUG - subset_size = 4
+2024-11-19 13:00:10,723 - shap - DEBUG - subset_size = 4
+2024-11-19 13:00:10,723 - shap - DEBUG - nsubsets = np.float64(990.0)
+2024-11-19 13:00:10,723 - shap - DEBUG - nsubsets = np.float64(990.0)
+2024-11-19 13:00:10,723 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 625.7604306864068
+2024-11-19 13:00:10,723 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1] = 625.7604306864068
+2024-11-19 13:00:10,723 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 0.6320812431175826
+2024-11-19 13:00:10,723 - shap - DEBUG - self.nsamples*weight_vector[subset_size-1]/nsubsets = 0.6320812431175826
+2024-11-19 13:00:10,723 - shap - INFO - num_full_subsets = 3
+2024-11-19 13:00:10,723 - shap - INFO - num_full_subsets = 3
+2024-11-19 13:00:10,887 - shap - DEBUG - samples_left = 1476
+2024-11-19 13:00:10,887 - shap - DEBUG - samples_left = 1476
+2024-11-19 13:00:10,887 - shap - INFO - remaining_weight_vector = array([0.35673839, 0.32616082, 0.31710079])
+2024-11-19 13:00:10,887 - shap - INFO - remaining_weight_vector = array([0.35673839, 0.32616082, 0.31710079])
+2024-11-19 13:00:10,899 - shap - INFO - num_paired_subset_sizes = 5
+2024-11-19 13:00:10,899 - shap - INFO - num_paired_subset_sizes = 5
+2024-11-19 13:02:37,831 - shap - INFO - weight_left = np.float64(0.2929005745959313)
+2024-11-19 13:02:37,831 - shap - INFO - weight_left = np.float64(0.2929005745959313)
+2024-11-19 13:19:42,975 - shap - DEBUG - fraction_evaluated = 0.5061064973131412
+2024-11-19 13:19:42,975 - shap - DEBUG - fraction_evaluated = 0.5061064973131412
+2024-11-19 13:19:43,022 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-19 13:19:43,022 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-19 13:19:43,037 - shap - DEBUG - np.sum(w) = np.float64(0.2147723445110366)
+2024-11-19 13:19:43,037 - shap - DEBUG - np.sum(w) = np.float64(0.2147723445110366)
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.21491667244448076
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = 0.21491667244448076
+2024-11-19 13:19:43,053 - shap - DEBUG - self.fx = 0.7823575672278535
+2024-11-19 13:19:43,053 - shap - DEBUG - self.fx = 0.7823575672278535
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fx) = 0.7823575672278535
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fx) = 0.7823575672278535
+2024-11-19 13:19:43,053 - shap - DEBUG - self.fnull = 0.5674408947833728
+2024-11-19 13:19:43,053 - shap - DEBUG - self.fnull = 0.5674408947833728
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fnull) = 0.5674408947833728
+2024-11-19 13:19:43,053 - shap - DEBUG - self.link(self.fnull) = 0.5674408947833728
+2024-11-19 13:19:43,053 - shap - INFO - phi = array([ 1.61301497e-04,  2.97125792e-03, -7.88712424e-04,  1.25865367e-03,
+       -1.50557300e-03, -2.08347148e-03,  1.69293044e-03, -6.00944665e-04,
+        4.50303319e-03,  2.08613369e-01,  5.50500483e-04,  1.44327933e-04])
+2024-11-19 13:19:43,053 - shap - INFO - phi = array([ 1.61301497e-04,  2.97125792e-03, -7.88712424e-04,  1.25865367e-03,
+       -1.50557300e-03, -2.08347148e-03,  1.69293044e-03, -6.00944665e-04,
+        4.50303319e-03,  2.08613369e-01,  5.50500483e-04,  1.44327933e-04])
+2024-11-19 13:19:43,100 - shap - DEBUG - fraction_evaluated = 0.5061064973131412
+2024-11-19 13:19:43,100 - shap - DEBUG - fraction_evaluated = 0.5061064973131412
+2024-11-19 13:19:43,116 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-19 13:19:43,116 - shap - DEBUG - etmp[:4, :] = array([[ 1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [-1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.],
+       [ 0., -1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]])
+2024-11-19 13:19:43,116 - shap - DEBUG - np.sum(w) = np.float64(-0.21477234451103686)
+2024-11-19 13:19:43,116 - shap - DEBUG - np.sum(w) = np.float64(-0.21477234451103686)
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.21491667244448073
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fx) - self.link(self.fnull) = -0.21491667244448073
+2024-11-19 13:19:43,116 - shap - DEBUG - self.fx = 0.21764243277214648
+2024-11-19 13:19:43,116 - shap - DEBUG - self.fx = 0.21764243277214648
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fx) = 0.21764243277214648
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fx) = 0.21764243277214648
+2024-11-19 13:19:43,116 - shap - DEBUG - self.fnull = 0.4325591052166272
+2024-11-19 13:19:43,116 - shap - DEBUG - self.fnull = 0.4325591052166272
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fnull) = 0.4325591052166272
+2024-11-19 13:19:43,116 - shap - DEBUG - self.link(self.fnull) = 0.4325591052166272
+2024-11-19 13:19:43,116 - shap - INFO - phi = array([-1.61301497e-04, -2.97125792e-03,  7.88712424e-04, -1.25865367e-03,
+        1.50557300e-03,  2.08347148e-03, -1.69293044e-03,  6.00944665e-04,
+       -4.50303319e-03, -2.08613369e-01, -5.50500483e-04, -1.44327933e-04])
+2024-11-19 13:19:43,116 - shap - INFO - phi = array([-1.61301497e-04, -2.97125792e-03,  7.88712424e-04, -1.25865367e-03,
+        1.50557300e-03,  2.08347148e-03, -1.69293044e-03,  6.00944665e-04,
+       -4.50303319e-03, -2.08613369e-01, -5.50500483e-04, -1.44327933e-04])
+2024-11-19 13:20:02,970 - root - ERROR - Error in explaining model: Unable to allocate 22.3 GiB for an array with shape (2072, 1446424) and data type float64
+2024-11-19 13:20:02,970 - root - ERROR - Error in explaining model: Unable to allocate 22.3 GiB for an array with shape (2072, 1446424) and data type float64

@@ -45,7 +45,6 @@ def prepare_data(data_path, target_column, test_size=0.2, scale_data=True):
         # Define features (X) and target (y)
         X = df.drop(columns=[target_column])  # Features (everything except the target column)
         y = df[target_column]  # Target
-
         # Split into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
         logger.info("Data successfully split into train and test sets.")

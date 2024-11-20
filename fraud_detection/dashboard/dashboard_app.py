@@ -6,6 +6,10 @@ import requests
 import datetime
 import pandas as pd
 import logging
+import pickle
+import os 
+import joblib
+
 
 logging.basicConfig(
     level=logging.DEBUG,  # Capture all levels of logs (DEBUG, INFO, WARNING, etc.)
@@ -18,8 +22,20 @@ logging.basicConfig(
 # Initialize Flask app
 server = Flask(__name__)
 
-# Initialize Flask app
-server = Flask(__name__)
+
+
+
+scaler_path = os.path.join('models', 'random_forest_scaler.pkl')
+try:
+    # Load the scaler
+    scaler = joblib.load(scaler_path)
+    print("Scaler loaded successfully.")
+except FileNotFoundError as e:
+    print(f"Error: Scaler file not found at {scaler_path}. Ensure the file exists and the path is correct.")
+    scaler = None
+except Exception as e:
+    print(f"An error occurred while loading the scaler: {e}")
+    scaler = None
 
 # Initialize Dash app
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
@@ -217,21 +233,22 @@ logging.basicConfig(level=logging.DEBUG, filename='api_debug.log', filemode='w',
         dash.dependencies.State('ip-address', 'value')
     ]
 )
+
 def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
     if n_clicks > 0:
-        try:
-            # Convert inputs to required format
-            country = 171  # Static value for now
-            transaction_frequency = 0.0  # Placeholder
-            transaction_count = 0.0  # Placeholder
-            transaction_velocity = -0.435282  # Placeholder
+        if scaler is None:
+            return html.Div([
+                html.H4("Error:"),
+                html.P("Scaler file is not available. Please check the path and try again.")
+            ])
 
-            # Time-based feature engineering
+        try:
+            # Feature engineering for time-based features
             purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
             hour_of_day = purchase_datetime.hour
             day_of_week = purchase_datetime.weekday()
 
-            # Map categorical values (source, browser, sex) to integers
+            # Map categorical values to integers
             source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
             browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
             sex_map = {'M': 0, 'F': 1}
@@ -240,35 +257,38 @@ def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value,
             browser = browser_map.get(browser, -1)
             sex = sex_map.get(sex, -1)
 
-            # Convert IP address to integer if it isn't already
+            # Convert IP address to integer (simple transformation)
             ip_address_int = int(ip_address.replace('.', ''))  # Example transformation
 
-            # Prepare data for prediction
-            data = {
-                "user_id": int(user_id),  # Assuming user_id is an integer
-                "purchase_value": float(purchase_value),
-                "device_id": int(device_id),
-                "source": source,
-                "browser": browser,
-                "sex": sex,
-                "age": float(age),
-                "ip_address": ip_address_int,
-                "country": country,
-                "transaction_frequency": transaction_frequency,
-                "transaction_count": transaction_count,
-                "transaction_velocity": transaction_velocity,
-                "hour_of_day": hour_of_day,
-                "day_of_week": day_of_week
-            }
+            # Prepare raw data for scaling
+            raw_data = [
+                [
+                    float(purchase_value),
+                    int(device_id),
+                    source,
+                    browser,
+                    sex,
+                    float(age),
+                    ip_address_int,
+                    171,  # Static value for country
+                    0.0,  # Placeholder for transaction_frequency
+                    0.0,  # Placeholder for transaction_count
+                    -0.435282,  # Placeholder for transaction_velocity
+                    hour_of_day,
+                    day_of_week
+                ]
+            ]
 
-            # Log the data being sent
-            logging.debug(f"Payload sent to API: {data}")
+            # Check if scaler has the 'transform' method
+            if hasattr(scaler, 'transform'):
+                scaled_data = scaler.transform(raw_data)
+                logging.debug(f"Scaled data: {scaled_data}")
+            else:
+                raise AttributeError("Scaler object does not have a 'transform' method.")
 
-            # Send data to Prediction API
+            # Send scaled data to Prediction API
             prediction_api_url = "http://127.0.0.1:5000/predict/general_fraud"
-            logging.debug(f"API URL: {prediction_api_url}")
-
-            response = requests.post(prediction_api_url, json=data)
+            response = requests.post(prediction_api_url, json={"features": scaled_data.tolist()})
 
             # Log the response
             logging.debug(f"Response received: {response.status_code} - {response.text}")
@@ -278,12 +298,7 @@ def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value,
                 response_json = response.json()
                 if isinstance(response_json, list) and len(response_json) == 1:
                     fraud_prediction = response_json[0]
-                    if fraud_prediction == 1:
-                        result_message = "Fraud Detected"
-                    elif fraud_prediction == 0:
-                        result_message = "No Fraud Detected"
-                    else:
-                        result_message = "Unexpected Prediction Value"
+                    result_message = "Fraud Detected" if fraud_prediction == 1 else "No Fraud Detected"
                 else:
                     result_message = "Unexpected response format"
 
@@ -303,8 +318,8 @@ def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value,
                 html.H4("Error:"),
                 html.P(f"An error occurred: {str(e)}")
             ])
-    return "Please fill out the form and submit."
 
+    return "Please fill out the form and submit."
 @app.callback(
     dash.dependencies.Output('general-summary', 'figure'),
     [dash.dependencies.Input('general-summary', 'id')]

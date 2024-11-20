@@ -18,99 +18,117 @@ from utils.logging_util import setup_logger
 logger = setup_logger('../logs/training.log')
 
 
-def prepare_data(data_path, target_column, test_size=0.2, scale_data=True):
-    """Prepare data for training and testing, handling timestamps and categorical variables."""
+def prepare_data(data_path, target_column, test_size=0.2, scale_data=True, scaler_path=None):
+    """
+    General data preparation function for datasets with categorical and numerical features.
+
+    Parameters:
+    - data_path (str): Path to the dataset file (CSV).
+    - target_column (str): Name of the target column.
+    - test_size (float): Fraction of data to reserve for testing.
+    - scale_data (bool): Whether to standardize features.
+    - scaler_path (str): Path to save the scaler if scaling is applied.
+
+    Returns:
+    - dict: Contains 'X_train', 'X_test', 'y_train', 'y_test', and 'scaler' (if applicable).
+    """
     try:
         # Load the dataset
         df = pd.read_csv(data_path)
         logger.info(f"Loaded data from {data_path}")
 
-        # # Convert timestamp columns to datetime
-        # df['signup_time'] = pd.to_datetime(df['signup_time'])
-        # df['purchase_time'] = pd.to_datetime(df['purchase_time'])
-
-        # # Calculate time difference between signup and purchase (in seconds)
-        # df['time_diff'] = (df['purchase_time'] - df['signup_time']).dt.total_seconds()
-
-        # Drop the original timestamp columns
-        df.drop(columns=['signup_time', 'purchase_time'], inplace=True)
+        # Drop unnecessary columns (if specific to the dataset)
+        if 'signup_time' in df.columns and 'purchase_time' in df.columns:
+            df.drop(columns=['signup_time', 'purchase_time'], inplace=True)
 
         # Handle categorical columns by encoding them
         categorical_columns = ['device_id', 'source', 'browser', 'sex']
         for col in categorical_columns:
-            le = LabelEncoder()
-            df[col] = le.fit_transform(df[col])
-            logger.info(f"Encoded column: {col}")
+            if col in df.columns:
+                le = LabelEncoder()
+                df[col] = le.fit_transform(df[col])
+                logger.info(f"Encoded column: {col}")
 
         # Define features (X) and target (y)
-        X = df.drop(columns=[target_column])  # Features (everything except the target column)
-        y = df[target_column]  # Target
+        X = df.drop(columns=[target_column])
+        y = df[target_column]
+
         # Split into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
         logger.info("Data successfully split into train and test sets.")
 
         # Scale the data if needed
+        scaler = None
         if scale_data:
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
             logger.info("Standardized the data.")
 
-        # Return the prepared data
-        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test}
+            # Save the scaler if scaler_path is specified
+            if scaler_path:
+                joblib.dump(scaler, scaler_path)
+                logger.info(f"Scaler saved to {scaler_path}")
+
+        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler}
 
     except Exception as e:
-        logger.error(f"Error preparing data: {str(e)}")
+        logger.error(f"Error preparing data: {e}")
         raise
 
-
-def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data=True):
+def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data=True, scaler_path=None):
     """
     Prepare credit card fraud data for training and testing.
-    
+
     Parameters:
     - data_path (str): Path to the dataset file (CSV).
     - target_column (str): Name of the target column indicating fraud.
     - test_size (float): Fraction of data to reserve for testing.
     - scale_data (bool): Whether to standardize features.
-    
+    - scaler_path (str): Path to save the scaler if scaling is applied.
+
     Returns:
-    - dict: Dictionary containing training and testing sets ('X_train', 'X_test', 'y_train', 'y_test').
+    - dict: Contains 'X_train', 'X_test', 'y_train', 'y_test', and 'scaler' (if applicable).
     """
     try:
         # Load the dataset
         df = pd.read_csv(data_path)
         logger.info(f"Loaded data from {data_path}")
 
-        # Check for missing values
+        # Check for missing values and handle them
         if df.isnull().sum().sum() > 0:
             logger.warning("Dataset contains missing values. Filling with mean values.")
             df.fillna(df.mean(), inplace=True)
 
         # Separate features (X) and target (y)
-        X = df.drop(columns=[target_column])  # Features
-        y = df[target_column]  # Target
+        X = df.drop(columns=[target_column])
+        y = df[target_column]
 
-        # Split into training and testing sets
+        # Split data into training and test sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
-        logger.info("Data successfully split into train and test sets.")
+        logger.info("Data successfully split into training and testing sets.")
 
         # Scale the data if needed
+        scaler = None
         if scale_data:
             scaler = StandardScaler()
             X_train = scaler.fit_transform(X_train)
             X_test = scaler.transform(X_test)
-            logger.info("Standardized the data.")
+            logger.info("Feature scaling applied.")
 
-        # Return the prepared data
-        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test}
+            # Save the scaler if scaler_path is specified
+            if scaler_path:
+                joblib.dump(scaler, scaler_path)
+                logger.info(f"Scaler saved to {scaler_path}")
+
+        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler}
 
     except Exception as e:
-        logger.error(f"Error preparing data: {str(e)}")
+        logger.error(f"Error in prepare_credit_card_data: {e}")
         raise
 
-def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path):
-    """Train and save a model to disk."""
+def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+    """Train and save a model and its scaler to disk."""
     try:
         logger.info(f"Training model: {model.__class__.__name__}.")
         start_time = time.time()
@@ -120,6 +138,11 @@ def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path):
         # Save the model to disk
         joblib.dump(model, model_path)
         logger.info(f"Model saved to {model_path}.")
+
+        # If the scaler is provided, save it
+        if scaler is not None and scaler_path:
+            joblib.dump(scaler, scaler_path)
+            logger.info(f"Scaler saved to {scaler_path}.")
 
         # Evaluate the model
         y_pred = model.predict(X_test)
@@ -137,26 +160,25 @@ def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path):
         raise
 
 
-# Individual training functions
-def train_logistic_regression(X_train, X_test, y_train, y_test, model_path):
+# Individual training functions for various models
+def train_logistic_regression(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     model = LogisticRegression(max_iter=2000, class_weight="balanced")
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path)
+    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 
-def train_decision_tree(X_train, X_test, y_train, y_test, model_path):
+def train_decision_tree(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     model = DecisionTreeClassifier()
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path)
+    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 
-def train_random_forest(X_train, X_test, y_train, y_test, model_path):
+def train_random_forest(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     model = RandomForestClassifier(class_weight="balanced")
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path)
+    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 
-def train_gradient_boosting(X_train, X_test, y_train, y_test, model_path):
+def train_gradient_boosting(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     model = GradientBoostingClassifier(n_estimators=100)
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path)
-
+    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 def train_mlp(X_train, X_test, y_train, y_test, model_path):
     """Train a Multi-Layer Perceptron (MLP) model and save it to disk."""

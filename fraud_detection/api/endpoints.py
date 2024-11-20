@@ -124,7 +124,8 @@ def predict_general_fraud():
 # Blueprint for statistics
 stats_blueprint = Blueprint('stats', __name__)
 
-fraud_data_path = os.path.join('data', 'Fraud_Data.csv')
+# fraud_data_path = os.path.join('data', 'Fraud_Data.csv')
+fraud_data_path = os.path.join('data', 'Fraudlent_Datas.csv')
 
 
 # Helper function to convert numpy types to native Python types
@@ -275,8 +276,8 @@ def get_geographic_fraud():
         return jsonify({'error': f"Failed to load data: {error}"}), 500
 
     # Just return the unique IP addresses and fraud classification (class) information
-    ip_data = data[['ip_address', 'class']].drop_duplicates()
-    
+    # ip_data = data[['ip_address', 'class']].drop_duplicates()
+    ip_data = data[['ip_address', 'class', 'country']].drop_duplicates()
     # Convert IP data to JSON serializable format
     ip_data = convert_data_types(ip_data)
 

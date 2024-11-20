@@ -454,3 +454,73 @@
         1.50557300e-03,  2.08347148e-03, -1.69293044e-03,  6.00944665e-04,
        -4.50303319e-03, -2.08613369e-01, -5.50500483e-04, -1.44327933e-04])
 2024-11-19 13:20:02,970 - root - ERROR - Error in explaining model: Unable to allocate 22.3 GiB for an array with shape (2072, 1446424) and data type float64
+2024-11-20 12:33:03,997 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 12:33:04,034 - root - INFO - Encoded column: device_id
+2024-11-20 12:33:04,042 - root - INFO - Encoded column: source
+2024-11-20 12:33:04,055 - root - INFO - Encoded column: browser
+2024-11-20 12:33:04,073 - root - INFO - Encoded column: sex
+2024-11-20 12:33:04,141 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:33:04,220 - root - INFO - Standardized the data.
+2024-11-20 12:33:09,147 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 12:33:09,363 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:33:09,692 - root - INFO - Standardized the data.
+2024-11-20 12:55:36,497 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 12:55:36,539 - root - INFO - Encoded column: device_id
+2024-11-20 12:55:36,539 - root - INFO - Encoded column: source
+2024-11-20 12:55:36,559 - root - INFO - Encoded column: browser
+2024-11-20 12:55:36,569 - root - INFO - Encoded column: sex
+2024-11-20 12:55:36,624 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:55:36,711 - root - INFO - Standardized the data.
+2024-11-20 12:55:43,476 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 12:55:43,658 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:55:43,857 - root - INFO - Standardized the data.
+2024-11-20 12:56:57,585 - root - INFO - Training model: LogisticRegression.
+2024-11-20 12:56:57,731 - root - ERROR - Error training model: [Errno 2] No such file or directory: 'models/logistic_regression_model.pkl'
+2024-11-20 12:57:27,246 - root - INFO - Training model: LogisticRegression.
+2024-11-20 12:57:27,393 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-20 12:57:27,450 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 12:57:27,466 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 12:58:01,603 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-20 12:58:02,810 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 12:59:04,323 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 12:59:04,521 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:59:04,739 - root - INFO - Standardized the data.
+2024-11-20 12:59:05,260 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 12:59:05,291 - root - INFO - Encoded column: device_id
+2024-11-20 12:59:05,309 - root - INFO - Encoded column: source
+2024-11-20 12:59:05,330 - root - INFO - Encoded column: browser
+2024-11-20 12:59:05,338 - root - INFO - Encoded column: sex
+2024-11-20 12:59:05,373 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 12:59:05,459 - root - INFO - Standardized the data.
+2024-11-20 12:59:53,216 - root - INFO - Training model: LogisticRegression.
+2024-11-20 12:59:53,332 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-20 12:59:53,366 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 12:59:53,366 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 13:00:29,932 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-20 13:00:31,283 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 13:08:05,994 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 13:08:06,025 - root - INFO - Encoded column: device_id
+2024-11-20 13:08:06,042 - root - INFO - Encoded column: source
+2024-11-20 13:08:06,043 - root - INFO - Encoded column: browser
+2024-11-20 13:08:06,043 - root - INFO - Encoded column: sex
+2024-11-20 13:08:06,099 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 13:08:06,159 - root - INFO - Standardized the data.
+2024-11-20 13:08:16,038 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 13:08:16,288 - root - INFO - Data successfully split into training and testing sets.
+2024-11-20 13:08:16,516 - root - INFO - Feature scaling applied.
+2024-11-20 13:08:28,167 - root - INFO - Training model: LogisticRegression.
+2024-11-20 13:08:28,292 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-20 13:08:28,292 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-20 13:08:28,343 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 13:08:28,343 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 13:09:02,681 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-20 13:09:02,681 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-20 13:09:04,068 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 15:06:42,256 - root - INFO - Training model: LogisticRegression.
+2024-11-20 15:06:44,144 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-20 15:06:44,144 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-20 15:06:44,241 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 15:06:44,241 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 15:09:55,912 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-20 15:09:55,912 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-20 15:09:56,746 - root - INFO - Model training and evaluation completed successfully.

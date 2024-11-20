@@ -1,0 +1,117 @@
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:43,888 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:47,339 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 09:30:47,598 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 09:30:47,624 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2340
+2024-11-20 09:30:47,633 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 09:30:47,661 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27585
+2024-11-20 09:30:48,248 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:30:49,301 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 8638291
+2024-11-20 09:30:49,924 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 591359
+2024-11-20 09:31:11,470 - DEBUG - Payload sent to API: {'user_id': 1111, 'purchase_value': 1200.0, 'device_id': 1111111111, 'source': 2, 'browser': 1, 'sex': 1, 'age': 22.0, 'ip_address': 192128112, 'country': 171, 'transaction_frequency': 0.0, 'transaction_count': 0.0, 'transaction_velocity': -0.435282, 'hour_of_day': 0, 'day_of_week': 1}
+2024-11-20 09:31:11,471 - DEBUG - API URL: http://127.0.0.1:5000/predict/general_fraud
+2024-11-20 09:31:11,473 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:31:12,471 - DEBUG - http://127.0.0.1:5000 "POST /predict/general_fraud HTTP/11" 200 8
+2024-11-20 09:31:12,471 - DEBUG - Response received: 200 - [
+  1
+]
+
+2024-11-20 09:31:12,471 - ERROR - Error parsing response: 'int' object has no attribute 'get'
+2024-11-20 09:33:43,642 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:43,642 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:43,659 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:43,668 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:43,750 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:43,750 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:46,241 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 09:33:46,585 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2340
+2024-11-20 09:33:46,601 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27585
+2024-11-20 09:33:46,617 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 09:33:47,117 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:33:47,292 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 09:33:48,735 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 8638291
+2024-11-20 09:33:49,207 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 591359
+2024-11-20 09:34:07,440 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:07,468 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:07,495 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:07,541 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:07,579 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:07,599 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:09,701 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2340
+2024-11-20 09:34:09,732 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 09:34:09,748 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:10,342 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 09:34:10,768 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27585
+2024-11-20 09:34:11,218 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 09:34:12,471 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 8638291
+2024-11-20 09:34:12,974 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 591359
+2024-11-20 09:34:47,265 - DEBUG - Payload sent to API: {'user_id': 11, 'purchase_value': 2000.0, 'device_id': 1344, 'source': 2, 'browser': 1, 'sex': 1, 'age': 22.0, 'ip_address': 192128112, 'country': 171, 'transaction_frequency': 0.0, 'transaction_count': 0.0, 'transaction_velocity': -0.435282, 'hour_of_day': 0, 'day_of_week': 0}
+2024-11-20 09:34:47,269 - DEBUG - API URL: http://127.0.0.1:5000/predict/general_fraud
+2024-11-20 09:34:47,273 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:34:48,255 - DEBUG - http://127.0.0.1:5000 "POST /predict/general_fraud HTTP/11" 200 8
+2024-11-20 09:34:48,256 - DEBUG - Response received: 200 - [
+  1
+]
+
+2024-11-20 09:40:17,748 - DEBUG - Payload sent to API: {'user_id': 11, 'purchase_value': 2000.0, 'device_id': 1344, 'source': 2, 'browser': 1, 'sex': 1, 'age': 22.0, 'ip_address': 192128112, 'country': 171, 'transaction_frequency': 0.0, 'transaction_count': 0.0, 'transaction_velocity': -0.435282, 'hour_of_day': 0, 'day_of_week': 0}
+2024-11-20 09:40:17,749 - DEBUG - API URL: http://127.0.0.1:5000/predict/general_fraud
+2024-11-20 09:40:17,751 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 09:40:17,775 - DEBUG - http://127.0.0.1:5000 "POST /predict/general_fraud HTTP/11" 200 8
+2024-11-20 09:40:17,776 - DEBUG - Response received: 200 - [
+  1
+]
+
+2024-11-20 10:12:43,725 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:43,725 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:43,749 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:43,761 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:43,834 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:43,834 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:46,560 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 10:12:46,681 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27585
+2024-11-20 10:12:46,692 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2340
+2024-11-20 10:12:46,704 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 10:12:47,303 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 10:12:47,544 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:12:48,777 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 8638291
+2024-11-20 10:12:49,350 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 591359
+2024-11-20 10:15:37,416 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:37,439 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:37,486 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:37,535 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:37,546 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:37,550 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:40,098 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 10:15:40,117 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-11-20 10:15:40,203 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 10:15:40,508 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 10:15:40,524 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-11-20 10:15:40,806 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 10:15:41,929 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 6614354
+2024-11-20 10:15:42,472 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-11-20 11:21:12,931 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:12,931 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:12,934 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:12,935 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:12,939 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:12,945 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:15,207 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-20 11:21:15,394 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-20 11:21:15,406 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-11-20 11:21:16,081 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:21:16,318 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-11-20 11:21:16,381 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-20 11:21:17,893 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 10249939
+2024-11-20 11:21:18,394 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-11-20 11:23:14,226 - DEBUG - Payload sent to API: {'user_id': 222, 'purchase_value': 4000.0, 'device_id': 1111111111, 'source': 2, 'browser': 2, 'sex': 1, 'age': 45.0, 'ip_address': 1232342441, 'country': 171, 'transaction_frequency': 0.0, 'transaction_count': 0.0, 'transaction_velocity': -0.435282, 'hour_of_day': 0, 'day_of_week': 0}
+2024-11-20 11:23:14,228 - DEBUG - API URL: http://127.0.0.1:5000/predict/general_fraud
+2024-11-20 11:23:14,231 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-20 11:23:15,238 - DEBUG - http://127.0.0.1:5000 "POST /predict/general_fraud HTTP/11" 200 8
+2024-11-20 11:23:15,253 - DEBUG - Response received: 200 - [
+  1
+]
+

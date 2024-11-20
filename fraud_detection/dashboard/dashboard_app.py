@@ -3,42 +3,32 @@ import dash
 import plotly.express as px
 from flask import Flask
 import requests
-<<<<<<< HEAD
-<<<<<<< HEAD
-import pandas as pd
-# Initialize Flask app
-server = Flask(__name__)
-
-
-# Free IP geolocation API without API key
-def get_country_from_ip(ip_address):
-    try:
-        url = f"https://ipinfo.io/{ip_address}/json"
-        response = requests.get(url)
-        data = response.json()
-        return data.get("country", None)
-    except Exception as e:
-        return None
-
-
-=======
-
-=======
 import datetime
 import pandas as pd
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,  # Capture all levels of logs (DEBUG, INFO, WARNING, etc.)
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(),  # Output logs to console
+        logging.FileHandler('api_debug.log')  # Output logs to a file
+    ]
+)
 # Initialize Flask app
 server = Flask(__name__)
 
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
+# Initialize Flask app
+server = Flask(__name__)
+
 # Initialize Dash app
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
 
-# API URL for fetching statistics (from the Flask API)
+# API URL for fetching statistics
 API_URL = "http://127.0.0.1:5000/stats"
 
 # Layout of the dashboard
-# Define the app layout with tabs
+
 app.layout = html.Div([
     html.H1("Fraud Detection Dashboard", style={'text-align': 'center'}),
 
@@ -69,18 +59,6 @@ app.layout = html.Div([
                         dcc.Graph(id='sex-distribution')
                     ], className="card"),
 
-<<<<<<< HEAD
-        html.Div([
-<<<<<<< HEAD
-=======
-            dcc.Graph(id='top-purchases'),
-        ], className="card"),
-
-        html.Div([
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
-            dcc.Graph(id='fraud-by-source'),
-        ], className="card"),
-=======
                     html.Div([
                         html.H4("Fraud Trends"),
                         html.P("Observe how fraud cases have trended over time."),
@@ -92,7 +70,6 @@ app.layout = html.Div([
                         html.P("Distribution of fraud cases based on source platforms."),
                         dcc.Graph(id='fraud-by-source')
                     ], className="card"),
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
 
                     html.Div([
                         html.H4("Geography of Fraud"),
@@ -219,6 +196,11 @@ app.layout = html.Div([
     ])
 ])
 
+
+
+# Configure logging
+logging.basicConfig(level=logging.DEBUG, filename='api_debug.log', filemode='w',
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 @app.callback(
     dash.dependencies.Output('output-display', 'children'),
     [dash.dependencies.Input('submit-button', 'n_clicks')],
@@ -237,100 +219,92 @@ app.layout = html.Div([
 )
 def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
     if n_clicks > 0:
-        # Convert inputs to required format
-        fraud_class = 0  # Assume it's unknown for prediction purposes
-        country = 171  # Example: Add logic to map IP to country if needed
-        transaction_frequency = 0.0  # Placeholder, adjust with logic if required
-        transaction_count = 0.0  # Placeholder
-        transaction_velocity = 0.0  # Placeholder
+        try:
+            # Convert inputs to required format
+            country = 171  # Static value for now
+            transaction_frequency = 0.0  # Placeholder
+            transaction_count = 0.0  # Placeholder
+            transaction_velocity = -0.435282  # Placeholder
 
-        # Derive time-based features
-        signup_datetime = datetime.datetime.fromisoformat(signup_time)
-        purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
-        hour_of_day = purchase_datetime.hour
-        day_of_week = purchase_datetime.weekday()  # Monday is 0, Sunday is 6
+            # Time-based feature engineering
+            purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
+            hour_of_day = purchase_datetime.hour
+            day_of_week = purchase_datetime.weekday()
 
-        # Map categorical values (source, browser, sex) to integers if needed
-        source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
-        browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
-        sex_map = {'M': 0, 'F': 1}
+            # Map categorical values (source, browser, sex) to integers
+            source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
+            browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
+            sex_map = {'M': 0, 'F': 1}
 
-        source = source_map.get(source, -1)
-        browser = browser_map.get(browser, -1)
-        sex = sex_map.get(sex, -1)
+            source = source_map.get(source, -1)
+            browser = browser_map.get(browser, -1)
+            sex = sex_map.get(sex, -1)
 
-        # Prepare data for the prediction API
-        data = {
-            "user_id": user_id,
-            "signup_time": signup_datetime.strftime('%Y-%m-%d %H:%M:%S'),
-            "purchase_time": purchase_datetime.strftime('%Y-%m-%d %H:%M:%S'),
-            "purchase_value": purchase_value,
-            "device_id": device_id,
-            "source": source,
-            "browser": browser,
-            "sex": sex,
-            "age": age,
-            "ip_address": ip_address,
-            "fraud_class": fraud_class,
-            "country": country,
-            "transaction_frequency": transaction_frequency,
-            "transaction_count": transaction_count,
-            "transaction_velocity": transaction_velocity,
-            "hour_of_day": hour_of_day,
-            "day_of_week": day_of_week
-        }
+            # Convert IP address to integer if it isn't already
+            ip_address_int = int(ip_address.replace('.', ''))  # Example transformation
 
-        # Send data to Prediction API
-        prediction_api_url = "http://127.0.0.1:5000/predict"
-        response = requests.post(prediction_api_url, json=data)
+            # Prepare data for prediction
+            data = {
+                "user_id": int(user_id),  # Assuming user_id is an integer
+                "purchase_value": float(purchase_value),
+                "device_id": int(device_id),
+                "source": source,
+                "browser": browser,
+                "sex": sex,
+                "age": float(age),
+                "ip_address": ip_address_int,
+                "country": country,
+                "transaction_frequency": transaction_frequency,
+                "transaction_count": transaction_count,
+                "transaction_velocity": transaction_velocity,
+                "hour_of_day": hour_of_day,
+                "day_of_week": day_of_week
+            }
 
-        if response.status_code == 200:
-            prediction = response.json()
-            return html.Div([
-                html.H4("Prediction Results:"),
-                html.P(f"Fraud Prediction: {prediction['fraud_prediction']}"),
-                html.P(f"Confidence Score: {prediction['confidence_score']}")
-            ])
-        else:
+            # Log the data being sent
+            logging.debug(f"Payload sent to API: {data}")
+
+            # Send data to Prediction API
+            prediction_api_url = "http://127.0.0.1:5000/predict/general_fraud"
+            logging.debug(f"API URL: {prediction_api_url}")
+
+            response = requests.post(prediction_api_url, json=data)
+
+            # Log the response
+            logging.debug(f"Response received: {response.status_code} - {response.text}")
+
+            # Handle response
+            try:
+                response_json = response.json()
+                if isinstance(response_json, list) and len(response_json) == 1:
+                    fraud_prediction = response_json[0]
+                    if fraud_prediction == 1:
+                        result_message = "Fraud Detected"
+                    elif fraud_prediction == 0:
+                        result_message = "No Fraud Detected"
+                    else:
+                        result_message = "Unexpected Prediction Value"
+                else:
+                    result_message = "Unexpected response format"
+
+                return html.Div([
+                    html.H4("Prediction Results:"),
+                    html.P(f"Prediction: {result_message}")
+                ])
+            except Exception as e:
+                logging.error(f"Error parsing response: {str(e)}")
+                return html.Div([
+                    html.H4("Error:"),
+                    html.P(f"Could not parse the response from the API: {str(e)}")
+                ])
+        except Exception as e:
+            logging.error(f"An error occurred: {str(e)}")
             return html.Div([
                 html.H4("Error:"),
-                html.P(f"Could not get a prediction. Status Code: {response.status_code}")
+                html.P(f"An error occurred: {str(e)}")
             ])
     return "Please fill out the form and submit."
-# Callback to display user input
-# @app.callback(
-#     dash.dependencies.Output('output-display', 'children'),
-#     [dash.dependencies.Input('submit-button', 'n_clicks')],
-#     [
-#         dash.dependencies.State('user-id', 'value'),
-#         dash.dependencies.State('signup-time', 'date'),
-#         dash.dependencies.State('purchase-time', 'date'),
-#         dash.dependencies.State('purchase-value', 'value'),
-#         dash.dependencies.State('device-id', 'value'),
-#         dash.dependencies.State('source', 'value'),
-#         dash.dependencies.State('browser', 'value'),
-#         dash.dependencies.State('sex', 'value'),
-#         dash.dependencies.State('age', 'value'),
-#         dash.dependencies.State('ip-address', 'value')
-#     ]
-# )
-# def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
-#     if n_clicks > 0:
-#         return html.Div([
-#             html.H4("Submitted Data:"),
-#             html.P(f"User ID: {user_id}"),
-#             html.P(f"Signup Time: {signup_time}"),
-#             html.P(f"Purchase Time: {purchase_time}"),
-#             html.P(f"Purchase Value: {purchase_value}"),
-#             html.P(f"Device ID: {device_id}"),
-#             html.P(f"Source: {source}"),
-#             html.P(f"Browser: {browser}"),
-#             html.P(f"Sex: {sex}"),
-#             html.P(f"Age: {age}"),
-#             html.P(f"IP Address: {ip_address}")
-#         ])
-#     return "Please fill out the form and submit."
-# Callback to update 'general-summary' graph
+
 @app.callback(
     dash.dependencies.Output('general-summary', 'figure'),
     [dash.dependencies.Input('general-summary', 'id')]
@@ -374,24 +348,10 @@ def update_sex_distribution_graph(input_value):
     response = requests.get(f'{API_URL}/sex_distribution')
     data = response.json()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     fig = px.pie(
         data,
         names='sex',
         values='class',
-=======
-    fig = px.bar(
-        data,
-        x='sex',
-        y='class',
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
-=======
-    fig = px.pie(
-        data,
-        names='sex',
-        values='class',
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
         labels={'class': 'Fraud Cases', 'sex': 'Sex'},
         title="Fraud Cases by Sex"
     )
@@ -414,30 +374,8 @@ def update_fraud_trends_graph(input_value):
     )
     return fig
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-# Callback to update 'top-purchases' graph
-@app.callback(
-    dash.dependencies.Output('top-purchases', 'figure'),
-    [dash.dependencies.Input('top-purchases', 'id')]
-)
-def update_top_purchases_graph(input_value):
-    response = requests.get(f'{API_URL}/top_purchases')
-    data = response.json()
 
-    fig = px.bar(
-        data,
-        x='user_id',
-        y='purchase_value',
-        labels={'user_id': 'User ID', 'purchase_value': 'Purchase Value'},
-        title="Top 10 Purchases by Users"
-    )
-    return fig
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
 
-=======
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
 # Callback to update 'fraud-by-source' graph
 @app.callback(
     dash.dependencies.Output('fraud-by-source', 'figure'),
@@ -456,57 +394,51 @@ def update_fraud_by_source_graph(input_value):
     )
     return fig
 
-# Callback to update 'geography' graph
-<<<<<<< HEAD
+# # Callback to update 'geography' graph
+# @app.callback(
+#     dash.dependencies.Output('geography', 'figure'),
+#     [dash.dependencies.Input('geography', 'id')]
+# )
+# def update_geography_graph(input_value):
+#     response = requests.get(f'{API_URL}/geography')
+#     data = response.json()
 
-=======
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
+#     fig = px.scatter(
+#         data,
+#         x='ip_address',
+#         y='class',
+#         labels={'ip_address': 'IP Address', 'class': 'Fraud Cases'},
+#         title="Geographic Distribution of Fraud Cases"
+#     )
+#     return fig
 @app.callback(
     dash.dependencies.Output('geography', 'figure'),
     [dash.dependencies.Input('geography', 'id')]
 )
-def update_geography_graph(input_value):
+def update_fraud_geography_chart(_):
+    # Get the fraud data from the API
     response = requests.get(f'{API_URL}/geography')
     data = response.json()
 
-<<<<<<< HEAD
-    # Convert the list to a pandas DataFrame
+    # Convert the response to a pandas DataFrame for easier handling
     df = pd.DataFrame(data)
 
-    # Get country for each IP address
-    df['country'] = df['ip_address'].apply(lambda x: get_country_from_ip(x))
+    # Filter the data to only include fraud cases (where class == 1)
+    fraud_geo = df[df['class'] == 1]['country'].value_counts().reset_index()
+    fraud_geo.columns = ['Country', 'Fraud Cases']
 
-    # Drop rows where country could not be determined
-    df = df.dropna(subset=['country'])
+    # Create the choropleth map using Plotly Express
+    fig = px.choropleth(fraud_geo,
+                        locations='Country',  # Column with country names
+                        locationmode='country names',  # Mode for country names
+                        color='Fraud Cases',  # Column to color by (number of fraud cases)
+                        title='Geographic Distribution of Fraud Cases',
+                        color_continuous_scale='Viridis',  # You can change this to other color scales
+                        template='plotly',  # Optional: use plotly's default template
+                        )
 
-    # Aggregate fraud cases by country
-    country_fraud = df.groupby('country')['class'].sum().reset_index()
-
-    # Plot the map
-    fig = px.scatter_geo(
-        country_fraud,
-        locations='country',  # Country names
-        size='class',         # Fraud cases as size of the marker
-        color='class',        # Color by fraud cases
-        hover_name='country', # Show country on hover
-        title="Geographic Distribution of Fraud Cases",
-        projection='natural earth', # Choose the map projection style
-        labels={'class': 'Fraud Cases'},
-        template='plotly_dark'  # Optional: Use dark theme
-    )
-
-=======
-    fig = px.scatter(
-        data,
-        x='ip_address',
-        y='class',
-        labels={'ip_address': 'IP Address', 'class': 'Fraud Cases'},
-        title="Geographic Distribution of Fraud Cases"
-    )
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
     return fig
 
-# Callback to update 'devices-fraud' graph
 # Callback to update 'devices-fraud' graph
 @app.callback(
     dash.dependencies.Output('devices-fraud', 'figure'),
@@ -517,10 +449,6 @@ def update_devices_fraud_graph(input_value):
     response = requests.get(f'{API_URL}/devices_fraud')
     data = response.json()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
     # Convert the list to a pandas DataFrame
     df = pd.DataFrame(data)
 
@@ -534,7 +462,7 @@ def update_devices_fraud_graph(input_value):
     top_devices = aggregated_df.nlargest(10, 'total_fraud')
 
     # Plot the bar chart
-<<<<<<< HEAD
+
     fig = px.bar(
         top_devices,
         y='device_id',
@@ -544,24 +472,6 @@ def update_devices_fraud_graph(input_value):
         title="Top 10 Fraud Cases by Device and Browser",
         orientation='h'
     )
-
-=======
-=======
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
-    fig = px.bar(
-        top_devices,
-        y='device_id',
-        x='total_fraud',
-        color='browser',
-        labels={'device_id': 'Device ID', 'total_fraud': 'Fraud Cases', 'browser': 'Browser'},
-        title="Top 10 Fraud Cases by Device and Browser",
-        orientation='h'
-    )
-<<<<<<< HEAD
->>>>>>> 44f4b4ee2ef8387b10ddb164add4ab73291fb6ac
-=======
-
->>>>>>> 57fec00822338884a9a323084e1a3ffa937cbae9
     return fig
 
 if __name__ == '__main__':

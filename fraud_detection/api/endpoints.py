@@ -36,12 +36,16 @@ def load_general_fraud_model():
         return None
 
 # Define the specific feature sets for each model
-general_fraud_model_features = [
-    'user_id', 'purchase_value', 'device_id', 'source', 
-    'browser', 'sex', 'age', 'country', 
-    'transaction_frequency', 'transaction_velocity', 
-    'hour_of_day', 'day_of_week'
-]
+# general_fraud_model_features = [
+#     'user_id', 'purchase_value', 'device_id', 'source', 
+#     'browser', 'sex', 'age', 'country', 
+#     'transaction_frequency', 'transaction_velocity', 
+#     'hour_of_day', 'day_of_week'
+# ]
+general_fraud_model_features = ['purchase_value', 'age', 'transaction_frequency', 'transaction_count', 
+                    'transaction_velocity', 'hour_of_day', 'day_of_week', 'time_to_purchase',
+                    'country_encoded', 'source_Direct', 'source_SEO', 'browser_FireFox', 
+                    'browser_IE', 'browser_Opera', 'browser_Safari', 'sex_M']
 
 credit_fraud_model_features = [f'V{i}' for i in range(1, 29)] + ['Time', 'Amount']
 

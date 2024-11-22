@@ -217,101 +217,195 @@ app.layout = html.Div([
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, filename='api_debug.log', filemode='w',
                     format='%(asctime)s - %(levelname)s - %(message)s')
+
+# @app.callback(
+#     dash.dependencies.Output('output-display', 'children'),
+#     [dash.dependencies.Input('submit-button', 'n_clicks')],
+#     [
+#         dash.dependencies.State('user-id', 'value'),
+#         dash.dependencies.State('signup-time', 'date'),
+#         dash.dependencies.State('purchase-time', 'date'),
+#         dash.dependencies.State('purchase-value', 'value'),
+#         dash.dependencies.State('device-id', 'value'),
+#         dash.dependencies.State('source', 'value'),
+#         dash.dependencies.State('browser', 'value'),
+#         dash.dependencies.State('sex', 'value'),
+#         dash.dependencies.State('age', 'value'),
+#         dash.dependencies.State('ip-address', 'value')
+#     ]
+# )
+# def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
+#     if n_clicks > 0:
+#         if scaler is None:
+#             return html.Div([
+#                 html.H4("Error:"),
+#                 html.P("Scaler file is not available. Please check the path and try again.")
+#             ])
+#         try:
+#             # Feature engineering for time-based features
+#             purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
+#             hour_of_day = purchase_datetime.hour
+#             day_of_week = purchase_datetime.weekday()
+
+#             # Compute missing features
+#             transaction_velocity = 0.1  # Replace with actual logic or value
+#             transaction_frequency = 2.0  # Replace with actual logic or value
+#             transaction_count = 5.0  # Replace with actual logic or value
+#             country = 171  # Static value or derived from data
+
+#             # Map categorical values to integers
+#             source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
+#             browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
+#             sex_map = {'M': 0, 'F': 1}
+
+#             source = source_map.get(source, -1)
+#             browser = browser_map.get(browser, -1)
+#             sex = sex_map.get(sex, -1)
+
+#             # Convert IP address to integer (example transformation)
+#             ip_address_int = int(ip_address.replace('.', ''))  # Ensure valid IP transformation logic
+
+#             # Prepare raw data for scaling
+#             raw_data = [
+#                 [
+#                     float(user_id),  # Ensure valid user_id
+#                     float(purchase_value),
+#                     int(device_id),
+#                     source,
+#                     browser,
+#                     sex,
+#                     float(age),
+#                     ip_address_int,
+#                     country,
+#                     transaction_frequency,
+#                     transaction_count,
+#                     transaction_velocity,
+#                     hour_of_day,
+#                     day_of_week
+#                 ]
+#             ]
+
+#             # Debug raw data
+#             logging.debug(f"Raw data before scaling: {raw_data}")
+
+#             # Scale data
+#             if hasattr(scaler, 'transform'):
+#                 scaled_data = scaler.transform(raw_data)
+#                 logging.debug(f"Scaled data: {scaled_data}")
+#             else:
+#                 raise AttributeError("Scaler object does not have a 'transform' method.")
+
+#             # Transform scaled data into a dictionary
+#             scaled_dict = {
+#                 "user_id": scaled_data[0][0],
+#                 "purchase_value": scaled_data[0][1],
+#                 "device_id": scaled_data[0][2],
+#                 "source": scaled_data[0][3],
+#                 "browser": scaled_data[0][4],
+#                 "sex": scaled_data[0][5],
+#                 "age": scaled_data[0][6],
+#                 "ip_address": scaled_data[0][7],
+#                 "country": scaled_data[0][8],
+#                 "transaction_frequency": scaled_data[0][9],
+#                 "transaction_count": scaled_data[0][10],
+#                 "transaction_velocity": scaled_data[0][11],
+#                 "hour_of_day": scaled_data[0][12],
+#                 "day_of_week": scaled_data[0][13]
+#             }
+
 @app.callback(
     dash.dependencies.Output('output-display', 'children'),
     [dash.dependencies.Input('submit-button', 'n_clicks')],
     [
-        dash.dependencies.State('user-id', 'value'),
         dash.dependencies.State('signup-time', 'date'),
         dash.dependencies.State('purchase-time', 'date'),
         dash.dependencies.State('purchase-value', 'value'),
-        dash.dependencies.State('device-id', 'value'),
         dash.dependencies.State('source', 'value'),
         dash.dependencies.State('browser', 'value'),
         dash.dependencies.State('sex', 'value'),
-        dash.dependencies.State('age', 'value'),
-        dash.dependencies.State('ip-address', 'value')
+        dash.dependencies.State('age', 'value')
     ]
 )
-
-def handle_submit(n_clicks, user_id, signup_time, purchase_time, purchase_value, device_id, source, browser, sex, age, ip_address):
+def handle_submit(n_clicks, signup_time, purchase_time, purchase_value, source, browser, sex, age):
     if n_clicks > 0:
-        if scaler is None:
-            return html.Div([
-                html.H4("Error:"),
-                html.P("Scaler file is not available. Please check the path and try again.")
-            ])
-
         try:
             # Feature engineering for time-based features
-            purchase_datetime = datetime.datetime.fromisoformat(purchase_time)
-            hour_of_day = purchase_datetime.hour
-            day_of_week = purchase_datetime.weekday()
+            signup_dt = pd.to_datetime(signup_time)
+            purchase_dt = pd.to_datetime(purchase_time)
+            time_to_purchase = (purchase_dt - signup_dt).total_seconds()
+            hour_of_day = purchase_dt.hour
+            day_of_week = purchase_dt.weekday()
 
-            # Map categorical values to integers
-            source_map = {'SEO': 1, 'Ads': 2, 'Direct': 3}
-            browser_map = {'Chrome': 0, 'Firefox': 1, 'Opera': 2, 'Safari': 3}
-            sex_map = {'M': 0, 'F': 1}
+            # One-hot encoding categorical variables
+            source_map = {"Direct": 1, "SEO": 0}
+            browser_map = {"FireFox": 1, "IE": 1, "Opera": 1, "Safari": 1}
+            sex_map = {"M": 1}
 
-            source = source_map.get(source, -1)
-            browser = browser_map.get(browser, -1)
-            sex = sex_map.get(sex, -1)
+            source_encoded = {f"source_{k}": (1 if source == k else 0) for k in source_map.keys()}
+            browser_encoded = {f"browser_{k}": (1 if browser == k else 0) for k in browser_map.keys()}
+            sex_encoded = {"sex_M": 1 if sex == "M" else 0}
 
-            # Convert IP address to integer (simple transformation)
-            ip_address_int = int(ip_address.replace('.', ''))  # Example transformation
+            # Combine all features into a single dictionary (raw data)
+            raw_data = {
+                "purchase_value": purchase_value,
+                "age": age,
+                "transaction_frequency": 3,  # Default or dynamic value
+                "transaction_count": 15,     # Default or dynamic value
+                "transaction_velocity": 0.8, # Default or dynamic value
+                "hour_of_day": hour_of_day,
+                "day_of_week": day_of_week,
+                "time_to_purchase": time_to_purchase,
+                "country_encoded": 245,      # Static or dynamic value
+                **source_encoded,
+                **browser_encoded,
+                **sex_encoded
+            }
 
-            # Prepare raw data for scaling
-            raw_data = [
-                [
-                    float(purchase_value),
-                    int(device_id),
-                    source,
-                    browser,
-                    sex,
-                    float(age),
-                    ip_address_int,
-                    171,  # Static value for country
-                    0.0,  # Placeholder for transaction_frequency
-                    0.0,  # Placeholder for transaction_count
-                    -0.435282,  # Placeholder for transaction_velocity
-                    hour_of_day,
-                    day_of_week
-                ]
-            ]
+            # Convert the raw_data dictionary to a pandas DataFrame for scaling
+            data_df = pd.DataFrame([raw_data])
 
-            # Check if scaler has the 'transform' method
-            if hasattr(scaler, 'transform'):
-                scaled_data = scaler.transform(raw_data)
-                logging.debug(f"Scaled data: {scaled_data}")
-            else:
-                raise AttributeError("Scaler object does not have a 'transform' method.")
+            # Scale the data using the pre-loaded scaler
+            scaled_data = scaler.transform(data_df)
 
-            # Send scaled data to Prediction API
-            prediction_api_url = "http://127.0.0.1:5000/predict/general_fraud"
-            response = requests.post(prediction_api_url, json={"features": scaled_data.tolist()})
+            # Convert scaled data into a dictionary for prediction
+            scaled_dict = {
+                "purchase_value": scaled_data[0][0],
+                "age": scaled_data[0][1],
+                "transaction_frequency": scaled_data[0][2],
+                "transaction_count": scaled_data[0][3],
+                "transaction_velocity": scaled_data[0][4],
+                "hour_of_day": scaled_data[0][5],
+                "day_of_week": scaled_data[0][6],
+                "time_to_purchase": scaled_data[0][7],
+                "country_encoded": scaled_data[0][8],
+                "source_Direct": scaled_data[0][9],
+                "source_SEO": scaled_data[0][10],
+                "browser_FireFox": scaled_data[0][11],
+                "browser_IE": scaled_data[0][12],
+                "browser_Opera": scaled_data[0][13],
+                "browser_Safari": scaled_data[0][14],
+                "sex_M": scaled_data[0][15]
+            }
 
-            # Log the response
+            # Debugging: Log the prepared data
+            logging.debug(f"Prepared and scaled data for prediction: {scaled_dict}")
+
+            # Send the scaled data to the Prediction API
+            response = requests.post("http://127.0.0.1:5000/predict/general_fraud", json=scaled_dict)
             logging.debug(f"Response received: {response.status_code} - {response.text}")
 
             # Handle response
-            try:
-                response_json = response.json()
-                if isinstance(response_json, list) and len(response_json) == 1:
-                    fraud_prediction = response_json[0]
-                    result_message = "Fraud Detected" if fraud_prediction == 1 else "No Fraud Detected"
-                else:
-                    result_message = "Unexpected response format"
+            response_json = response.json()
+            if isinstance(response_json, list) and len(response_json) == 1:
+                fraud_prediction = response_json[0]
+                result_message = "Fraud Detected" if fraud_prediction == 1 else "No Fraud Detected"
+            else:
+                result_message = "Unexpected response format"
 
-                return html.Div([
-                    html.H4("Prediction Results:"),
-                    html.P(f"Prediction: {result_message}")
-                ])
-            except Exception as e:
-                logging.error(f"Error parsing response: {str(e)}")
-                return html.Div([
-                    html.H4("Error:"),
-                    html.P(f"Could not parse the response from the API: {str(e)}")
-                ])
+            return html.Div([
+                html.H4("Prediction Results:"),
+                html.P(f"Prediction: {result_message}")
+            ])
         except Exception as e:
             logging.error(f"An error occurred: {str(e)}")
             return html.Div([

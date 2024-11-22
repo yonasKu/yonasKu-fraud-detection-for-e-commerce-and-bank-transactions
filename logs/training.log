@@ -2539,3 +2539,659 @@
 2024-11-20 15:58:46,011 - root - INFO - Data successfully split into training and testing sets.
 2024-11-20 15:58:46,186 - root - INFO - Feature scaling applied.
 2024-11-20 15:58:46,186 - root - INFO - Feature scaling applied.
+2024-11-20 16:24:30,600 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-20 16:24:30,600 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-20 16:24:30,600 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-20 16:24:30,600 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-20 16:24:30,631 - matplotlib - DEBUG - interactive is False
+2024-11-20 16:24:30,631 - matplotlib - DEBUG - interactive is False
+2024-11-20 16:24:30,631 - matplotlib - DEBUG - platform is win32
+2024-11-20 16:24:30,631 - matplotlib - DEBUG - platform is win32
+2024-11-20 16:24:30,701 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-20 16:24:30,701 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-20 16:24:30,701 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-20 16:24:30,701 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-20 16:24:31,714 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 16:24:31,714 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 16:24:31,735 - root - INFO - Encoded column: device_id
+2024-11-20 16:24:31,735 - root - INFO - Encoded column: device_id
+2024-11-20 16:24:31,760 - root - INFO - Encoded column: source
+2024-11-20 16:24:31,760 - root - INFO - Encoded column: source
+2024-11-20 16:24:31,771 - root - INFO - Encoded column: browser
+2024-11-20 16:24:31,771 - root - INFO - Encoded column: browser
+2024-11-20 16:24:31,775 - root - INFO - Encoded column: sex
+2024-11-20 16:24:31,775 - root - INFO - Encoded column: sex
+2024-11-20 16:24:31,833 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 16:24:31,833 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 16:24:31,894 - root - INFO - Standardized the data.
+2024-11-20 16:24:31,894 - root - INFO - Standardized the data.
+2024-11-20 16:24:35,980 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 16:24:35,980 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 16:24:36,149 - root - INFO - Data successfully split into training and testing sets.
+2024-11-20 16:24:36,149 - root - INFO - Data successfully split into training and testing sets.
+2024-11-20 16:24:36,298 - root - INFO - Feature scaling applied.
+2024-11-20 16:24:36,298 - root - INFO - Feature scaling applied.
+2024-11-20 16:25:06,431 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 16:25:06,431 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-20 16:25:06,471 - root - INFO - Encoded column: device_id
+2024-11-20 16:25:06,471 - root - INFO - Encoded column: device_id
+2024-11-20 16:25:06,480 - root - INFO - Encoded column: source
+2024-11-20 16:25:06,480 - root - INFO - Encoded column: source
+2024-11-20 16:25:06,480 - root - INFO - Encoded column: browser
+2024-11-20 16:25:06,480 - root - INFO - Encoded column: browser
+2024-11-20 16:25:06,497 - root - INFO - Encoded column: sex
+2024-11-20 16:25:06,497 - root - INFO - Encoded column: sex
+2024-11-20 16:25:06,614 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 16:25:06,614 - root - INFO - Data successfully split into train and test sets.
+2024-11-20 16:25:06,730 - root - INFO - Standardized the data.
+2024-11-20 16:25:06,730 - root - INFO - Standardized the data.
+2024-11-20 16:25:11,221 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 16:25:11,221 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-20 16:25:11,383 - root - INFO - Data successfully split into training and testing sets.
+2024-11-20 16:25:11,383 - root - INFO - Data successfully split into training and testing sets.
+2024-11-20 16:25:11,541 - root - INFO - Feature scaling applied.
+2024-11-20 16:25:11,541 - root - INFO - Feature scaling applied.
+2024-11-20 16:26:39,499 - root - INFO - Training model: LogisticRegression.
+2024-11-20 16:26:39,499 - root - INFO - Training model: LogisticRegression.
+2024-11-20 16:26:39,633 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-20 16:26:39,633 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-20 16:26:39,633 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-20 16:26:39,633 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-20 16:26:39,681 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:26:39,681 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:26:39,681 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 16:26:39,681 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 16:27:13,942 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-20 16:27:13,942 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-20 16:27:13,942 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-20 16:27:13,942 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-20 16:27:15,217 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:27:15,217 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:27:43,835 - root - INFO - Training model: LogisticRegression.
+2024-11-20 16:27:43,835 - root - INFO - Training model: LogisticRegression.
+2024-11-20 16:27:45,691 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-20 16:27:45,691 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-20 16:27:45,691 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-20 16:27:45,691 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-20 16:27:45,755 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:27:45,755 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:27:45,770 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 16:27:45,770 - root - INFO - Training model: RandomForestClassifier.
+2024-11-20 16:30:59,727 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-20 16:30:59,727 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-20 16:30:59,732 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-20 16:30:59,732 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-20 16:31:00,852 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:00,852 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:00,870 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-20 16:31:00,870 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-20 16:31:04,595 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-20 16:31:04,595 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-20 16:31:04,599 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-20 16:31:04,599 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-20 16:31:04,649 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:04,649 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:04,655 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-20 16:31:04,655 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-20 16:31:53,178 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-20 16:31:53,178 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-20 16:31:53,178 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-20 16:31:53,178 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-20 16:31:53,297 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:53,297 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:31:58,420 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-20 16:31:58,420 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-20 16:32:35,139 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-20 16:32:35,139 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-20 16:32:35,139 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-20 16:32:35,139 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-20 16:32:35,233 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:32:35,233 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:32:35,236 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-20 16:32:35,236 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-20 16:41:03,376 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-20 16:41:03,376 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-20 16:41:03,376 - root - INFO - Scaler saved to ../models/credit_gradient_boosting_scaler.pkl.
+2024-11-20 16:41:03,376 - root - INFO - Scaler saved to ../models/credit_gradient_boosting_scaler.pkl.
+2024-11-20 16:41:03,565 - root - INFO - Model training and evaluation completed successfully.
+2024-11-20 16:41:03,565 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 15:33:11,738 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 15:33:11,738 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 15:33:11,738 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 15:33:11,738 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 15:33:11,769 - matplotlib - DEBUG - interactive is False
+2024-11-21 15:33:11,769 - matplotlib - DEBUG - interactive is False
+2024-11-21 15:33:11,769 - matplotlib - DEBUG - platform is win32
+2024-11-21 15:33:11,769 - matplotlib - DEBUG - platform is win32
+2024-11-21 15:33:11,890 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 15:33:11,890 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 15:33:11,895 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 15:33:11,895 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 15:33:13,080 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 15:33:13,080 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 15:33:13,127 - root - INFO - Encoded column: device_id
+2024-11-21 15:33:13,127 - root - INFO - Encoded column: device_id
+2024-11-21 15:33:13,132 - root - INFO - Encoded column: source
+2024-11-21 15:33:13,132 - root - INFO - Encoded column: source
+2024-11-21 15:33:13,146 - root - INFO - Encoded column: browser
+2024-11-21 15:33:13,146 - root - INFO - Encoded column: browser
+2024-11-21 15:33:13,160 - root - INFO - Encoded column: sex
+2024-11-21 15:33:13,160 - root - INFO - Encoded column: sex
+2024-11-21 15:33:13,295 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 15:33:13,295 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 15:33:13,372 - root - INFO - Standardized the data.
+2024-11-21 15:33:13,372 - root - INFO - Standardized the data.
+2024-11-21 15:33:18,465 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 15:33:18,465 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 15:33:18,667 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 15:33:18,667 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 15:33:18,871 - root - INFO - Feature scaling applied.
+2024-11-21 15:33:18,871 - root - INFO - Feature scaling applied.
+2024-11-21 16:22:43,211 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:22:43,211 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:22:43,228 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:22:43,228 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:22:43,251 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:22:43,251 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:22:43,251 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:22:43,251 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:22:43,334 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:22:43,334 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:22:43,334 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:22:43,334 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:23:49,510 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/Fraudulent_Datas.csv'
+2024-11-21 16:23:49,510 - root - ERROR - Error preparing data: [Errno 2] No such file or directory: '../data/Fraudulent_Datas.csv'
+2024-11-21 16:24:07,505 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:24:07,505 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:24:07,983 - root - INFO - Encoded column: device_id
+2024-11-21 16:24:07,983 - root - INFO - Encoded column: device_id
+2024-11-21 16:24:08,016 - root - INFO - Encoded column: source
+2024-11-21 16:24:08,016 - root - INFO - Encoded column: source
+2024-11-21 16:24:08,049 - root - INFO - Encoded column: browser
+2024-11-21 16:24:08,049 - root - INFO - Encoded column: browser
+2024-11-21 16:24:08,070 - root - INFO - Encoded column: sex
+2024-11-21 16:24:08,070 - root - INFO - Encoded column: sex
+2024-11-21 16:24:08,102 - root - ERROR - Error preparing data: "['Class'] not found in axis"
+2024-11-21 16:24:08,102 - root - ERROR - Error preparing data: "['Class'] not found in axis"
+2024-11-21 16:24:31,880 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:24:31,880 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:24:32,382 - root - INFO - Encoded column: device_id
+2024-11-21 16:24:32,382 - root - INFO - Encoded column: device_id
+2024-11-21 16:24:32,401 - root - INFO - Encoded column: source
+2024-11-21 16:24:32,401 - root - INFO - Encoded column: source
+2024-11-21 16:24:32,435 - root - INFO - Encoded column: browser
+2024-11-21 16:24:32,435 - root - INFO - Encoded column: browser
+2024-11-21 16:24:32,470 - root - INFO - Encoded column: sex
+2024-11-21 16:24:32,470 - root - INFO - Encoded column: sex
+2024-11-21 16:24:32,517 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:24:32,517 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:24:32,585 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-21 16:24:32,585 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-21 16:29:58,837 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:29:58,837 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:29:58,837 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:29:58,837 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:29:58,869 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:29:58,869 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:29:58,871 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:29:58,871 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:29:58,937 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:29:58,937 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:29:58,937 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:29:58,937 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:30:02,650 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 16:30:02,650 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 16:30:02,690 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:02,690 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:02,699 - root - INFO - Encoded column: source
+2024-11-21 16:30:02,699 - root - INFO - Encoded column: source
+2024-11-21 16:30:02,701 - root - INFO - Encoded column: browser
+2024-11-21 16:30:02,701 - root - INFO - Encoded column: browser
+2024-11-21 16:30:02,720 - root - INFO - Encoded column: sex
+2024-11-21 16:30:02,720 - root - INFO - Encoded column: sex
+2024-11-21 16:30:02,767 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:02,767 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:02,833 - root - INFO - Standardized the data.
+2024-11-21 16:30:02,833 - root - INFO - Standardized the data.
+2024-11-21 16:30:22,706 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 16:30:22,706 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 16:30:22,895 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 16:30:22,895 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 16:30:23,093 - root - INFO - Feature scaling applied.
+2024-11-21 16:30:23,093 - root - INFO - Feature scaling applied.
+2024-11-21 16:30:32,885 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 16:30:32,885 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-21 16:30:32,916 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:32,916 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:32,924 - root - INFO - Encoded column: source
+2024-11-21 16:30:32,924 - root - INFO - Encoded column: source
+2024-11-21 16:30:32,932 - root - INFO - Encoded column: browser
+2024-11-21 16:30:32,932 - root - INFO - Encoded column: browser
+2024-11-21 16:30:32,938 - root - INFO - Encoded column: sex
+2024-11-21 16:30:32,938 - root - INFO - Encoded column: sex
+2024-11-21 16:30:32,999 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:32,999 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:33,064 - root - INFO - Standardized the data.
+2024-11-21 16:30:33,064 - root - INFO - Standardized the data.
+2024-11-21 16:30:44,186 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:30:44,186 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-21 16:30:44,186 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:30:44,186 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:30:44,219 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:30:44,219 - matplotlib - DEBUG - interactive is False
+2024-11-21 16:30:44,219 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:30:44,219 - matplotlib - DEBUG - platform is win32
+2024-11-21 16:30:44,286 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:30:44,286 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-21 16:30:44,286 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:30:44,286 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-21 16:30:47,706 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 16:30:47,706 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-21 16:30:47,866 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 16:30:47,866 - root - INFO - Data successfully split into training and testing sets.
+2024-11-21 16:30:48,076 - root - INFO - Feature scaling applied.
+2024-11-21 16:30:48,076 - root - INFO - Feature scaling applied.
+2024-11-21 16:30:48,595 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:30:48,595 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-21 16:30:49,082 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:49,082 - root - INFO - Encoded column: device_id
+2024-11-21 16:30:49,117 - root - INFO - Encoded column: source
+2024-11-21 16:30:49,117 - root - INFO - Encoded column: source
+2024-11-21 16:30:49,152 - root - INFO - Encoded column: browser
+2024-11-21 16:30:49,152 - root - INFO - Encoded column: browser
+2024-11-21 16:30:49,169 - root - INFO - Encoded column: sex
+2024-11-21 16:30:49,169 - root - INFO - Encoded column: sex
+2024-11-21 16:30:49,231 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:49,231 - root - INFO - Data successfully split into train and test sets.
+2024-11-21 16:30:49,312 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-21 16:30:49,312 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-21 16:31:52,925 - root - INFO - Training model: LogisticRegression.
+2024-11-21 16:31:52,925 - root - INFO - Training model: LogisticRegression.
+2024-11-21 16:31:53,087 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-21 16:31:53,087 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-21 16:31:53,088 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-21 16:31:53,088 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-21 16:31:53,138 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:31:53,138 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:31:53,139 - root - INFO - Training model: RandomForestClassifier.
+2024-11-21 16:31:53,139 - root - INFO - Training model: RandomForestClassifier.
+2024-11-21 16:32:18,962 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-21 16:32:18,962 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-21 16:32:18,962 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-21 16:32:18,962 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-21 16:32:20,187 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:32:20,187 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:42:37,653 - root - INFO - Training model: LogisticRegression.
+2024-11-21 16:42:37,653 - root - INFO - Training model: LogisticRegression.
+2024-11-21 16:42:39,157 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-21 16:42:39,157 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-21 16:42:39,165 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-21 16:42:39,165 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-21 16:42:39,235 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:42:39,235 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:42:39,238 - root - INFO - Training model: RandomForestClassifier.
+2024-11-21 16:42:39,238 - root - INFO - Training model: RandomForestClassifier.
+2024-11-21 16:45:48,145 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-21 16:45:48,145 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-21 16:45:48,145 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-21 16:45:48,145 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-21 16:45:48,895 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:45:48,895 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:45:48,911 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-21 16:45:48,911 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-21 16:45:50,584 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-21 16:45:50,584 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-21 16:45:50,584 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-21 16:45:50,584 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-21 16:45:50,629 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:45:50,629 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:45:50,629 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-21 16:45:50,629 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-21 16:46:16,752 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-21 16:46:16,752 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-21 16:46:16,752 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-21 16:46:16,752 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-21 16:46:16,883 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:46:16,883 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:46:16,907 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-21 16:46:16,907 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-21 16:46:59,355 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-21 16:46:59,355 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-21 16:46:59,355 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-21 16:46:59,355 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-21 16:46:59,434 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:46:59,434 - root - INFO - Model training and evaluation completed successfully.
+2024-11-21 16:46:59,449 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-21 16:46:59,449 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-22 08:30:41,710 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 08:30:41,710 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 08:30:41,725 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 08:30:41,725 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 08:30:41,745 - matplotlib - DEBUG - interactive is False
+2024-11-22 08:30:41,745 - matplotlib - DEBUG - interactive is False
+2024-11-22 08:30:41,745 - matplotlib - DEBUG - platform is win32
+2024-11-22 08:30:41,745 - matplotlib - DEBUG - platform is win32
+2024-11-22 08:30:41,866 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 08:30:41,866 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 08:30:41,870 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 08:30:41,870 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 08:30:58,914 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-22 08:30:58,914 - root - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-22 08:30:59,114 - root - INFO - Data successfully split into training and testing sets.
+2024-11-22 08:30:59,114 - root - INFO - Data successfully split into training and testing sets.
+2024-11-22 08:30:59,393 - root - INFO - Feature scaling applied.
+2024-11-22 08:30:59,393 - root - INFO - Feature scaling applied.
+2024-11-22 08:31:01,887 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-22 08:31:01,887 - root - INFO - Loaded data from ../data/fraud_datas.csv
+2024-11-22 08:31:01,947 - root - INFO - Encoded column: device_id
+2024-11-22 08:31:01,947 - root - INFO - Encoded column: device_id
+2024-11-22 08:31:01,979 - root - INFO - Encoded column: source
+2024-11-22 08:31:01,979 - root - INFO - Encoded column: source
+2024-11-22 08:31:01,986 - root - INFO - Encoded column: browser
+2024-11-22 08:31:01,986 - root - INFO - Encoded column: browser
+2024-11-22 08:31:01,997 - root - INFO - Encoded column: sex
+2024-11-22 08:31:01,997 - root - INFO - Encoded column: sex
+2024-11-22 08:31:02,066 - root - INFO - Data successfully split into train and test sets.
+2024-11-22 08:31:02,066 - root - INFO - Data successfully split into train and test sets.
+2024-11-22 08:31:02,157 - root - INFO - Standardized the data.
+2024-11-22 08:31:02,157 - root - INFO - Standardized the data.
+2024-11-22 08:31:07,428 - root - INFO - Training model: LogisticRegression.
+2024-11-22 08:31:07,428 - root - INFO - Training model: LogisticRegression.
+2024-11-22 08:31:07,582 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-22 08:31:07,582 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-22 08:31:07,582 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-22 08:31:07,582 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-22 08:31:07,637 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 08:31:07,637 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 08:31:07,641 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 08:31:07,641 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 08:31:41,442 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-22 08:31:41,442 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-22 08:31:41,442 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-22 08:31:41,442 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-22 08:31:42,629 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 08:31:42,629 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:17,714 - root - INFO - Training model: LogisticRegression.
+2024-11-22 09:10:17,714 - root - INFO - Training model: LogisticRegression.
+2024-11-22 09:10:17,842 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-22 09:10:17,842 - root - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-22 09:10:17,850 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-22 09:10:17,850 - root - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-22 09:10:17,900 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:17,900 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:17,903 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 09:10:17,903 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 09:10:54,399 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-22 09:10:54,399 - root - INFO - Model saved to ../models/random_forest_model.pkl.
+2024-11-22 09:10:54,399 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-22 09:10:54,399 - root - INFO - Scaler saved to ../models/random_forest_scaler.pkl.
+2024-11-22 09:10:55,691 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:55,691 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:55,723 - root - INFO - Training model: LogisticRegression.
+2024-11-22 09:10:55,723 - root - INFO - Training model: LogisticRegression.
+2024-11-22 09:10:58,049 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-22 09:10:58,049 - root - INFO - Model saved to ../models/credit_logistic_regression_model.pkl.
+2024-11-22 09:10:58,062 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-22 09:10:58,062 - root - INFO - Scaler saved to ../models/credit_logistic_scaler.pkl.
+2024-11-22 09:10:58,136 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:58,136 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:10:58,136 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 09:10:58,136 - root - INFO - Training model: RandomForestClassifier.
+2024-11-22 09:14:01,546 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-22 09:14:01,546 - root - INFO - Model saved to ../models/credit_random_forest_model.pkl.
+2024-11-22 09:14:01,550 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-22 09:14:01,550 - root - INFO - Scaler saved to ../models/credit_random_forest_scaler.pkl.
+2024-11-22 09:14:02,297 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:02,297 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:02,311 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-22 09:14:02,311 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-22 09:14:05,260 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-22 09:14:05,260 - root - INFO - Model saved to ../models/decision_tree_model.pkl.
+2024-11-22 09:14:05,260 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-22 09:14:05,260 - root - INFO - Scaler saved to ../models/decision_tree_scaler.pkl.
+2024-11-22 09:14:05,305 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:05,305 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:05,305 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-22 09:14:05,305 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-22 09:14:43,520 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-22 09:14:43,520 - root - INFO - Model saved to ../models/gradient_boosting_model.pkl.
+2024-11-22 09:14:43,537 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-22 09:14:43,537 - root - INFO - Scaler saved to ../models/gradient_boosting_scaler.pkl.
+2024-11-22 09:14:43,631 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:43,631 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:14:43,644 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-22 09:14:43,644 - root - INFO - Training model: DecisionTreeClassifier.
+2024-11-22 09:15:17,661 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-22 09:15:17,661 - root - INFO - Model saved to ../models/credit_decision_tree_model.pkl.
+2024-11-22 09:15:17,661 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-22 09:15:17,661 - root - INFO - Scaler saved to ../models/credit_decision_tree_scaler.pkl.
+2024-11-22 09:15:17,744 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:15:17,744 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:15:17,744 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-22 09:15:17,744 - root - INFO - Training model: GradientBoostingClassifier.
+2024-11-22 09:24:02,115 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-22 09:24:02,115 - root - INFO - Model saved to ../models/credit_gradient_boosting_model.pkl.
+2024-11-22 09:24:02,120 - root - INFO - Scaler saved to ../models/credit_gradient_boosting_scaler.pkl.
+2024-11-22 09:24:02,120 - root - INFO - Scaler saved to ../models/credit_gradient_boosting_scaler.pkl.
+2024-11-22 09:24:02,329 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:24:02,329 - root - INFO - Model training and evaluation completed successfully.
+2024-11-22 09:24:02,386 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-22 09:24:02,386 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-22 09:24:02,386 - root - INFO - Accuracy: 0.643166860240031
+2024-11-22 09:24:02,386 - root - INFO - Accuracy: 0.643166860240031
+2024-11-22 09:24:02,386 - root - INFO - Precision: 0.1685580121306985
+2024-11-22 09:24:02,386 - root - INFO - Precision: 0.1685580121306985
+2024-11-22 09:24:02,397 - root - INFO - Recall: 0.705858254813601
+2024-11-22 09:24:02,397 - root - INFO - Recall: 0.705858254813601
+2024-11-22 09:24:02,401 - root - INFO - F1 Score: 0.2721314064597647
+2024-11-22 09:24:02,401 - root - INFO - F1 Score: 0.2721314064597647
+2024-11-22 09:24:02,403 - root - INFO - ROC AUC: 0.7624917395087755
+2024-11-22 09:24:02,403 - root - INFO - ROC AUC: 0.7624917395087755
+2024-11-22 09:24:02,404 - root - INFO - Confusion Matrix: 
+[[14890  8499]
+ [  718  1723]]
+2024-11-22 09:24:02,404 - root - INFO - Confusion Matrix: 
+[[14890  8499]
+ [  718  1723]]
+2024-11-22 09:24:02,485 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-22 09:24:02,485 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-22 09:24:02,488 - root - INFO - Accuracy: 0.9032133178474642
+2024-11-22 09:24:02,488 - root - INFO - Accuracy: 0.9032133178474642
+2024-11-22 09:24:02,490 - root - INFO - Precision: 0.48963093145869946
+2024-11-22 09:24:02,490 - root - INFO - Precision: 0.48963093145869946
+2024-11-22 09:24:02,493 - root - INFO - Recall: 0.5706677591151168
+2024-11-22 09:24:02,493 - root - INFO - Recall: 0.5706677591151168
+2024-11-22 09:24:02,496 - root - INFO - F1 Score: 0.5270525917517972
+2024-11-22 09:24:02,496 - root - INFO - F1 Score: 0.5270525917517972
+2024-11-22 09:24:02,501 - root - INFO - ROC AUC: 0.7542936469695897
+2024-11-22 09:24:02,501 - root - INFO - ROC AUC: 0.7542936469695897
+2024-11-22 09:24:02,501 - root - INFO - Confusion Matrix: 
+[[21937  1452]
+ [ 1048  1393]]
+2024-11-22 09:24:02,501 - root - INFO - Confusion Matrix: 
+[[21937  1452]
+ [ 1048  1393]]
+2024-11-22 09:24:03,780 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-22 09:24:03,780 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-22 09:24:03,780 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-22 09:24:03,780 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-22 09:24:03,780 - root - INFO - Precision: 0.9992520568436799
+2024-11-22 09:24:03,780 - root - INFO - Precision: 0.9992520568436799
+2024-11-22 09:24:03,780 - root - INFO - Recall: 0.5473166734944694
+2024-11-22 09:24:03,780 - root - INFO - Recall: 0.5473166734944694
+2024-11-22 09:24:03,780 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-22 09:24:03,780 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-22 09:24:03,796 - root - INFO - ROC AUC: 0.7811007264713299
+2024-11-22 09:24:03,796 - root - INFO - ROC AUC: 0.7811007264713299
+2024-11-22 09:24:03,796 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-22 09:24:03,796 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-22 09:24:03,879 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-22 09:24:03,879 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-22 09:24:03,879 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-22 09:24:03,879 - root - INFO - Accuracy: 0.9571815718157182
+2024-11-22 09:24:03,879 - root - INFO - Precision: 0.9992520568436799
+2024-11-22 09:24:03,879 - root - INFO - Precision: 0.9992520568436799
+2024-11-22 09:24:03,895 - root - INFO - Recall: 0.5473166734944694
+2024-11-22 09:24:03,895 - root - INFO - Recall: 0.5473166734944694
+2024-11-22 09:24:03,895 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-22 09:24:03,895 - root - INFO - F1 Score: 0.7072525145579672
+2024-11-22 09:24:03,895 - root - INFO - ROC AUC: 0.7860508119894944
+2024-11-22 09:24:03,895 - root - INFO - ROC AUC: 0.7860508119894944
+2024-11-22 09:24:03,895 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-22 09:24:03,895 - root - INFO - Confusion Matrix: 
+[[23388     1]
+ [ 1105  1336]]
+2024-11-22 09:24:03,978 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-22 09:24:03,978 - root - INFO - Evaluation metrics for LogisticRegression:
+2024-11-22 09:24:03,982 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-22 09:24:03,982 - root - INFO - Accuracy: 0.9776019455115779
+2024-11-22 09:24:03,984 - root - INFO - Precision: 0.05965697240865026
+2024-11-22 09:24:03,984 - root - INFO - Precision: 0.05965697240865026
+2024-11-22 09:24:03,987 - root - INFO - Recall: 0.8888888888888888
+2024-11-22 09:24:03,987 - root - INFO - Recall: 0.8888888888888888
+2024-11-22 09:24:03,989 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-22 09:24:03,989 - root - INFO - F1 Score: 0.11180992313067785
+2024-11-22 09:24:03,989 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-22 09:24:03,989 - root - INFO - ROC AUC: 0.9754564584706141
+2024-11-22 09:24:03,998 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-22 09:24:03,998 - root - INFO - Confusion Matrix: 
+[[55395  1261]
+ [   10    80]]
+2024-11-22 09:24:04,078 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-22 09:24:04,078 - root - INFO - Evaluation metrics for DecisionTreeClassifier:
+2024-11-22 09:24:04,080 - root - INFO - Accuracy: 0.9990836358509851
+2024-11-22 09:24:04,080 - root - INFO - Accuracy: 0.9990836358509851
+2024-11-22 09:24:04,084 - root - INFO - Precision: 0.7021276595744681
+2024-11-22 09:24:04,084 - root - INFO - Precision: 0.7021276595744681
+2024-11-22 09:24:04,088 - root - INFO - Recall: 0.7333333333333333
+2024-11-22 09:24:04,088 - root - INFO - Recall: 0.7333333333333333
+2024-11-22 09:24:04,090 - root - INFO - F1 Score: 0.717391304347826
+2024-11-22 09:24:04,090 - root - INFO - F1 Score: 0.717391304347826
+2024-11-22 09:24:04,093 - root - INFO - ROC AUC: 0.8664195613291914
+2024-11-22 09:24:04,093 - root - INFO - ROC AUC: 0.8664195613291914
+2024-11-22 09:24:04,095 - root - INFO - Confusion Matrix: 
+[[56628    28]
+ [   24    66]]
+2024-11-22 09:24:04,095 - root - INFO - Confusion Matrix: 
+[[56628    28]
+ [   24    66]]
+2024-11-22 09:24:04,911 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-22 09:24:04,911 - root - INFO - Evaluation metrics for RandomForestClassifier:
+2024-11-22 09:24:04,911 - root - INFO - Accuracy: 0.9994889507630493
+2024-11-22 09:24:04,911 - root - INFO - Accuracy: 0.9994889507630493
+2024-11-22 09:24:04,911 - root - INFO - Precision: 0.9692307692307692
+2024-11-22 09:24:04,911 - root - INFO - Precision: 0.9692307692307692
+2024-11-22 09:24:04,911 - root - INFO - Recall: 0.7
+2024-11-22 09:24:04,911 - root - INFO - Recall: 0.7
+2024-11-22 09:24:04,927 - root - INFO - F1 Score: 0.8129032258064516
+2024-11-22 09:24:04,927 - root - INFO - F1 Score: 0.8129032258064516
+2024-11-22 09:24:04,927 - root - INFO - ROC AUC: 0.926045785088958
+2024-11-22 09:24:04,927 - root - INFO - ROC AUC: 0.926045785088958
+2024-11-22 09:24:04,935 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   27    63]]
+2024-11-22 09:24:04,935 - root - INFO - Confusion Matrix: 
+[[56654     2]
+ [   27    63]]
+2024-11-22 09:24:05,145 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-22 09:24:05,145 - root - INFO - Evaluation metrics for GradientBoostingClassifier:
+2024-11-22 09:24:05,145 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-22 09:24:05,145 - root - INFO - Accuracy: 0.9992951045007578
+2024-11-22 09:24:05,145 - root - INFO - Precision: 0.890625
+2024-11-22 09:24:05,145 - root - INFO - Precision: 0.890625
+2024-11-22 09:24:05,145 - root - INFO - Recall: 0.6333333333333333
+2024-11-22 09:24:05,145 - root - INFO - Recall: 0.6333333333333333
+2024-11-22 09:24:05,145 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-22 09:24:05,145 - root - INFO - F1 Score: 0.7402597402597403
+2024-11-22 09:24:05,145 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-22 09:24:05,145 - root - INFO - ROC AUC: 0.7664991841601556
+2024-11-22 09:24:05,163 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-22 09:24:05,163 - root - INFO - Confusion Matrix: 
+[[56649     7]
+ [   33    57]]
+2024-11-22 11:42:00,499 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 11:42:00,499 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 11:42:00,500 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 11:42:00,500 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 11:42:00,516 - matplotlib - DEBUG - interactive is False
+2024-11-22 11:42:00,516 - matplotlib - DEBUG - interactive is False
+2024-11-22 11:42:00,516 - matplotlib - DEBUG - platform is win32
+2024-11-22 11:42:00,516 - matplotlib - DEBUG - platform is win32
+2024-11-22 11:42:00,582 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 11:42:00,582 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 11:42:00,599 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 11:42:00,599 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 11:42:10,136 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-22 11:42:10,136 - root - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-22 11:42:10,621 - root - INFO - Encoded column: device_id
+2024-11-22 11:42:10,621 - root - INFO - Encoded column: device_id
+2024-11-22 11:42:10,642 - root - INFO - Encoded column: source
+2024-11-22 11:42:10,642 - root - INFO - Encoded column: source
+2024-11-22 11:42:10,677 - root - INFO - Encoded column: browser
+2024-11-22 11:42:10,677 - root - INFO - Encoded column: browser
+2024-11-22 11:42:10,705 - root - INFO - Encoded column: sex
+2024-11-22 11:42:10,705 - root - INFO - Encoded column: sex
+2024-11-22 11:42:10,757 - root - INFO - Data successfully split into train and test sets.
+2024-11-22 11:42:10,757 - root - INFO - Data successfully split into train and test sets.
+2024-11-22 11:42:10,838 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-22 11:42:10,838 - root - ERROR - Error preparing data: could not convert string to float: 'China'
+2024-11-22 14:18:54,557 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 14:18:54,557 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 14:18:54,557 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:18:54,557 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:18:54,589 - matplotlib - DEBUG - interactive is False
+2024-11-22 14:18:54,589 - matplotlib - DEBUG - interactive is False
+2024-11-22 14:18:54,590 - matplotlib - DEBUG - platform is win32
+2024-11-22 14:18:54,590 - matplotlib - DEBUG - platform is win32
+2024-11-22 14:18:54,658 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:18:54,658 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:18:54,670 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 14:18:54,670 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 14:22:24,253 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 14:22:24,253 - matplotlib - DEBUG - matplotlib data path: c:\Users\Akram 1\Desktop\New folder (2)\fraud-detection-for-e-commercand-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-22 14:22:24,253 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:22:24,253 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:22:24,276 - matplotlib - DEBUG - interactive is False
+2024-11-22 14:22:24,276 - matplotlib - DEBUG - interactive is False
+2024-11-22 14:22:24,276 - matplotlib - DEBUG - platform is win32
+2024-11-22 14:22:24,276 - matplotlib - DEBUG - platform is win32
+2024-11-22 14:22:24,354 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:22:24,354 - matplotlib - DEBUG - CACHEDIR=C:\Users\Akram 1\.matplotlib
+2024-11-22 14:22:24,354 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 14:22:24,354 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Akram 1\.matplotlib\fontlist-v390.json
+2024-11-22 14:22:38,489 - model_training - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-22 14:22:38,489 - model_training - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-22 14:22:38,691 - model_training - INFO - Data successfully split into training and testing sets.
+2024-11-22 14:22:38,691 - model_training - INFO - Data successfully split into training and testing sets.
+2024-11-22 14:22:38,891 - model_training - INFO - Feature scaling applied.
+2024-11-22 14:22:38,891 - model_training - INFO - Feature scaling applied.
+2024-11-22 14:22:39,462 - model_training - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-22 14:22:39,462 - model_training - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-22 14:22:39,727 - model_training - INFO - Calculated 'time_to_purchase' and dropped 'signup_time' and 'purchase_time'.
+2024-11-22 14:22:39,727 - model_training - INFO - Calculated 'time_to_purchase' and dropped 'signup_time' and 'purchase_time'.
+2024-11-22 14:22:39,778 - model_training - INFO - Encoded 'country' using frequency encoding.
+2024-11-22 14:22:39,778 - model_training - INFO - Encoded 'country' using frequency encoding.
+2024-11-22 14:22:39,839 - model_training - INFO - Encoded column: source using one-hot encoding.
+2024-11-22 14:22:39,839 - model_training - INFO - Encoded column: source using one-hot encoding.
+2024-11-22 14:22:39,883 - model_training - INFO - Encoded column: browser using one-hot encoding.
+2024-11-22 14:22:39,883 - model_training - INFO - Encoded column: browser using one-hot encoding.
+2024-11-22 14:22:39,924 - model_training - INFO - Encoded column: sex using one-hot encoding.
+2024-11-22 14:22:39,924 - model_training - INFO - Encoded column: sex using one-hot encoding.
+2024-11-22 14:22:39,942 - model_training - INFO - Dropped irrelevant columns: ['user_id', 'device_id', 'ip_address']
+2024-11-22 14:22:39,942 - model_training - INFO - Dropped irrelevant columns: ['user_id', 'device_id', 'ip_address']
+2024-11-22 14:22:39,951 - model_training - INFO - Features (X) and target (y) defined. Target column: class
+2024-11-22 14:22:39,951 - model_training - INFO - Features (X) and target (y) defined. Target column: class
+2024-11-22 14:22:39,994 - model_training - INFO - Data split into train and test sets with test size = 0.2.
+2024-11-22 14:22:39,994 - model_training - INFO - Data split into train and test sets with test size = 0.2.
+2024-11-22 14:22:40,126 - model_training - INFO - Standardized the data.
+2024-11-22 14:22:40,126 - model_training - INFO - Standardized the data.

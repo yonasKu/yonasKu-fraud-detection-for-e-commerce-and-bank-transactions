@@ -9763,3 +9763,7 @@
 2024-11-21 15:38:58,969 - root - INFO - Starting plot: Top Countries in IP Address Range
 2024-11-21 15:38:59,302 - root - INFO - Completed plot: Top Countries in IP Address Range
 2024-11-21 15:38:59,317 - root - INFO - Exploratory Data Analysis (EDA) completed.
+2024-11-25 20:15:01,994 - matplotlib - DEBUG - matplotlib data path: c:\Users\Yonas\Desktop\proj\yonasKu-fraud-detection-for-e-commerce-and-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-25 20:15:02,067 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Yonas\.matplotlib
+2024-11-25 20:15:02,357 - matplotlib - DEBUG - interactive is False
+2024-11-25 20:15:02,358 - matplotlib - DEBUG - platform is win32

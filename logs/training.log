@@ -3195,3 +3195,51 @@
 2024-11-22 14:22:39,994 - model_training - INFO - Data split into train and test sets with test size = 0.2.
 2024-11-22 14:22:40,126 - model_training - INFO - Standardized the data.
 2024-11-22 14:22:40,126 - model_training - INFO - Standardized the data.
+2024-11-25 20:19:13,739 - matplotlib - DEBUG - matplotlib data path: c:\Users\Yonas\Desktop\proj\yonasKu-fraud-detection-for-e-commerce-and-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-25 20:19:13,739 - matplotlib - DEBUG - matplotlib data path: c:\Users\Yonas\Desktop\proj\yonasKu-fraud-detection-for-e-commerce-and-bank-transactions\myvenv\Lib\site-packages\matplotlib\mpl-data
+2024-11-25 20:19:13,767 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Yonas\.matplotlib
+2024-11-25 20:19:13,767 - matplotlib - DEBUG - CONFIGDIR=C:\Users\Yonas\.matplotlib
+2024-11-25 20:19:13,855 - matplotlib - DEBUG - interactive is False
+2024-11-25 20:19:13,855 - matplotlib - DEBUG - interactive is False
+2024-11-25 20:19:13,856 - matplotlib - DEBUG - platform is win32
+2024-11-25 20:19:13,856 - matplotlib - DEBUG - platform is win32
+2024-11-25 20:19:14,149 - matplotlib - DEBUG - CACHEDIR=C:\Users\Yonas\.matplotlib
+2024-11-25 20:19:14,149 - matplotlib - DEBUG - CACHEDIR=C:\Users\Yonas\.matplotlib
+2024-11-25 20:19:14,167 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Yonas\.matplotlib\fontlist-v390.json
+2024-11-25 20:19:14,167 - matplotlib.font_manager - DEBUG - Using fontManager instance from C:\Users\Yonas\.matplotlib\fontlist-v390.json
+2024-11-25 20:19:23,439 - model_training - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-25 20:19:23,439 - model_training - INFO - Loaded data from ../data/credit_datas.csv
+2024-11-25 20:19:23,968 - model_training - INFO - Data successfully split into training and testing sets.
+2024-11-25 20:19:23,968 - model_training - INFO - Data successfully split into training and testing sets.
+2024-11-25 20:19:24,301 - model_training - INFO - Feature scaling applied.
+2024-11-25 20:19:24,301 - model_training - INFO - Feature scaling applied.
+2024-11-25 20:19:25,671 - model_training - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-25 20:19:25,671 - model_training - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-11-25 20:19:26,624 - model_training - INFO - Calculated 'time_to_purchase' and dropped 'signup_time' and 'purchase_time'.
+2024-11-25 20:19:26,624 - model_training - INFO - Calculated 'time_to_purchase' and dropped 'signup_time' and 'purchase_time'.
+2024-11-25 20:19:26,733 - model_training - INFO - Encoded 'country' using frequency encoding.
+2024-11-25 20:19:26,733 - model_training - INFO - Encoded 'country' using frequency encoding.
+2024-11-25 20:19:26,872 - model_training - INFO - Encoded column: source using one-hot encoding.
+2024-11-25 20:19:26,872 - model_training - INFO - Encoded column: source using one-hot encoding.
+2024-11-25 20:19:26,969 - model_training - INFO - Encoded column: browser using one-hot encoding.
+2024-11-25 20:19:26,969 - model_training - INFO - Encoded column: browser using one-hot encoding.
+2024-11-25 20:19:27,058 - model_training - INFO - Encoded column: sex using one-hot encoding.
+2024-11-25 20:19:27,058 - model_training - INFO - Encoded column: sex using one-hot encoding.
+2024-11-25 20:19:27,090 - model_training - INFO - Dropped irrelevant columns: ['user_id', 'device_id', 'ip_address']
+2024-11-25 20:19:27,090 - model_training - INFO - Dropped irrelevant columns: ['user_id', 'device_id', 'ip_address']
+2024-11-25 20:19:27,115 - model_training - INFO - Features (X) and target (y) defined. Target column: class
+2024-11-25 20:19:27,115 - model_training - INFO - Features (X) and target (y) defined. Target column: class
+2024-11-25 20:19:27,185 - model_training - INFO - Data split into train and test sets with test size = 0.2.
+2024-11-25 20:19:27,185 - model_training - INFO - Data split into train and test sets with test size = 0.2.
+2024-11-25 20:19:27,452 - model_training - INFO - Standardized the data.
+2024-11-25 20:19:27,452 - model_training - INFO - Standardized the data.
+2024-11-25 20:19:27,554 - model_training - INFO - Training model: LogisticRegression.
+2024-11-25 20:19:27,554 - model_training - INFO - Training model: LogisticRegression.
+2024-11-25 20:19:27,854 - model_training - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-25 20:19:27,854 - model_training - INFO - Model saved to ../models/logistic_regression_model.pkl.
+2024-11-25 20:19:27,867 - model_training - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-25 20:19:27,867 - model_training - INFO - Scaler saved to ../models/logistic_regression_scaler.pkl.
+2024-11-25 20:19:27,974 - model_training - INFO - Model training and evaluation completed successfully.
+2024-11-25 20:19:27,974 - model_training - INFO - Model training and evaluation completed successfully.
+2024-11-25 20:19:27,985 - model_training - INFO - Training model: RandomForestClassifier.
+2024-11-25 20:19:27,985 - model_training - INFO - Training model: RandomForestClassifier.

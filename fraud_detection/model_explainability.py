@@ -8,52 +8,43 @@ import matplotlib.pyplot as plt
 # Setup logger
 logger = setup_logger('../logs/explainability.log')
 
-def explain_model_shap(model, X_train, X_test, model_type='rf'):
-    """Generate SHAP explanations for the trained model."""
+def explain_model_shap(model, X_train, X_test, model_type='rf', sample_size=100):
+    """Generate SHAP explanations with memory optimization."""
     try:
         logger.info(f"Starting explanation for model type: {model_type}.")
         
-        # Choose the appropriate SHAP explainer based on model type
-        if model_type == 'rf':
+        # Reduce the dataset size
+        X_train_sampled = X_train.sample(n=sample_size, random_state=42)
+        logger.info(f"Using a sample size of {sample_size} for SHAP.")
+
+        # Choose SHAP explainer
+        if model_type in ['rf', 'xgboost']:
             explainer = shap.TreeExplainer(model)
-            logger.info("Using TreeExplainer for Random Forest model.")
-        elif model_type == 'xgboost':
-            explainer = shap.TreeExplainer(model)
-            logger.info("Using TreeExplainer for XGBoost model.")
+            logger.info("Using TreeExplainer.")
         elif model_type == 'lr':
-            explainer = shap.KernelExplainer(model.predict_proba, X_train)
-            logger.info("Using KernelExplainer for Logistic Regression model.")
+            # Reduce the background data size using shap.sample
+            background_data = shap.sample(X_train_sampled, 1000)  # Use 1000 samples instead of the full set
+            explainer = shap.KernelExplainer(model.predict_proba, background_data)
+            logger.info("Using KernelExplainer.")
         else:
             logger.error(f"Unsupported model type: {model_type}")
             raise ValueError(f"Unsupported model type: {model_type}")
 
-        # Generate SHAP values for the training dataset
-        shap_values = explainer.shap_values(X_train)
+        # Compute SHAP values for a small test subset
+        X_test_sampled = X_test.sample(n=10, random_state=42)  # Explain 10 test instances
+        shap_values = explainer.shap_values(X_test_sampled)
         logger.info("SHAP values computed.")
 
-        # Visualize SHAP plots (these will show up interactively)
-        logger.info("Generating SHAP summary plot...")
-        
-        # SHAP summary plot (Feature Importance)
-        shap.summary_plot(shap_values, X_train, plot_type="bar")  # Feature importance plot
-        shap.summary_plot(shap_values, X_train)  # Detailed SHAP value distribution plot
+        # Visualizations
+        shap.summary_plot(shap_values, X_train_sampled, plot_type="bar", max_display=10)  # Top 10 features
+        shap.summary_plot(shap_values, X_train_sampled, max_display=10)
 
-        # SHAP Force plot for a specific instance (e.g., first instance in the test set)
-        logger.info("Generating SHAP force plot...")
-        shap.initjs()  # Initialize JS for force plot visualization
-        shap.force_plot(explainer.expected_value[1], shap_values[1][0], X_train.iloc[0], matplotlib=True)  # Force plot for the first instance
-        
-        # SHAP dependence plot (for a specific feature)
-        logger.info("Generating SHAP dependence plot...")
-        feature_name = X_train.columns[0]  # You can change this to a specific feature
-        shap.dependence_plot(feature_name, shap_values, X_train)  # Replace "feature_name" with an actual feature
-        
-        logger.info("SHAP explanation completed successfully.")
         return shap_values
 
     except Exception as e:
         logger.error(f"Error in explaining model: {e}")
         raise
+
 
 def explain_model_lime(model, X_train, X_test, idx=0):
     """Explain a specific instance using LIME."""

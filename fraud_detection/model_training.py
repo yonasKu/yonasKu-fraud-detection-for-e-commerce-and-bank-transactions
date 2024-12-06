@@ -13,26 +13,13 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 # from tensorflow.keras.layers import Dense, Dropout, LSTM, SimpleRNN, Conv1D, MaxPooling1D, Flatten
 # from tensorflow.keras.optimizers import Adam
 from utils.logging_util import setup_logger
+import mlflow
+import mlflow.sklearn
+
 
 # Setup logger
 logger = setup_logger('../logs/training.log')
 
-
-
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, LabelEncoder
-import joblib
-import logging
-
-# Set up logging
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-ch = logging.StreamHandler()
-ch.setLevel(logging.INFO)
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-ch.setFormatter(formatter)
-logger.addHandler(ch)
 
 
 def prepare_large_data(data_path, target_column, test_size=0.2, scale_data=True, scaler_path=None):
@@ -222,6 +209,93 @@ def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data
         logger.error(f"Error in prepare_credit_card_data: {e}")
         raise
 
+def train_and_log_model(model, X_train, X_test, y_train, y_test, model_name, experiment_name="FraudDetection"):
+    """
+    Train a model, log it with MLflow, and save the best-performing model.
+
+    Parameters:
+        - model: Initialized ML model.
+        - X_train, X_test, y_train, y_test: Train/test splits.
+        - model_name: Name of the model (for MLflow).
+        - experiment_name: MLflow experiment name.
+
+    Returns:
+        - dict: Contains metrics and trained model.
+    """
+    try:
+        # Set MLflow experiment
+        mlflow.set_experiment(experiment_name)
+
+        # Start a new MLflow run
+        with mlflow.start_run(run_name=model_name):
+            logger.info(f"Training {model_name}...")
+
+            # Train the model
+            start_time = time.time()
+            model.fit(X_train, y_train)
+            training_time = time.time() - start_time
+
+            # Predictions and evaluation
+            y_pred = model.predict(X_test)
+            if hasattr(model, "predict_proba"):
+                y_pred_proba = model.predict_proba(X_test)[:, 1]
+                roc_auc = roc_auc_score(y_test, y_pred_proba)
+            else:
+                roc_auc = None
+
+            report = classification_report(y_test, y_pred, output_dict=True)
+            logger.info(f"{model_name} training complete.")
+
+            # Log parameters, metrics, and model to MLflow
+            mlflow.log_param("model_name", model_name)
+            mlflow.log_param("training_time", training_time)
+            mlflow.log_metrics({
+                "roc_auc": roc_auc,
+                "precision": report['1']['precision'],
+                "recall": report['1']['recall'],
+                "f1_score": report['1']['f1-score']
+            })
+
+            # Log the model to MLflow
+            mlflow.sklearn.log_model(model, artifact_path="model")
+
+            # Log additional artifacts (e.g., scaler if applicable)
+            logger.info(f"{model_name} logged to MLflow.")
+
+            return {"model": model, "roc_auc": roc_auc, "report": report, "training_time": training_time}
+
+    except Exception as e:
+        logger.error(f"Error training and logging model: {e}")
+        raise
+
+def train_and_select_best_model(models, X_train, X_test, y_train, y_test):
+    """
+    Train multiple models and select the best one based on ROC-AUC.
+
+    Parameters:
+        - models: Dictionary of model names and initialized model objects.
+        - X_train, X_test, y_train, y_test: Train/test splits.
+
+    Returns:
+        - dict: Best model details (name, object, and metrics).
+    """
+    best_model = None
+    best_roc_auc = 0
+    best_model_details = {}
+
+    for model_name, model in models.items():
+        logger.info(f"Training model: {model_name}")
+        result = train_and_log_model(model, X_train, X_test, y_train, y_test, model_name)
+
+        # Compare models by ROC-AUC
+        if result["roc_auc"] > best_roc_auc:
+            best_roc_auc = result["roc_auc"]
+            best_model = model
+            best_model_details = {"name": model_name, "roc_auc": best_roc_auc, "model": best_model}
+
+    logger.info(f"Best model: {best_model_details['name']} with ROC-AUC: {best_roc_auc}")
+    return best_model_details
+
 def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     """Train and save a model and its scaler to disk."""
     try:
@@ -274,116 +348,4 @@ def train_random_forest(X_train, X_test, y_train, y_test, model_path, scaler=Non
 def train_gradient_boosting(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
     model = GradientBoostingClassifier(n_estimators=100)
     return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
-
-def train_mlp(X_train, X_test, y_train, y_test, model_path):
-    """Train a Multi-Layer Perceptron (MLP) model and save it to disk."""
-    try:
-        model = Sequential([
-            Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
-            Dropout(0.3),
-            Dense(64, activation='relu'),
-            Dropout(0.3),
-            Dense(1, activation='sigmoid')
-        ])
-
-        model.compile(optimizer=Adam(learning_rate=0.001),
-                      loss='binary_crossentropy',
-                      metrics=['accuracy'])
-
-        history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
-                            epochs=20, batch_size=32, verbose=2)
-
-        model.save(model_path)
-        logger.info(f"MLP model saved to {model_path}.")
-        return model, history.history
-    except Exception as e:
-        logger.error(f"Error training MLP model: {e}")
-        raise
-
-
-def train_lstm(X_train, X_test, y_train, y_test, model_path):
-    """Train a Long Short-Term Memory (LSTM) model and save it to disk."""
-    try:
-        X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1])
-        X_test = X_test.reshape(X_test.shape[0], 1, X_test.shape[1])
-
-        model = Sequential([
-            LSTM(64, activation='tanh', input_shape=(1, X_train.shape[2])),
-            Dropout(0.3),
-            Dense(1, activation='sigmoid')
-        ])
-
-        model.compile(optimizer=Adam(learning_rate=0.001),
-                      loss='binary_crossentropy',
-                      metrics=['accuracy'])
-
-        history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
-                            epochs=20, batch_size=32, verbose=2)
-
-        model.save(model_path)
-        logger.info(f"LSTM model saved to {model_path}.")
-        return model, history.history
-    except Exception as e:
-        logger.error(f"Error training LSTM model: {e}")
-        raise
-
-
-def train_cnn(X_train, X_test, y_train, y_test, model_path):
-    """Train a Convolutional Neural Network (CNN) model and save it to disk."""
-    try:
-        X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
-        X_test = X_test.reshape(X_test.shape[0], X_test.shape[1], 1)
-
-        model = Sequential([
-            Conv1D(filters=32, kernel_size=3, activation='relu', input_shape=(X_train.shape[1], 1)),
-            MaxPooling1D(pool_size=2),
-            Conv1D(filters=64, kernel_size=3, activation='relu'),
-            MaxPooling1D(pool_size=2),
-            Flatten(),
-            Dense(128, activation='relu'),
-            Dropout(0.3),
-            Dense(1, activation='sigmoid')
-        ])
-
-        model.compile(optimizer=Adam(learning_rate=0.001),
-                      loss='binary_crossentropy',
-                      metrics=['accuracy'])
-
-        history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
-                            epochs=20, batch_size=32, verbose=2)
-
-        model.save(model_path)
-        logger.info(f"CNN model saved to {model_path}.")
-        return model, history.history
-    except Exception as e:
-        logger.error(f"Error training CNN model: {e}")
-        raise
-
-
-def train_rnn(X_train, X_test, y_train, y_test, model_path):
-    """Train a Recurrent Neural Network (RNN) model and save it to disk."""
-    try:
-        X_train = X_train.reshape(X_train.shape[0], 1, X_train.shape[1])
-        X_test = X_test.reshape(X_test.shape[0], 1, X_test.shape[1])
-
-        model = Sequential([
-            SimpleRNN(64, activation='tanh', input_shape=(1, X_train.shape[2])),
-            Dropout(0.3),
-            Dense(1, activation='sigmoid')
-        ])
-
-        model.compile(optimizer=Adam(learning_rate=0.001),
-                      loss='binary_crossentropy',
-                      metrics=['accuracy'])
-
-        history = model.fit(X_train, y_train, validation_data=(X_test, y_test),
-                            epochs=20, batch_size=32, verbose=2)
-
-        model.save(model_path)
-        logger.info(f"RNN model saved to {model_path}.")
-        return model, history.history
-    except Exception as e:
-        logger.error(f"Error training RNN model: {e}")
-        raise
-
 

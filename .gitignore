@@ -6,3 +6,5 @@ models/*
 # models/decision_tree_model.pkl
 # models/gradient_boosting_model.pkl
 models/random_forest_model.pkl
+mlruns/
+notebooks/mlruns/*

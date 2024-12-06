@@ -11,10 +11,34 @@ import numpy as np
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-# Load the credit fraud detection model
+# # Load the credit fraud detection model
+# def load_credit_fraud_model():
+#     # Corrected model path based on folder structure
+#     credit_fraud_model_path = os.path.join('models', 'credit_gradient_boosting_model.pkl')
+#     try:
+#         credit_fraud_model = joblib.load(credit_fraud_model_path)
+#         logger.info("Credit Fraud Model loaded successfully.")
+#         return credit_fraud_model
+#     except Exception as e:
+#         logger.error(f"Error loading Credit Fraud Model: {e}")
+#         return None
+
+# # Load the general fraud detection model
+# def load_general_fraud_model():
+#     # Corrected model path based on folder structure
+#     general_fraud_model_path = os.path.join('models', 'gradient_boosting_model.pkl')
+#     try:
+#         general_fraud_model = joblib.load(general_fraud_model_path)
+#         logger.info("General Fraud Model loaded successfully.")
+#         return general_fraud_model
+#     except Exception as e:
+#         logger.error(f"Error loading General Fraud Model: {e}")
+#         return None
+
+
 def load_credit_fraud_model():
     # Corrected model path based on folder structure
-    credit_fraud_model_path = os.path.join('models', 'credit_gradient_boosting_model.pkl')
+    credit_fraud_model_path = os.path.join('models', 'best_credit_model.pkl')
     try:
         credit_fraud_model = joblib.load(credit_fraud_model_path)
         logger.info("Credit Fraud Model loaded successfully.")
@@ -26,7 +50,7 @@ def load_credit_fraud_model():
 # Load the general fraud detection model
 def load_general_fraud_model():
     # Corrected model path based on folder structure
-    general_fraud_model_path = os.path.join('models', 'gradient_boosting_model.pkl')
+    general_fraud_model_path = os.path.join('models', 'best_model.pkl')
     try:
         general_fraud_model = joblib.load(general_fraud_model_path)
         logger.info("General Fraud Model loaded successfully.")
@@ -34,7 +58,6 @@ def load_general_fraud_model():
     except Exception as e:
         logger.error(f"Error loading General Fraud Model: {e}")
         return None
-
 # Define the specific feature sets for each model
 # general_fraud_model_features = [
 #     'user_id', 'purchase_value', 'device_id', 'source', 

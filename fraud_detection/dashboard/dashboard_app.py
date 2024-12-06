@@ -25,17 +25,17 @@ server = Flask(__name__)
 
 
 
-scaler_path = os.path.join('models', 'random_forest_scaler.pkl')
-try:
-    # Load the scaler
-    scaler = joblib.load(scaler_path)
-    print("Scaler loaded successfully.")
-except FileNotFoundError as e:
-    print(f"Error: Scaler file not found at {scaler_path}. Ensure the file exists and the path is correct.")
-    scaler = None
-except Exception as e:
-    print(f"An error occurred while loading the scaler: {e}")
-    scaler = None
+# scaler_path = os.path.join('models', 'random_forest_scaler.pkl')
+# try:
+#     # Load the scaler
+#     scaler = joblib.load(scaler_path)
+#     print("Scaler loaded successfully.")
+# except FileNotFoundError as e:
+#     print(f"Error: Scaler file not found at {scaler_path}. Ensure the file exists and the path is correct.")
+#     scaler = None
+# except Exception as e:
+#     print(f"An error occurred while loading the scaler: {e}")
+#     scaler = None
 
 # Initialize Dash app
 app = dash.Dash(__name__, server=server, url_base_pathname='/dashboard/')
@@ -326,6 +326,7 @@ logging.basicConfig(level=logging.DEBUG, filename='api_debug.log', filemode='w',
         dash.dependencies.State('age', 'value')
     ]
 )
+
 def handle_submit(n_clicks, signup_time, purchase_time, purchase_value, source, browser, sex, age):
     if n_clicks > 0:
         try:
@@ -345,7 +346,7 @@ def handle_submit(n_clicks, signup_time, purchase_time, purchase_value, source, 
             browser_encoded = {f"browser_{k}": (1 if browser == k else 0) for k in browser_map.keys()}
             sex_encoded = {"sex_M": 1 if sex == "M" else 0}
 
-            # Combine all features into a single dictionary (raw data)
+            # Combine all features into a single dictionary
             raw_data = {
                 "purchase_value": purchase_value,
                 "age": age,
@@ -361,37 +362,14 @@ def handle_submit(n_clicks, signup_time, purchase_time, purchase_value, source, 
                 **sex_encoded
             }
 
-            # Convert the raw_data dictionary to a pandas DataFrame for scaling
+            # Convert the raw_data dictionary to a pandas DataFrame
             data_df = pd.DataFrame([raw_data])
 
-            # Scale the data using the pre-loaded scaler
-            scaled_data = scaler.transform(data_df)
-
-            # Convert scaled data into a dictionary for prediction
-            scaled_dict = {
-                "purchase_value": scaled_data[0][0],
-                "age": scaled_data[0][1],
-                "transaction_frequency": scaled_data[0][2],
-                "transaction_count": scaled_data[0][3],
-                "transaction_velocity": scaled_data[0][4],
-                "hour_of_day": scaled_data[0][5],
-                "day_of_week": scaled_data[0][6],
-                "time_to_purchase": scaled_data[0][7],
-                "country_encoded": scaled_data[0][8],
-                "source_Direct": scaled_data[0][9],
-                "source_SEO": scaled_data[0][10],
-                "browser_FireFox": scaled_data[0][11],
-                "browser_IE": scaled_data[0][12],
-                "browser_Opera": scaled_data[0][13],
-                "browser_Safari": scaled_data[0][14],
-                "sex_M": scaled_data[0][15]
-            }
-
             # Debugging: Log the prepared data
-            logging.debug(f"Prepared and scaled data for prediction: {scaled_dict}")
+            logging.debug(f"Prepared data for prediction: {data_df}")
 
-            # Send the scaled data to the Prediction API
-            response = requests.post("http://127.0.0.1:5000/predict/general_fraud", json=scaled_dict)
+            # Send the data to the Prediction API
+            response = requests.post("http://127.0.0.1:5000/predict/general_fraud", json=raw_data)
             logging.debug(f"Response received: {response.status_code} - {response.text}")
 
             # Handle response
@@ -414,6 +392,8 @@ def handle_submit(n_clicks, signup_time, purchase_time, purchase_value, source, 
             ])
 
     return "Please fill out the form and submit."
+
+
 @app.callback(
     dash.dependencies.Output('general-summary', 'figure'),
     [dash.dependencies.Input('general-summary', 'id')]

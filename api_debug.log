@@ -805,3 +805,90 @@
 
 2024-11-25 19:56:23,254 - INFO - Dash is running on http://127.0.0.1:8050/dashboard/
 
+2024-11-25 20:13:46,171 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,191 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 500 105
+2024-11-25 20:13:46,258 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,279 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 500 105
+2024-11-25 20:13:46,374 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,409 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,552 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,565 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 500 105
+2024-11-25 20:13:46,592 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 500 105
+2024-11-25 20:13:46,605 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,660 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:13:46,672 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 500 105
+2024-11-25 20:13:46,704 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 500 105
+2024-11-25 20:13:46,821 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 500 105
+2024-11-25 20:41:00,853 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:00,989 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:01,140 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:01,347 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:01,570 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:01,668 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:06,793 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-25 20:41:10,863 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-25 20:41:10,903 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-25 20:41:10,990 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-11-25 20:41:11,020 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-11-25 20:41:15,675 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 10249939
+2024-11-25 20:41:21,626 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-25 20:41:24,764 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-11-29 21:06:00,501 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:00,659 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:00,769 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:00,906 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:01,032 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:01,093 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:08,843 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-11-29 21:06:09,266 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-11-29 21:06:11,120 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-11-29 21:06:11,146 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-11-29 21:06:11,147 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-11-29 21:06:11,734 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-11-29 21:06:22,003 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-11-29 21:06:22,997 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 10249939
+2024-12-05 19:47:11,532 - INFO - Dash is running on http://127.0.0.1:8050/dashboard/
+
+2024-12-06 21:39:50,249 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:50,343 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:50,497 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:50,589 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:50,656 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:50,756 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:39:55,256 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-12-06 21:39:59,721 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-12-06 21:39:59,744 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-12-06 21:39:59,745 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-12-06 21:39:59,845 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-12-06 21:40:04,158 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 10249939
+2024-12-06 21:40:09,148 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:40:11,269 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-12-06 21:40:51,217 - DEBUG - Prepared and scaled data for prediction:    purchase_value  age  transaction_frequency  transaction_count  ...  browser_IE  browser_Opera  browser_Safari  sex_M
+0           45000   26                      3                 15  ...           0              0               0      0
+
+[1 rows x 16 columns]
+2024-12-06 21:40:51,220 - ERROR - An error occurred: Object of type DataFrame is not JSON serializable
+2024-12-06 21:45:23,181 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:23,184 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:23,185 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:23,190 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:23,194 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:23,300 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:31,005 - DEBUG - http://127.0.0.1:5000 "GET /stats/general_summary HTTP/11" 200 140
+2024-12-06 21:45:32,893 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:45:35,497 - DEBUG - http://127.0.0.1:5000 "GET /stats/trends HTTP/11" 200 27574
+2024-12-06 21:45:35,603 - DEBUG - http://127.0.0.1:5000 "GET /stats/sex_distribution HTTP/11" 200 89
+2024-12-06 21:45:35,745 - DEBUG - http://127.0.0.1:5000 "GET /stats/age_distribution HTTP/11" 200 2262
+2024-12-06 21:45:35,945 - DEBUG - http://127.0.0.1:5000 "GET /stats/fraud_by_source HTTP/11" 200 195
+2024-12-06 21:45:38,625 - DEBUG - http://127.0.0.1:5000 "GET /stats/geography HTTP/11" 200 10249939
+2024-12-06 21:45:39,731 - DEBUG - http://127.0.0.1:5000 "GET /stats/devices_fraud HTTP/11" 200 508636
+2024-12-06 21:45:59,647 - DEBUG - Prepared data for prediction:    purchase_value  age  transaction_frequency  transaction_count  ...  browser_IE  browser_Opera  browser_Safari  sex_M
+0           34500   34                      3                 15  ...           0              0               0      0
+
+[1 rows x 16 columns]
+2024-12-06 21:45:59,650 - DEBUG - Starting new HTTP connection (1): 127.0.0.1:5000
+2024-12-06 21:46:01,346 - DEBUG - http://127.0.0.1:5000 "POST /predict/general_fraud HTTP/11" 200 8
+2024-12-06 21:46:01,348 - DEBUG - Response received: 200 - [
+  1
+]
+

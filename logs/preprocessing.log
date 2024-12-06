@@ -10640,6 +10640,7 @@
 2024-11-25 20:15:41,560 - root - INFO - Exploratory Data Analysis (EDA) completed.
 2024-11-25 20:15:41,645 - root - INFO - Starting IP preprocessing...
 2024-11-25 20:15:44,273 - root - INFO - IP data preprocessing complete.
+<<<<<<< HEAD
 2024-11-28 22:15:55,578 - root - INFO - Data loading completed.
 2024-11-28 22:15:55,595 - root - INFO - Starting preprocessing data...
 2024-11-28 22:15:55,607 - root - INFO - Starting data preprocessing...
@@ -10669,3 +10670,5 @@
 2024-11-28 22:16:21,166 - root - INFO - Exploratory Data Analysis (EDA) completed.
 2024-11-28 22:16:21,197 - root - INFO - Starting IP preprocessing...
 2024-11-28 22:16:23,606 - root - INFO - IP data preprocessing complete.
+=======
+>>>>>>> 5390d5a4e2b9f7f6d0ea18bee28ffda3ad755002

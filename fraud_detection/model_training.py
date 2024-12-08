@@ -133,6 +133,8 @@ def prepare_data(data_path, target_column, test_size=0.2, scale_data=True, scale
         # Define features (X) and target (y)
         X = df.drop(columns=[target_column])
         y = df[target_column]
+        
+        feature_names = X.columns.tolist()
 
         # Split into training and testing sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
@@ -151,7 +153,7 @@ def prepare_data(data_path, target_column, test_size=0.2, scale_data=True, scale
                 joblib.dump(scaler, scaler_path)
                 logger.info(f"Scaler saved to {scaler_path}")
 
-        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler}
+        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler,'feature_names': feature_names }
 
     except Exception as e:
         logger.error(f"Error preparing data: {e}")
@@ -186,6 +188,8 @@ def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data
         X = df.drop(columns=[target_column])
         y = df[target_column]
 
+        feature_names = X.columns.tolist()
+
         # Split data into training and test sets
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
         logger.info("Data successfully split into training and testing sets.")
@@ -203,7 +207,7 @@ def prepare_credit_card_data(data_path, target_column, test_size=0.2, scale_data
                 joblib.dump(scaler, scaler_path)
                 logger.info(f"Scaler saved to {scaler_path}")
 
-        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler}
+        return {'X_train': X_train, 'X_test': X_test, 'y_train': y_train, 'y_test': y_test, 'scaler': scaler ,'feature_names': feature_names}
 
     except Exception as e:
         logger.error(f"Error in prepare_credit_card_data: {e}")
@@ -268,16 +272,17 @@ def train_and_log_model(model, X_train, X_test, y_train, y_test, model_name, exp
         logger.error(f"Error training and logging model: {e}")
         raise
 
-def train_and_select_best_model(models, X_train, X_test, y_train, y_test):
+def train_and_select_best_model(models, X_train, X_test, y_train, y_test, feature_names):
     """
     Train multiple models and select the best one based on ROC-AUC.
 
     Parameters:
         - models: Dictionary of model names and initialized model objects.
         - X_train, X_test, y_train, y_test: Train/test splits.
+        - feature_names: List of feature names (for explainability).
 
     Returns:
-        - dict: Best model details (name, object, and metrics).
+        - dict: Best model details (name, object, metrics, and feature names).
     """
     best_model = None
     best_roc_auc = 0
@@ -291,11 +296,15 @@ def train_and_select_best_model(models, X_train, X_test, y_train, y_test):
         if result["roc_auc"] > best_roc_auc:
             best_roc_auc = result["roc_auc"]
             best_model = model
-            best_model_details = {"name": model_name, "roc_auc": best_roc_auc, "model": best_model}
+            best_model_details = {
+                "name": model_name,
+                "roc_auc": best_roc_auc,
+                "model": best_model,
+                "feature_names": feature_names  # Include feature names
+            }
 
     logger.info(f"Best model: {best_model_details['name']} with ROC-AUC: {best_roc_auc}")
     return best_model_details
-
 # def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
 #     """Train and save a model and its scaler to disk."""
 #     try:

@@ -5,67 +5,90 @@ import lime.lime_tabular
 import numpy as np
 import matplotlib.pyplot as plt
 
+from lime.lime_tabular import LimeTabularExplainer
+import pandas as pd
 # Setup logger
 logger = setup_logger('../logs/explainability.log')
 
-def explain_model_shap(model, X_train, X_test, model_type='rf', sample_size=100):
-    """Generate SHAP explanations with memory optimization."""
+
+
+def explain_with_shap(model, X_train, X_test, feature_names=None, sample_size=100):
+    """
+    Generate and visualize SHAP explanations for the given model.
+
+    Parameters:
+        - model: Trained model to explain.
+        - X_train: Training data used to fit the SHAP explainer.
+        - X_test: Test data to analyze and visualize.
+        - feature_names: List of feature names (optional).
+        - sample_size: Number of test samples to explain.
+
+    Returns:
+        - shap_values: Computed SHAP values.
+        - shap_summary: SHAP summary visualization.
+    """
     try:
-        logger.info(f"Starting explanation for model type: {model_type}.")
-        
-        # Reduce the dataset size
-        X_train_sampled = X_train.sample(n=sample_size, random_state=42)
-        logger.info(f"Using a sample size of {sample_size} for SHAP.")
-
-        # Choose SHAP explainer
-        if model_type in ['rf', 'xgboost']:
-            explainer = shap.TreeExplainer(model)
-            logger.info("Using TreeExplainer.")
-        elif model_type == 'lr':
-            # Reduce the background data size using shap.sample
-            background_data = shap.sample(X_train_sampled, 1000)  # Use 1000 samples instead of the full set
-            explainer = shap.KernelExplainer(model.predict_proba, background_data)
-            logger.info("Using KernelExplainer.")
+        logger.info("Initializing SHAP explainer...")
+        if hasattr(model, "predict_proba"):
+            explainer = shap.Explainer(model, X_train, feature_names=feature_names)
         else:
-            logger.error(f"Unsupported model type: {model_type}")
-            raise ValueError(f"Unsupported model type: {model_type}")
+            explainer = shap.Explainer(model.predict, X_train)
 
-        # Compute SHAP values for a small test subset
-        X_test_sampled = X_test.sample(n=10, random_state=42)  # Explain 10 test instances
-        shap_values = explainer.shap_values(X_test_sampled)
-        logger.info("SHAP values computed.")
+        # Compute SHAP values
+        logger.info("Computing SHAP values...")
+        X_sample = X_test[:sample_size]
+        shap_values = explainer(X_sample)
 
-        # Visualizations
-        shap.summary_plot(shap_values, X_train_sampled, plot_type="bar", max_display=10)  # Top 10 features
-        shap.summary_plot(shap_values, X_train_sampled, max_display=10)
+        # Plot summary
+        logger.info("Generating SHAP summary plot...")
+        shap.summary_plot(shap_values, X_sample, feature_names=feature_names)
 
         return shap_values
 
     except Exception as e:
-        logger.error(f"Error in explaining model: {e}")
+        logger.error(f"Error in SHAP explanation: {e}")
         raise
 
 
-def explain_model_lime(model, X_train, X_test, idx=0):
-    """Explain a specific instance using LIME."""
+def explain_with_lime(model, X_train, X_test, y_train, feature_names, sample_index=0, num_features=10, class_names=None):
+    """
+    Generate and visualize LIME explanations for the given model.
+
+    Parameters:
+        - model: Trained model to explain.
+        - X_train: Training data for LIME explainer.
+        - X_test: Test data to analyze and visualize.
+        - y_train: Target variable from training data (for scaling).
+        - feature_names: List of feature names.
+        - sample_index: Index of the test sample to explain.
+        - num_features: Number of top features to display in the explanation.
+        - class_names: Names of the output classes (for classification).
+
+    Returns:
+        - explanation: LIME explanation object.
+    """
     try:
-        # Create a LIME explainer object
-        explainer = lime.lime_tabular.LimeTabularExplainer(
-            training_data=X_train.values,
-            feature_names=X_train.columns,
-            class_names=['Non-Fraud', 'Fraud'],  # Adjust for your classes
-            mode='classification'
+        logger.info("Initializing LIME explainer...")
+        lime_explainer = LimeTabularExplainer(
+            training_data=X_train,
+            feature_names=feature_names,
+            class_names=class_names,
+            mode="classification" if hasattr(model, "predict_proba") else "regression",
+            discretize_continuous=True,
         )
 
-        # Select a data point to explain
-        instance = X_test.iloc[idx]
-        logger.info(f"Explaining instance {idx}...")
+        # Select the sample to explain
+        sample = X_test[sample_index]
+        logger.info(f"Explaining sample index {sample_index}...")
 
-        # Explain the prediction
-        explanation = explainer.explain_instance(instance.values, model.predict_proba, num_features=5)
-        
-        # Display the explanation in notebook (if using Jupyter)
-        explanation.show_in_notebook(show_table=True, show_all=False)  # In Jupyter Notebook
+        # Generate explanation
+        explanation = lime_explainer.explain_instance(
+            sample, model.predict_proba if hasattr(model, "predict_proba") else model.predict, num_features=num_features
+        )
+
+        # Visualize explanation
+        logger.info("Generating LIME visualization...")
+        explanation.show_in_notebook(show_table=True)
         explanation.as_pyplot_figure()
         plt.show()
 
@@ -74,3 +97,32 @@ def explain_model_lime(model, X_train, X_test, idx=0):
     except Exception as e:
         logger.error(f"Error in LIME explanation: {e}")
         raise
+
+
+def explain_model_with_shap_and_lime(
+    model, X_train, X_test, y_train, feature_names, sample_size=100, lime_sample_index=0, num_lime_features=10, class_names=None
+):
+    """
+    Combined explanation using both SHAP and LIME.
+
+    Parameters:
+        - model: Trained model to explain.
+        - X_train, X_test: Training and test datasets.
+        - y_train: Training target data (for LIME scaling).
+        - feature_names: List of feature names.
+        - sample_size: Number of samples for SHAP.
+        - lime_sample_index: Index of the sample for LIME.
+        - num_lime_features: Number of LIME features to explain.
+        - class_names: Names of classes for LIME.
+
+    Returns:
+        - shap_values: SHAP values.
+        - lime_explanation: LIME explanation object.
+    """
+    logger.info("Starting model explanation using SHAP and LIME...")
+    shap_values = explain_with_shap(model, X_train, X_test, feature_names, sample_size)
+    lime_explanation = explain_with_lime(
+        model, X_train, X_test, y_train, feature_names, lime_sample_index, num_lime_features, class_names
+    )
+    logger.info("Explanation complete.")
+    return shap_values, lime_explanation

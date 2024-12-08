@@ -296,56 +296,56 @@ def train_and_select_best_model(models, X_train, X_test, y_train, y_test):
     logger.info(f"Best model: {best_model_details['name']} with ROC-AUC: {best_roc_auc}")
     return best_model_details
 
-def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
-    """Train and save a model and its scaler to disk."""
-    try:
-        logger.info(f"Training model: {model.__class__.__name__}.")
-        start_time = time.time()
-        model.fit(X_train, y_train)
-        training_time = time.time() - start_time
+# def train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+#     """Train and save a model and its scaler to disk."""
+#     try:
+#         logger.info(f"Training model: {model.__class__.__name__}.")
+#         start_time = time.time()
+#         model.fit(X_train, y_train)
+#         training_time = time.time() - start_time
 
-        # Save the model to disk
-        joblib.dump(model, model_path)
-        logger.info(f"Model saved to {model_path}.")
+#         # Save the model to disk
+#         joblib.dump(model, model_path)
+#         logger.info(f"Model saved to {model_path}.")
 
-        # If the scaler is provided, save it
-        if scaler is not None and scaler_path:
-            joblib.dump(scaler, scaler_path)
-            logger.info(f"Scaler saved to {scaler_path}.")
+#         # If the scaler is provided, save it
+#         if scaler is not None and scaler_path:
+#             joblib.dump(scaler, scaler_path)
+#             logger.info(f"Scaler saved to {scaler_path}.")
 
-        # Evaluate the model
-        y_pred = model.predict(X_test)
-        if hasattr(model, "predict_proba"):
-            y_pred_proba = model.predict_proba(X_test)[:, 1]
-            roc_auc = roc_auc_score(y_test, y_pred_proba)
-        else:
-            roc_auc = None
+#         # Evaluate the model
+#         y_pred = model.predict(X_test)
+#         if hasattr(model, "predict_proba"):
+#             y_pred_proba = model.predict_proba(X_test)[:, 1]
+#             roc_auc = roc_auc_score(y_test, y_pred_proba)
+#         else:
+#             roc_auc = None
 
-        report = classification_report(y_test, y_pred)
-        logger.info("Model training and evaluation completed successfully.")
-        return {"model": model, "training_time": training_time, "roc_auc": roc_auc, "report": report}
-    except Exception as e:
-        logger.error(f"Error training model: {e}")
-        raise
-
-
-# Individual training functions for various models
-def train_logistic_regression(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
-    model = LogisticRegression(max_iter=2000, class_weight="balanced")
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
+#         report = classification_report(y_test, y_pred)
+#         logger.info("Model training and evaluation completed successfully.")
+#         return {"model": model, "training_time": training_time, "roc_auc": roc_auc, "report": report}
+#     except Exception as e:
+#         logger.error(f"Error training model: {e}")
+#         raise
 
 
-def train_decision_tree(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
-    model = DecisionTreeClassifier()
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
+# # Individual training functions for various models
+# def train_logistic_regression(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+#     model = LogisticRegression(max_iter=2000, class_weight="balanced")
+#     return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 
-def train_random_forest(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
-    model = RandomForestClassifier(class_weight="balanced")
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
+# def train_decision_tree(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+#     model = DecisionTreeClassifier()
+#     return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 
 
-def train_gradient_boosting(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
-    model = GradientBoostingClassifier(n_estimators=100)
-    return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
+# def train_random_forest(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+#     model = RandomForestClassifier(class_weight="balanced")
+#     return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
+
+
+# def train_gradient_boosting(X_train, X_test, y_train, y_test, model_path, scaler=None, scaler_path=None):
+#     model = GradientBoostingClassifier(n_estimators=100)
+#     return train_and_save_model(model, X_train, X_test, y_train, y_test, model_path, scaler, scaler_path)
 

@@ -45,3 +45,50 @@
 2024-12-08 14:29:15,420 - ../logs/training.log - INFO - GradientBoosting training complete.
 2024-12-08 14:29:24,623 - ../logs/training.log - INFO - GradientBoosting logged to MLflow.
 2024-12-08 14:29:24,633 - ../logs/training.log - INFO - Best model: GradientBoosting with ROC-AUC: 0.7809695885184598
+2024-12-08 22:51:07,076 - ../logs/training.log - INFO - Loaded data from ../data/credit_datas.csv
+2024-12-08 22:51:07,527 - ../logs/training.log - INFO - Data successfully split into training and testing sets.
+2024-12-08 22:51:08,007 - ../logs/training.log - INFO - Feature scaling applied.
+2024-12-08 22:51:10,311 - ../logs/training.log - INFO - Loaded data from ../data/Fraudlent_Datas.csv
+2024-12-08 22:51:11,342 - ../logs/training.log - INFO - Calculated 'time_to_purchase' and dropped 'signup_time' and 'purchase_time'.
+2024-12-08 22:51:11,440 - ../logs/training.log - INFO - Encoded 'country' using frequency encoding.
+2024-12-08 22:51:11,558 - ../logs/training.log - INFO - Encoded column: source using one-hot encoding.
+2024-12-08 22:51:11,655 - ../logs/training.log - INFO - Encoded column: browser using one-hot encoding.
+2024-12-08 22:51:11,741 - ../logs/training.log - INFO - Encoded column: sex using one-hot encoding.
+2024-12-08 22:51:11,764 - ../logs/training.log - INFO - Dropped irrelevant columns: ['user_id', 'device_id', 'ip_address']
+2024-12-08 22:51:11,781 - ../logs/training.log - INFO - Features (X) and target (y) defined. Target column: class
+2024-12-08 22:51:11,840 - ../logs/training.log - INFO - Data split into train and test sets with test size = 0.2.
+2024-12-08 22:51:12,097 - ../logs/training.log - INFO - Standardized the data.
+2024-12-08 22:51:12,154 - ../logs/training.log - INFO - Training model: LogisticRegression
+2024-12-08 22:51:13,406 - ../logs/training.log - INFO - Training LogisticRegression...
+2024-12-08 22:51:13,676 - ../logs/training.log - INFO - LogisticRegression training complete.
+2024-12-08 22:51:48,984 - ../logs/training.log - INFO - LogisticRegression logged to MLflow.
+2024-12-08 22:51:49,034 - ../logs/training.log - INFO - Training model: DecisionTree
+2024-12-08 22:51:49,516 - ../logs/training.log - INFO - Training DecisionTree...
+2024-12-08 22:51:56,565 - ../logs/training.log - INFO - DecisionTree training complete.
+2024-12-08 22:52:09,893 - ../logs/training.log - INFO - DecisionTree logged to MLflow.
+2024-12-08 22:52:09,911 - ../logs/training.log - INFO - Training model: RandomForest
+2024-12-08 22:52:10,145 - ../logs/training.log - INFO - Training RandomForest...
+2024-12-08 22:53:39,413 - ../logs/training.log - INFO - RandomForest training complete.
+2024-12-08 22:53:55,002 - ../logs/training.log - INFO - RandomForest logged to MLflow.
+2024-12-08 22:53:55,016 - ../logs/training.log - INFO - Training model: GradientBoosting
+2024-12-08 22:53:55,438 - ../logs/training.log - INFO - Training GradientBoosting...
+2024-12-08 22:55:03,873 - ../logs/training.log - INFO - GradientBoosting training complete.
+2024-12-08 22:55:15,551 - ../logs/training.log - INFO - GradientBoosting logged to MLflow.
+2024-12-08 22:55:15,570 - ../logs/training.log - INFO - Best model: GradientBoosting with ROC-AUC: 0.7809695885184598
+2024-12-08 22:55:15,686 - ../logs/training.log - INFO - Training model: LogisticRegression
+2024-12-08 22:55:16,322 - ../logs/training.log - INFO - Training LogisticRegression...
+2024-12-08 22:55:20,143 - ../logs/training.log - INFO - LogisticRegression training complete.
+2024-12-08 22:55:32,238 - ../logs/training.log - INFO - LogisticRegression logged to MLflow.
+2024-12-08 22:55:32,252 - ../logs/training.log - INFO - Training model: DecisionTree
+2024-12-08 22:55:32,481 - ../logs/training.log - INFO - Training DecisionTree...
+2024-12-08 22:56:57,420 - ../logs/training.log - INFO - DecisionTree training complete.
+2024-12-08 22:57:07,832 - ../logs/training.log - INFO - DecisionTree logged to MLflow.
+2024-12-08 22:57:07,848 - ../logs/training.log - INFO - Training model: RandomForest
+2024-12-08 22:57:08,007 - ../logs/training.log - INFO - Training RandomForest...
+2024-12-08 23:04:21,484 - ../logs/training.log - INFO - RandomForest training complete.
+2024-12-08 23:04:34,373 - ../logs/training.log - INFO - RandomForest logged to MLflow.
+2024-12-08 23:04:34,391 - ../logs/training.log - INFO - Training model: GradientBoosting
+2024-12-08 23:04:34,646 - ../logs/training.log - INFO - Training GradientBoosting...
+2024-12-08 23:21:42,886 - ../logs/training.log - INFO - GradientBoosting training complete.
+2024-12-08 23:21:50,640 - ../logs/training.log - INFO - GradientBoosting logged to MLflow.
+2024-12-08 23:21:50,656 - ../logs/training.log - INFO - Best model: LogisticRegression with ROC-AUC: 0.9754564584706141
